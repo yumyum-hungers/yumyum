@@ -1,23 +1,28 @@
 'use strict';
+//to locate current user
+var usernum;
+// to locate current company
+var companynum;
 // this contructor  companies
 var Companies = function() {
-  // this.items is an array of CartItem instances.
+  // this array contain the copmany object so this is the main that we will use and store , when you take the data from local sorage you should put it here .
   this.company = [];
 };
 
 
 Companies.prototype.addCompany = function(company, logo) {
-  // TODO: Fill in this instance method to create a new CartItem and add it to this.items
+  // when you add company we call this method with the name of the company and the directory of logo so here we make a company and we push it in company array
   var thiscompany = new Company(company, logo);
   this.company.push(thiscompany );
 };
 
 Companies.prototype.saveToLocalStorage = function() {
-  // TODO: Fill in this instance method to save the contents of the cart to localStorage
+  // we call this method to store data on local storage
   localStorage.cart = JSON.stringify(this.company);
 };
 
 var Company = function(company, logo) {
+  //thiss is company fconsructor
   this.companyName = company;
   this.logoDirectory = logo;
   this.user = [];
@@ -25,17 +30,18 @@ var Company = function(company, logo) {
 };
 
 Company.prototype.addUser = function(name,password,number,breakHour,visaType,visaNumber) {
-  // TODO: Fill in this instance method to save the contents of the cart to localStorage
+  // here we add user to company with all data needed and add it to user array ,so when ever we want to add user to company we should call this method
   var thisUser = new Users(name,password,number,breakHour,visaType,visaNumber);
   this.user.push(thisUser );
 };
 
 Company.prototype.addRestorants = function(name,password,number,breakHour,visaType,visaNumber) {
-  // TODO: Fill in this instance method to save the contents of the cart to localStorage
+  // here we add restorant to company usually we will fill it in the code for now
   var thisRestorant = new Restorant(name,password,number,breakHour,visaType,visaNumber);
   this.restorant.push(thisRestorant );
 };
 var Users = function(name,password,number,breakHour,visaType,visaNumber) {
+  //this is user constructor just to store data off user
   this.name = name;
   this.password = password;
   this.number =number;
@@ -44,12 +50,17 @@ var Users = function(name,password,number,breakHour,visaType,visaNumber) {
   this.visaNumber =visaNumber;
 };
 
-Users.prototype.voit = function() {
 
-};
 var Restorant = function(name,logo,totalVoites) {
+  // to store data of every restorant
   this.name = name;
   this.logo = logo;
   this.totalVoites =totalVoites;
   this.order =[];
+};
+Restorant.prototype.voit = function() {
+  //this methode we will use when click happen so we will add voit to restorant in company ,and add 1 to total voit
+  this.totalVoites++;
+  this.order.push(Companies.company[companynum].user[usernum].name);
+
 };
