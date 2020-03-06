@@ -18,7 +18,7 @@ Companies.prototype.addCompany = function(company, logo) {
 
 Companies.prototype.saveToLocalStorage = function() {
   // we call this method to store data on local storage
-  localStorage.cart = JSON.stringify(this.company);
+  localStorage.companies = JSON.stringify(this.company);
 };
 
 var Company = function(company, logo) {
@@ -51,16 +51,16 @@ var Users = function(name,password,number,breakHour,visaType,visaNumber) {
 };
 
 
-var Restorant = function(name,logo,totalVoites) {
+var Restorant = function(name,logo,totalvoteses) {
   // to store data of every restorant
   this.name = name;
   this.logo = logo;
-  this.totalVoites =totalVoites;
+  this.totalvoteses =totalvoteses;
   this.order =[];
 };
-Restorant.prototype.voit = function() {
-  //this methode we will use when click happen so we will add voit to restorant in company ,and add 1 to total voit
-  this.totalVoites++;
+Restorant.prototype.votes = function() {
+  //this methode we will use when click happen so we will add votes to restorant in company ,and add 1 to total votes
+  this.totalvoteses++;
   this.order.push(Companies.company[companynum].user[usernum].name);
 
 };
