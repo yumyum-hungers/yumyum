@@ -1,0 +1,212 @@
+
+  @import 'https://fonts.googleapis.com/css?family=Viga&display=swap';
+  @import 'https://fonts.googleapis.com/css?family=Chilanka&display=swap';
+  @import 'https://fonts.googleapis.com/css?family=Chilanka&display=swap';
+
+.home-intro {
+    background-image: url('https://download.hipwallpaper.com/desktop/1536/864/25/82/ltP7UD.jpg');
+    background-size: cover;
+    height: 100%;
+    color: white;
+    text-align: center;
+  }
+
+  body, html{
+    height: 100%;
+  }
+
+ 
+  h1 {
+    font-family: 'Chilanka', cursive;
+    color: #1f1835;
+    font-size: 95px;
+    font-weight: 600;
+    float: left;
+    margin: 8% 10%;
+  }
+
+ 
+ 
+  div.container {
+    margin: 0 auto;
+    padding: 5% 0%;
+    text-align: center;
+    margin-left: 46%; 
+  }
+
+
+div.container a
+{
+    color: rgb(58, 58, 88);
+    text-decoration: none;
+    font: 20px 'Viga', sans-serif;
+    margin: 0% 2%;
+    padding: 1% 2%;
+    position: relative;
+    /* z-index: 0; */
+    cursor: pointer;
+}
+
+img.logo {
+    float: left;
+    border-radius: 50%;
+    height: 15%;
+    width: 7%;
+    margin: 2% 5%;
+}
+
+
+
+/* Pull right and left  */
+div.pullRightLeft a:before, div.pullRightLeft a:after
+{
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0px;
+    content: '';
+    background: rgb(96, 88, 146);
+    opacity: 0.3;
+    transition: all 0.3s;
+}
+
+div.pullRightLeft a:before
+{
+    left: 0px;
+} 
+
+div.pullRightLeft a:after
+{
+    right: 0px;
+}
+
+div.pullRightLeft a:hover:before, div.pullRightLeft a:hover:after
+{
+    width: 100%;
+}
+
+ 
+h2 {
+    position: relative;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #28223c, #cec2c2, #28223c);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 9s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(185, 28, 28, 0);
+    float: left;
+    font-weight: 700;
+    text-align: center;
+    margin: -6% 0% 0% 6%;
+}
+  @keyframes animate {
+    0% {
+      background-position: -500%;
+    }
+    100% {
+      background-position: 500%;
+    }
+  }
+
+.sign-in {
+    background-color: #404265;
+    height: 100%;
+}
+
+p.p1 {
+    float: right;
+    clear: left;
+    color: beige;
+    font-size: 40px;
+    margin: 3% 27%;
+    font-family: 'Chilanka', cursive;
+}
+
+
+.p2 {
+    width: 565px;
+    float: right;
+    margin: 33% 45%;
+    padding: -82%;
+    margin: 29% 75%;
+    padding: 32px;
+    border: 5px groove rgb(243, 202, 236);
+    margin: -2% 10%;
+    font-family: 'Snippet', sans-serif;
+    color: beige;
+    text-align: left;
+    font-size: 25px;
+    line-height: 33px;
+}
+
+
+.companies {
+    height: 100%;
+    background-color: beige;
+}
+
+.p3 {
+     float: right;
+     clear: left;
+     margin: 3% 33%;
+     color: rgb(71, 36, 68);
+     font-size: 40px;
+     text-align:center;
+     font-family: 'Chilanka', cursive;
+ 
+}
+
+.column {
+    float: left;
+    width: 7.33%;
+    padding: 34px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 500px) {
+    .column {
+      width: 100%;
+    }
+  }
+
+  .p4 {
+    float: right;
+    clear: left;
+    margin: 3% 41%;
+    color: rgb(71, 36, 68);
+    font-size: 40px;
+    text-align:center;
+    font-family: 'Chilanka', cursive;
+
+}
+
+
+footer {
+    height: 35%;
+    background-color: #9fa0a0;
+}
+
+.p5 {
+    float: left;
+    margin-top: 2%;
+    font-weight: 700;
+    color: rgb(71, 36, 68);
+    font-size: 27px;
+    text-align: center;
+    font-family: 'Chilanka', cursive;
+
+}
+
+
