@@ -1,0 +1,130 @@
+#watchme {
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%; 
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+#watchme{
+color:rgb(8, 8, 8);
+font-size: 100px;
+border-width: 800px;
+margin: 15px;
+padding: 44px;
+}
+
+/* main{
+
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRx8B1VTnBcy6RePdaZWc7i9YMulrQYQfUQNGuWYxYfNoXf9ACN");
+/* z-index: 9999999999999999999px; */
+   
+/* } */ 
+
+ /* html {
+    height: 500vh;
+  } */
+  
+  html {
+    /* The image used */
+    background-color: rgb(122, 137, 189);
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #b{
+   
+      margin-left:24% ;
+  }
+
+  #y{
+    background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cheesy-pepperoni-pizza-royalty-free-image-1570815711.jpg?resize=480:*");
+    background-repeat: no-repeat;
+  }
+  #pic1{
+      width: 100%;
+      height: 100%;
+  }
+  .container {
+    margin: 20px;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    left: 200px;
+    margin-left: 104px;
+  }
+.inlineDiv{
+   /* background-color: #A5A6AE; */
+  /*border: solid tomato; */
+  display: inline-block;
+  text-align: center;
+}  
+
+.boxContainer{
+    width: 100%;
+    height: 100%;
+  }
+.box {
+    width: 100%;
+    height: 100%;
+    transition: transform 3s ease-in-out;
+    cursor: pointer;
+    transform-style: preserve-3d;
+  }
+
+.boxContainer:hover  .box{
+    transform: rotateY(180deg);
+}
+
+.front {
+    border: 2px solid #7F5D3F;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    background-color: #E0BE96;
+}
+.front h2,p{
+    padding: 1em;
+    font-size: large;
+    transform: translateZ(50px);
+}
+
+.back {
+   border: 2px solid #A5A6AE;
+   transform: rotateY(180deg);
+   background-color: #2DA5DC;
+   backface-visibility: hidden;
+   transform-style: preserve-3d;
+}
+
+.back h2{
+    padding: 1em;
+    font-size: large;
+    transform: translateZ(100px);
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+ 
+  
+  
