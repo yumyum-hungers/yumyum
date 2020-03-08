@@ -3,57 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>User</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/user.css">
 </head>
 <body>
-    <header>
-      <div class='borderBox'></div>
-      <span id='ourCompanyName'>Yum Yum</span>
-      <nav>
-        <a href="index.html"><div class="outerCircle"> <div class='innerCircle'>Home</div> </div> </a>
-        <a href="user.html"><div class="outerCircle"><div class='innerCircle'>Resturants</div></div> </a>
-      </nav>
-  </header>
-    <main>
-      <!-- <img id ='slideShow'> -->
-      <div id='userInfo' >
-        <div id ='userName'></div>
-        <a href="index.html">
-          <button class="button">Log Out</button>
-        </a>
-        <div id='companyData'>
-          <img  id='companyLogo'>
-          <span id='companyName'></span>
-        </div>
+
+  <div id ='userName'></div>
+  
+  <header class="home-intro">
+    <img class="logo wow bounceInRight" src="images/yumyum (3).jpg" alt="yumyum">
+    <a href="">
+      <div id='companyData'>
+        <img  id='companyLogo'>
+        <!-- <span id='companyName'></span> -->
       </div>
       
-      <div id='msg' ></div>
+    
+    </a>
+    <div class="cont deepOrange pullRightLeft">
+        <a>HOME</a>
+        <a>REGISTER</a>
+        <a>ABOUT US</a>
+        <a>CONTACT</a>
+      </div>
+</header>
 
-      <div class="container inlineDiv">
-          <div class="boxContainer">
-              <div class="box">
-                <div class="front">
-                  <div id='bestOne' >
-                  <p class ='resturantName'></p>
-                  <img class = 'imgLogo'>
-                  <!-- <p>Free delivery when votes becomes 20</p>
-                  <p>Discount 20% when votes becomes 40</p> -->
-                  <p class='votes' ></p>
+    <main >
+      <div id=headerUser>
+        <!-- <div id='userInfo' > -->
+          
+          <a href="index.html">
+            <button class="button">Log Out</button>
+          </a>
+      </div>
+      <div id='main'>
+        <div id='msg' ></div>
+        <!-- <div id='orderButton' >order</div> -->
+        <!-- <div id="imgDesc" ></div> -->
+        <div id='orderButton' >order</div>
+
+  
+      <!-- <div class="container inlineDiv" >
+        <img class="imgDesc" >
+          <div  class="boxContainer ">
+            
+              <div class="box ">
+                
+                <div class="front ">
+                  <div  >
+                  <p  class ='resturantName '></p>
+                  <img class = 'imgLogo '>
+                  <p>Free delivery when votes becomes 20</p>
+                  <p>Discount 20% when votes becomes 40</p>
+                  <p class='votes ' ></p>
                 </div>
                 </div>
-                <div class="back">
-                  <p class='desc' ></p>
+                <div class="back ">
+                  <p class='desc ' ></p>
                 </div>
               </div>
-        </div>
-        </div>
-        <div id='orderButton' >order</div>
-        <div id="imgDesc" ></div>
+          </div>
+          
+        </div> -->
 
-
-        <div class="container inlineDiv">
+        <!-- <div class="container inlineDiv">
           <div class="boxContainer">
               <div class="box">
                 <div class="front">
@@ -68,8 +82,8 @@
                 </div>
               </div>
           </div>
-        </div>
-
+        </div> -->
+<!-- 
         <div class="container inlineDiv">
           <div class="boxContainer">
               <div class="box">
@@ -84,8 +98,8 @@
                 </div>
               </div>
           </div>
-        </div>
-
+        </div> -->
+<!-- 
 
         <div class="container inlineDiv">
           <div class="boxContainer">
@@ -102,7 +116,8 @@
               </div>
           </div>
         </div>
-        
+         -->
+        </div>
     </main>
     <footer></footer>
     <script src="js/app.js"></script>
