@@ -40,13 +40,15 @@ Company.prototype.addRestorants = function(name,password,number,breakHour,visaTy
   var thisRestorant = new Restorant(name,password,number,breakHour,visaType,visaNumber);
   this.restorant.push(thisRestorant );
 };
-var Users = function(name,password,number,breakHour,visaType,visaNumber) {
+var Users = function(name,password,number,email,breakHour,employeesNumber,visaNumber) {
   //this is user constructor just to store data off user
   this.name = name;
   this.password = password;
   this.number =number;
+  this.email = email;
   this.breakHour =breakHour;
-  this.visaType = visaType;
+  this.employeesNumber = employeesNumber;
+  //   this.visaType = visaType;
   this.visaNumber =visaNumber;
 };
 
@@ -57,6 +59,7 @@ var Restorant = function(name,logo,totalvoteses) {
   this.logo = logo;
   this.totalvoteses =totalvoteses;
   this.order =[];
+  this.menu = [];
 };
 Restorant.prototype.votes = function() {
   //this methode we will use when click happen so we will add votes to restorant in company ,and add 1 to total votes
