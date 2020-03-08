@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/forms.css">
+   
+</head>
+<body>
+    <header>
+        <img id="logo-1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Whole_Foods_Market_201x_logo.svg/800px-Whole_Foods_Market_201x_logo.svg.png" alt="">
+        <img id="logo-2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Whole_Foods_Market_201x_logo.svg/800px-Whole_Foods_Market_201x_logo.svg.png" alt="">
+        <div class="inner-header">
+       <div class="main-header">
+        <h1>Yum<span>Yum</span></h1>
+    </div>
+        <ul class="head-list">
+        <a href=""><li>Home</li></a>
+        <a href=""><li>About Us</li></a>
+        <a href=""><li>Contact Us</li></a>
+        </ul>
+    </div>
+    </header>
+    <main>
+
+
+
+
+        <div class="form-style-3">
+        <form id="myForm">
+            <fieldset> <legend>Please Fill In The Registeration Form</legend>
+             <label for="name">Name: </label>
+            <input type="text" id="name" placeholder="Enter Full Name.." >
+             <label for="phonenumber">Phone Number: </label>
+             <input type="number" id="phonenumber" placeholder="Enter Phone Number.." >
+             <label for="company">Comapny: </label>
+            <input type="text" id="company" placeholder="Enter Company.. (optional)">
+
+             <label for="employees">Number of Employees: </label>
+            <input type="number" id="employees" placeholder="Enter Number of Employees..(opyional)">
+
+             <label for="breakHours">Break hours: </label>
+            <select id="breakHours" >
+                <optgroup label="pick a time:"> 
+                    <option value="10am">10am</option>
+                    <option value="11am">11am</option>
+                    <option value="12pm">12pm</option>
+                    <option value="1pm">1pm</option>
+                    <option value="2pm">2pm</option>
+                    <option value="3pm">3pm</option>
+                    <option value="4pm">4pm</option>
+                    <option value="5pm">5pm</option>
+                    <option value="6pm">6pm</option>
+                    <option value="7pm">7pm</option>
+                <option value="8pm">8pm</option> </optgroup> </select>
+
+                <label for="email">Email: </label>
+             <input type="text" id="email" placeholder="Enter your Email.." >
+             <label for="pwd">Password: </label>
+            <input type="password" id="pwd" placeholder="Enter your Password.." >
+             <button type="submit" value="Submit" id="submit" onsubmit="check(); return false" > <a href="billing.html"></a> Submit </button>
+            </fieldset>
+        </form>
+        
+
+
+    </div>
+     <img id="form-logo" src="img/logo-head.png" alt="">
+     <img id="burger" src="img/burger.png" alt="">
+
+        
+    </main>
+<footer>
+    <div class="snapInButtonContainer" ng-click="openContactUs()">
+        <a class="snapInButton">
+            <div class="favicon">
+                <i class="fa fa-comment"></i>
+            </div>
+            
+            <div class="buttonText"> <img id="contact-logo" src="img/logo-contact.png" alt=""> Contact Us</div>
+        </a>
+    </div>
+  
+    <p class="foot-p"> Copyright © 2020 by Team Hungers </p>
+</footer>
+<script src="forms.js"></script>
+    
+</body>
+</html>
