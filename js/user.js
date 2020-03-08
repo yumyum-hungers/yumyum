@@ -4,7 +4,7 @@
 
 /*********************************************** Data for testing **************************************************** */
 localStorage.setItem('user','ruwaid');
-
+/*
 //companies objects
 localStorage.setItem('companies',JSON.stringify([
   {name:'ltuc',
@@ -62,9 +62,9 @@ localStorage.setItem('companies',JSON.stringify([
 
 /****************************************** User Page Code start here ******************************************** */
 // Global variables
-var numberOfTopDiv = 4;
+var numberOfTopDiv = 3;
 // var desc = document.getElementById('desc');
-var imgDesc = document.getElementById('imgDesc');
+// var imgDesc = document.getElementById('imgDesc');
 var imgEl = document.createElement('img');
 var orderButton = document.getElementById('orderButton');
 
@@ -77,31 +77,6 @@ var bestOne = 0;
 // var slideIndex =0;
 /********************************************** Calling Functions ************************************************* */
 
-// Event listeners
-orderButton.addEventListener('click',ordered);
-
-listenersfun();
-
-function listenersfun(){
-  for(let i = 0;i<numberOfTopDiv;i++){
-    var containerClass = document.getElementsByClassName('container')[i];
-    containerClass.addEventListener('mouseover',hoverEffects);
-    containerClass.addEventListener('mouseout',hoverEffectsOut);
-  }
-  // var containerClass = document.getElementsByClassName('container')[0];
-}
-// containerClass.addEventListener('mouseover',hoverEffects);
-// containerClass.addEventListener('mouseout',hoverEffectsOut);
-
-// Slideshow for restaurants logos
-// setInterval(() => {
-//   slideShow.src = companies[0].restorant[slideIndex].logo;
-//   slideIndex++;
-//   if(slideIndex === companies[0].restorant.length){
-//     slideIndex =0;
-//   }
-// }, 1500);
-
 // Get data from local storage
 loadData();
 
@@ -111,14 +86,22 @@ printCompany();
 // Display User Name
 printUser();
 
+// Display resturants
+printRest();
+
 // calculate best one according to number of votes
 votesCalc();
 
-// Display best resturant
-// resturantDataFunction( bestOne.name,bestOne.totalVoites,bestOne.menu);
-
 // Display other resturants
-topp(restorantIndex);
+topp();
+
+// Declare event listeners for every restorant
+listenersfun();
+
+
+// Event listeners
+orderButton.addEventListener('click',ordered);
+
 
 /*********************************************** Functions ******************************************************* */
 
@@ -126,18 +109,18 @@ topp(restorantIndex);
 // Display User Name
 function printUser(){
   var userName = document.getElementById('userName');
-  userName.textContent = `Welcome ${user}`;
+  userName.textContent = ` ${user}`;
 }
 
 // Display name and logo for the company
 function printCompany(){
-  var companyName = document.getElementById('companyName');
+  // var companyName = document.getElementById('companyName');
   var companyLogo = document.getElementById('companyLogo');
   for(let i =0;i<companies.length; i++ ){
     for(let j =0 ; j<companies[i].users.length;j++){
       if(companies[i].users[j].name.includes(user)){
         companyIndex = i;
-        companyName.textContent = companies[i].name;
+        // companyName.textContent = companies[i].name;
         companyLogo.src = companies[i].logo;
         companyLogo.alt = companies[i].name;
         break;
@@ -159,18 +142,6 @@ function votesCalc(){
   bestOne = companies[companyIndex].restorant[restorantIndex];
 }
 
-// Display best resturant
-// function resturantDataFunction(resturantNamee,votess,description){
-//   // var resturantName = document.getElementById('resturantName');
-//   // var votes = document.getElementById('votes');
-
-//   resturantName.textContent = resturantNamee;
-//   votes.textContent = `Number of votes until now ${votess}`;
-//   desc.textContent = `The menu for ${resturantNamee} is ${description}`;
-// }
-
-
-
 // Display other resturants
 function topp(){
   var restorantClass = document.getElementsByClassName('resturantName');
@@ -178,19 +149,33 @@ function topp(){
   var discClass = document.getElementsByClassName('desc');
   var logoClass = document.getElementsByClassName('imgLogo');
   var topDiv =1;
-  console.log(bestOne);
-
+  var ulEl =document.createElement('ul');
   restorantClass[0].textContent = bestOne.name;
   logoClass[0].src= bestOne.logo;
-  votesClass[0].textContent = `Number of votes until now ${bestOne.totalVoites}`;
-  discClass[0].textContent = `The menu for ${bestOne.name} is ${bestOne.menu}`;
-
+  votesClass[0].textContent = `votes  ${bestOne.totalVoites}`;
+  discClass[0].textContent = `The menu for ${bestOne.name} is `;
+  discClass[0].appendChild(ulEl);
+  for(let i =0 ;i<bestOne.menu.length;i++){
+    let liEl =document.createElement('li');
+    liEl.textContent = `${bestOne.menu[i]}`;
+    ulEl.appendChild(liEl);
+    liEl.id =`${0}.${restorantIndex}.${i}`;
+  }
   for (let i =0;i<=numberOfTopDiv;i++){
     if(i !== restorantIndex){
+        console.log(i);
       restorantClass[topDiv].textContent = companies[companyIndex].restorant[i].name;
       logoClass[topDiv].src= companies[companyIndex].restorant[i].logo;
-      votesClass[topDiv].textContent = `Number of votes until now ${companies[companyIndex].restorant[i].totalVoites}`;
-      discClass[topDiv].textContent = `The menu for ${companies[companyIndex].restorant[i].name} is ${companies[companyIndex].restorant[i].menu}`;
+      votesClass[topDiv].textContent = `votes  ${companies[companyIndex].restorant[i].totalVoites}`;
+      discClass[topDiv].textContent = `The menu for ${companies[companyIndex].restorant[i].name} is `;
+      let ulEl =document.createElement('ul');
+      discClass[topDiv].appendChild(ulEl);
+      for(let j =0 ;j<companies[companyIndex].restorant[i].menu.length;j++){
+        let liEl =document.createElement('li');
+        liEl.textContent = `${companies[companyIndex].restorant[i].menu[j]}`;
+        ulEl.appendChild(liEl);
+        liEl.id =`${topDiv}.${i}.${j}`;
+      }
       topDiv++;
     }
   }
@@ -198,16 +183,21 @@ function topp(){
 
 // Event listeners function for hover effects
 function hoverEffects(e){
-  console.log(e.target.id);
-  imgDesc.appendChild(imgEl);
-  imgEl.src =companies[companyIndex].restorant[restorantIndex].logo;
-  imgDesc.style.opacity ='1';
+  var imgDesc = document.querySelectorAll('.imgDesc');
+  imgDesc[e.target.id.split('.')[0]].appendChild(imgEl);
+
+  // imgEl.src =companies[companyIndex].restorant[e.target.id.split('.')[1]].menu(e.target.id.split('.')[2]);
+  imgDesc[e.target.id.split('.')[0]].style.opacity ='1';
+  imgDesc[e.target.id.split('.')[0]].style.zIndex ='9999';
+
 }
 
 // Event listeners function for hover effects
-function hoverEffectsOut(){
-  imgDesc.removeChild(imgEl);
-  imgDesc.style.opacity ='0';
+function hoverEffectsOut(e){
+  var imgDesc = document.querySelectorAll('.imgDesc');
+  imgDesc[e.target.id.split('.')[0]].removeChild(imgEl);
+  imgDesc[e.target.id.split('.')[0]].style.opacity ='0';
+  imgDesc[e.target.id.split('.')[0]].style.zIndex ='-9999';
 }
 
 
@@ -216,7 +206,6 @@ function ordered(){
   popalert();
   localStorage.setItem('companies',JSON.stringify(companies));
   // Companies.saveToLocalStorage();
-  // resturantDataFunction( bestOne.name,bestOne.totalVoites,bestOne.menu);
 }
 
 
@@ -227,17 +216,71 @@ function loadData() {
 
   // get array of objects for the companies
   companies = JSON.parse(localStorage.getItem('companies')) || [];
+  console.log(companies);
+
 }
 
 // Display alert after ordering
 function popalert(){
-  // alert(`Thank you ${user} for your order from ${companies[companyIndex].restorant[restorantIndex].name}
-  // and the total votes for the resturant ${companies[companyIndex].restorant[restorantIndex].totalVoites}`);
   var msg = document.getElementById('msg');
+  msg.style.zIndex='9999';
   msg.innerHTML=(`Thank you ${user} for your order from ${companies[companyIndex].restorant[restorantIndex].name}
   and the total votes for the resturant ${companies[companyIndex].restorant[restorantIndex].totalVoites}`);
   msg.style.opacity=1;
+  topp();
   setTimeout(() => {
     msg.style.opacity=0;
+    msg.style.zIndex='-9999';
   }, 4000);
 }
+
+function listenersfun(){
+  var menuMeal = document.querySelectorAll('li');
+  for(let i =0;i<menuMeal.length;i++){
+    menuMeal[i].addEventListener('mouseover',hoverEffects);
+    menuMeal[i].addEventListener('mouseout',hoverEffectsOut);
+  }
+}
+
+// Display resturants
+function printRest(){
+  var main = document.getElementById('main');
+  for(let i =0;i<companies[0].restorant.length;i++){
+    var divOne = document.createElement('div');
+    divOne.className = 'container inlineDiv ';
+    main.appendChild(divOne);
+    var imgDesc = document.createElement('img');
+    imgDesc.className = 'imgDesc' ;
+    divOne.appendChild(imgDesc);
+    var divTwo = document.createElement('div');
+    divTwo.className = 'boxContainer';
+    divOne.appendChild(divTwo);
+    var divThree = document.createElement('div');
+    divThree.className = 'box';
+    divTwo.appendChild(divThree);
+    var divFour = document.createElement('div');
+    divFour.className = 'front';
+    divThree.appendChild(divFour);
+    var divFive = document.createElement('div');
+    divFour.appendChild(divFive);
+    var par = document.createElement('p');
+    par.className = 'resturantName';
+    divFive.appendChild(par);
+    var image = document.createElement('img');
+    image.className = 'imgLogo';
+    divFive.appendChild(image);
+    par = document.createElement('p');
+    par.className = 'votes';
+    divFive.appendChild(par);
+    var divsix = document.createElement('div');
+    divsix.className = 'back';
+    divThree.appendChild(divsix);
+    par = document.createElement('p');
+    par.className = 'desc';
+    divsix.appendChild(par);
+
+
+  }
+
+}
+
