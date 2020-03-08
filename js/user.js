@@ -4,7 +4,7 @@
 
 /*********************************************** Data for testing **************************************************** */
 localStorage.setItem('user','ruwaid');
-
+/*
 //companies objects
 localStorage.setItem('companies',JSON.stringify([
   {name:'ltuc',
@@ -185,8 +185,9 @@ function topp(){
   votesClass[0].textContent = `Number of votes until now ${bestOne.totalVoites}`;
   discClass[0].textContent = `The menu for ${bestOne.name} is ${bestOne.menu}`;
 
-  for (let i =0;i<=numberOfTopDiv;i++){
+  for (var i = 0;i<=numberOfTopDiv;i++){
     if(i !== restorantIndex){
+        console.log(i);
       restorantClass[topDiv].textContent = companies[companyIndex].restorant[i].name;
       logoClass[topDiv].src= companies[companyIndex].restorant[i].logo;
       votesClass[topDiv].textContent = `Number of votes until now ${companies[companyIndex].restorant[i].totalVoites}`;
@@ -227,6 +228,8 @@ function loadData() {
 
   // get array of objects for the companies
   companies = JSON.parse(localStorage.getItem('companies')) || [];
+  console.log(companies);
+
 }
 
 // Display alert after ordering
