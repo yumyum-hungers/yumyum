@@ -64,7 +64,7 @@ localStorage.setItem('companies',JSON.stringify([
 // Global variables
 var numberOfTopDiv = 3;
 // var desc = document.getElementById('desc');
-var imgDesc = document.getElementById('imgDesc');
+// var imgDesc = document.getElementById('imgDesc');
 var imgEl = document.createElement('img');
 var orderButton = document.getElementById('orderButton');
 
@@ -76,9 +76,6 @@ var restorantIndex;
 var bestOne = 0;
 // var slideIndex =0;
 /********************************************** Calling Functions ************************************************* */
-
-// Event listeners
-orderButton.addEventListener('click',ordered);
 
 // Get data from local storage
 loadData();
@@ -100,6 +97,10 @@ topp();
 
 // Declare event listeners for every restorant
 listenersfun();
+
+
+// Event listeners
+orderButton.addEventListener('click',ordered);
 
 
 /*********************************************** Functions ******************************************************* */
@@ -158,7 +159,7 @@ function topp(){
     let liEl =document.createElement('li');
     liEl.textContent = `${bestOne.menu[i]}`;
     ulEl.appendChild(liEl);
-    liEl.id =`${restorantIndex}.${i}`;
+    liEl.id =`${0}.${restorantIndex}.${i}`;
   }
   for (let i =0;i<=numberOfTopDiv;i++){
     if(i !== restorantIndex){
@@ -172,7 +173,7 @@ function topp(){
         let liEl =document.createElement('li');
         liEl.textContent = `${companies[companyIndex].restorant[i].menu[j]}`;
         ulEl.appendChild(liEl);
-        liEl.id =`${i}.${j}`;
+        liEl.id =`${topDiv}.${i}.${j}`;
       }
       topDiv++;
     }
@@ -180,22 +181,22 @@ function topp(){
 }
 
 // Event listeners function for hover effects
-function hoverEffects(){
-  // var imgDesc = document.querySelector('.imgDesc imgDesc.1');
-  // var imgDesc = 'ss';
-  // console.log(e.target.id);
-  imgDesc.appendChild(imgEl);
-  // imgEl.src =companies[companyIndex].restorant[e.target.id.split('.')[0]].menu(e.target.id.split('.')[1]);
-  imgDesc.style.opacity ='1';
-  imgDesc.style.zIndex ='9999';
+function hoverEffects(e){
+  var imgDesc = document.querySelectorAll('.imgDesc');
+  imgDesc[e.target.id.split('.')[0]].appendChild(imgEl);
+
+  // imgEl.src =companies[companyIndex].restorant[e.target.id.split('.')[1]].menu(e.target.id.split('.')[2]);
+  imgDesc[e.target.id.split('.')[0]].style.opacity ='1';
+  imgDesc[e.target.id.split('.')[0]].style.zIndex ='9999';
 
 }
 
 // Event listeners function for hover effects
-function hoverEffectsOut(){
-  imgDesc.removeChild(imgEl);
-  imgDesc.style.opacity ='0';
-  imgDesc.style.zIndex ='-9999';
+function hoverEffectsOut(e){
+  var imgDesc = document.querySelectorAll('.imgDesc');
+  imgDesc[e.target.id.split('.')[0]].removeChild(imgEl);
+  imgDesc[e.target.id.split('.')[0]].style.opacity ='0';
+  imgDesc[e.target.id.split('.')[0]].style.zIndex ='-9999';
 }
 
 
@@ -223,6 +224,7 @@ function popalert(){
   msg.innerHTML=(`Thank you ${user} for your order from ${companies[companyIndex].restorant[restorantIndex].name}
   and the total votes for the resturant ${companies[companyIndex].restorant[restorantIndex].totalVoites}`);
   msg.style.opacity=1;
+  topp();
   setTimeout(() => {
     msg.style.opacity=0;
     msg.style.zIndex='-9999';
@@ -230,12 +232,10 @@ function popalert(){
 }
 
 function listenersfun(){
-  for(let i =0;i<companies[companyIndex].restorant.length;i++){
-    for(let j = 0;j<companies[companyIndex].restorant[i].menu.length;j++){
-      var menuMeal = document.getElementById(`${i}.${j}`);
-      menuMeal.addEventListener('mouseover',hoverEffects);
-      menuMeal.addEventListener('mouseout',hoverEffectsOut);
-    }
+  var menuMeal = document.querySelectorAll('li');
+  for(let i =0;i<menuMeal.length;i++){
+    menuMeal[i].addEventListener('mouseover',hoverEffects);
+    menuMeal[i].addEventListener('mouseout',hoverEffectsOut);
   }
 }
 
@@ -243,15 +243,12 @@ function listenersfun(){
 function printRest(){
   var main = document.getElementById('main');
   for(let i =0;i<companies[0].restorant.length;i++){
-    var divZero = document.createElement('div');
-    divZero.className = 'all inlineDiv';
-    main.appendChild(divZero);
-    // var imgDesc = document.createElement('img');
-    // imgDesc.className = `imgDesc imgDesc${i}`;
-    // divZero.appendChild(imgDesc);
     var divOne = document.createElement('div');
-    divOne.className = 'container ';
-    divZero.appendChild(divOne);
+    divOne.className = 'container inlineDiv ';
+    main.appendChild(divOne);
+    var imgDesc = document.createElement('img');
+    imgDesc.className = 'imgDesc' ;
+    divOne.appendChild(imgDesc);
     var divTwo = document.createElement('div');
     divTwo.className = 'boxContainer';
     divOne.appendChild(divTwo);
