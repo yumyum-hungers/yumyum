@@ -1,31 +1,93 @@
-body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #F2F2F2 ;
-    /* background-image: url(../img/platter-2009590_960_720.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;*/
-  } 
-header{
-  border: solid #F28A2E ;
-  width: 100%;
+@import 'https://fonts.googleapis.com/css?family=Viga&display=swap';
+@import 'https://fonts.googleapis.com/css?family=Chilanka&display=swap';
+@import 'https://fonts.googleapis.com/css?family=Chilanka&display=swap';
+
+
+.home-intro {
+  background-image: url('https://download.hipwallpaper.com/desktop/1536/864/25/82/ltP7UD.jpg');
+  background-size: cover;
+  height: 157px;
+  color: white;
+  text-align: center;
+  margin:0px 0px -10px;
+
+}
+
+body, html{
+  height: 100%;
+}
+
+#main{
+  background-image: url('https://download.hipwallpaper.com/desktop/1536/864/25/82/ltP7UD.jpg');
+  background-size: cover;
+  
+}
+
+ 
+div.cont {
+  margin: 0 auto;
+  padding: 5% 0%;
+  text-align: center;
+  margin-left: 46%; 
+}
+
+
+div.cont a
+{
+  color: rgb(58, 58, 88);
+  text-decoration: none;
+  font: 20px 'Viga', sans-serif;
+  margin: 0% 2%;
+  padding: 1% 2%;
   position: relative;
-  border-top-right-radius:50px ;
-  border-bottom-left-radius:50px ;
-  height: 200px;
-  background-color: #a5a6ae
-
-}
-nav{
-  width: 52%;
-  height: 200px;
-  right: 0px;
-  position: absolute;
-  background-color: #F2F2F2;
-  border-top-right-radius: 50px;
+  cursor: pointer;
 }
 
+img.logo {
+  float: left;
+  border-radius: 50%;
+  height: 15%;
+  width: 7%;
+  margin: 40px 10px 0 10px;
+}
+
+
+/* Pull right and left  */
+div.pullRightLeft a:before, div.pullRightLeft a:after
+{
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0px;
+    content: '';
+    background: rgb(96, 88, 146);
+    opacity: 0.3;
+    transition: all 0.3s;
+}
+
+div.pullRightLeft a:before
+{
+    left: 0px;
+} 
+
+div.pullRightLeft a:after
+{
+    right: 0px;
+}
+
+div.pullRightLeft a:hover:before, div.pullRightLeft a:hover:after
+{
+    width: 100%;
+}
+
+/*******************************************************************************/
+
+#headerUser{
+  background-image: url('https://download.hipwallpaper.com/desktop/1536/864/25/82/ltP7UD.jpg');
+  background-size: cover;
+  height: 176px;
+  margin: 0 0 0px 0;
+}
 .borderBox{
   background-image: linear-gradient(180deg, rgba(242,242,242,1) 0%, rgba(242,242,242,1) 10%, rgba(165,166,174,1) 20%, rgba(165,166,174,1) 30%, rgba(242,242,242,1) 40%, rgba(242,242,242,1) 50%, rgba(165,166,174,1) 60%, rgba(165,166,174,1) 70%, rgba(242,242,242,1) 80%, rgba(242,242,242,1) 90%, rgba(165,166,174,1) 100%);
   height: 200px;
@@ -48,98 +110,35 @@ nav{
 main{
   position: relative;
 }
-header a{
-  text-decoration: none;
-
-}
-.outerCircle{
-  display: inline-block;
-  width: 100px;
-  padding: 12px 12px;
-  margin:20px 50px 20px 20px;
-  background-color: #a5a6ae;
-  border-radius: 50px;
-  line-height: 0;
-  cursor: pointer;
-  transition: 1s;
-  text-align: center;
-  position: relative;
-  left: 30%;
-  box-shadow: rgb(242, 219, 242) 19px 20px 20px 0px ;
-}
-
-.innerCircle{
-    display: inline-block;
-    width: 100px;
-    padding: 50px 0;
-    background-color: #F2F2F2;
-    border-radius: 50px;
-    line-height: 0;
-    cursor: pointer;
-    transition: 1s;
-    text-align: center; 
-    /* color: #F20519; */
-    color: #95969c;
-  }
-
-.innerCircle:hover{
-  animation: example 3s ease forwards;
-}
-  
-
-  @keyframes example {
-    0% { background-image: linear-gradient(0deg, rgba(2,20,76,1) 0%, rgba(243,249,243,1) 12%, rgba(243,249,243,1) 100%);}
-    10% {background: linear-gradient(0deg, rgba(2,20,76,1) 0%, rgba(243,249,243,1) 23%, rgba(243,249,243,1) 100%);}
-    20%{background: linear-gradient(0deg, rgba(2,20,76,1) 12%, rgba(243,249,243,1) 29%, rgba(243,249,243,1) 100%);}
-    40% {background: linear-gradient(0deg, rgba(2,20,76,1) 32%, rgba(243,249,243,1) 55%, rgba(243,249,243,1) 100%);}
-    50%{background: linear-gradient(45deg, rgba(2,20,76,1) 49%, rgba(243,249,243,1) 80%, rgba(243,249,243,1) 100%);}
-    60%{background: linear-gradient(0deg, rgba(2,20,76,1) 49%, rgba(243,249,243,1) 80%, rgba(243,249,243,1) 100%);}
-    70%{background: linear-gradient(0deg, rgba(2,20,76,1) 68%, rgba(243,249,243,1) 93%, rgba(243,249,243,1) 100%);}
-    90%{background: linear-gradient(0deg, rgba(2,20,76,1) 90%, rgba(243,249,243,1) 100%, rgba(243,249,243,1) 100%);}
-    100% {color: #E0BE96;
-      background: linear-gradient(0deg, rgba(2,20,76,1) 98%, rgba(243,249,243,1) 100%, rgba(243,249,243,1) 100%);}
-  }
-
-
-.outerCircle:hover{
-  background-color: #A5A6AE;
-  /* transform: rotate(360deg); */
-  box-shadow: #A8AFB0 0px 0px ;
-} 
 
 .container {
     margin: 20px;
     width: 300px;
     height: 300px;
+    padding: 5px;
     position: relative;
-    left: 200px;
+    left: 200px;  
   }
+
 .inlineDiv{
-   /* background-color: #A5A6AE; */
-  /*border: solid tomato; */
   display: inline-block;
   text-align: center;
-  margin: 90px;
 }  
 
 .boxContainer{
-    width: 100%;
-    height: 100%;
-  }
+    width: 98%;
+    height: 98%;
+}
+
 .box {
-    width: 100%;
-    height: 100%;
+    width: 98%;
+    height: 98%;
     transition: 1.5s ease-in-out;
     cursor: pointer;
     transform-style: preserve-3d;
   }
 
-/* @keyframes flipp{
-  0% {transform: rotateY(0deg);}
-  20% {transform: rotateY(50deg);}
-  80% {transform: rotateY(0deg);}
-  100% {transform: rotateY(00deg);}
-} */
+
 .boxContainer:hover  .box{
     transform: rotateY(180deg);
 }
@@ -149,6 +148,7 @@ header a{
     backface-visibility: hidden;
     transform-style: preserve-3d;
     background-color: #E0BE96;
+    
 }
 .front h2,p{
     padding: 1em;
@@ -174,16 +174,20 @@ header a{
     width: 100%;
     height: 100%;
     position: absolute;
+    border-radius: 10px;
+    border: solid 2px;
+    box-shadow: #e4e4e4 13px 0px 20px;
 }
 #imgDesc{
     position: absolute;
-    top: 170px;
-    right:550px;
+    top: 0px;
+    left:446px;
     width: 200px;
     height: 200px; 
     opacity: 0;
     transition: 1s ease-in-out;
-    z-index: 9;
+    z-index: 9999;
+
 }
 
 img{
@@ -193,8 +197,8 @@ img{
   background-color: #a5a6ae;
 }
 .button {
-  padding: 15px 25px;
-  font-size: 24px;
+  padding: 6px 18px;
+  /* font-size: 24px; */
   text-align: center;
   cursor: pointer;
   outline: none;
@@ -202,10 +206,10 @@ img{
   background-color: #A5A6AE;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 9px #A8AFB0;
+  /* box-shadow: 0 9px #A8AFB0; */
   position: absolute;
   right:5px;
-  top:10px;
+  top:-150px;
 }
 
 .button:hover {
@@ -219,9 +223,10 @@ img{
 }
 
 #companyData{
-  width: 150px;
-  height: 150px;
-  margin: 10px 20px;
+  width: 90px;
+  height: 90px;
+  margin: 40px 20px;
+  float: left;
 }
 #companyName{
   font-size: XX-large;
@@ -231,7 +236,8 @@ img{
 
 #companyLogo{
   transition: 2s ease-in-out;
-  margin: 7px 0;
+  margin: 5px 0;
+  z-index: 999999;
 }
 
 #companyLogo:hover{
@@ -241,7 +247,7 @@ transform: rotate(-10deg);
 #userName{
   position: absolute;
     top: 31px;
-    left: 209px;
+    left: 150px;
     font-size: large;
     font-style: italic;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -250,6 +256,9 @@ transform: rotate(-10deg);
     padding: 10px;
     color: #FAF9F9;
     background-color: #f20519;
+    position: fixed;
+    top: 0px;
+    z-index: 9999;
 }
 #userName:hover{
   background-color: #FAF9F9;
@@ -275,7 +284,6 @@ transform: rotate(-10deg);
 }
 
 #userInfo{
-  /* border: darkblue solid; */
   position: relative;
   width: 100%;
 }
@@ -297,15 +305,11 @@ transform: rotate(-10deg);
   height: 100px;
   align-content: center;
   transform: translateZ(15px);
-  /* transform: ; */
+  border-radius: 5px;
 }
 
-#slideShow{
-  width:  300px;
-  height: 300px;
-  /* background-color: red; */
-  right: 100px;
-  top: 150px;
-  position: absolute;
-}
 
+
+.votes{
+  font-size: medium;
+}

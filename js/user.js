@@ -4,7 +4,7 @@
 
 /*********************************************** Data for testing **************************************************** */
 localStorage.setItem('user','ruwaid');
-
+/*
 //companies objects
 localStorage.setItem('companies',JSON.stringify([
   {name:'ltuc',
@@ -80,16 +80,6 @@ var bestOne = 0;
 // Event listeners
 orderButton.addEventListener('click',ordered);
 
-
-// Slideshow for restaurants logos
-// setInterval(() => {
-//   slideShow.src = companies[0].restorant[slideIndex].logo;
-//   slideIndex++;
-//   if(slideIndex === companies[0].restorant.length){
-//     slideIndex =0;
-//   }
-// }, 1500);
-
 // Get data from local storage
 loadData();
 
@@ -99,11 +89,14 @@ printCompany();
 // Display User Name
 printUser();
 
+// Display resturants
+printRest();
+
 // calculate best one according to number of votes
 votesCalc();
 
 // Display other resturants
-topp(restorantIndex);
+topp();
 
 // Declare event listeners for every restorant
 listenersfun();
@@ -115,18 +108,18 @@ listenersfun();
 // Display User Name
 function printUser(){
   var userName = document.getElementById('userName');
-  userName.textContent = `Welcome ${user}`;
+  userName.textContent = ` ${user}`;
 }
 
 // Display name and logo for the company
 function printCompany(){
-  var companyName = document.getElementById('companyName');
+  // var companyName = document.getElementById('companyName');
   var companyLogo = document.getElementById('companyLogo');
   for(let i =0;i<companies.length; i++ ){
     for(let j =0 ; j<companies[i].users.length;j++){
       if(companies[i].users[j].name.includes(user)){
         companyIndex = i;
-        companyName.textContent = companies[i].name;
+        // companyName.textContent = companies[i].name;
         companyLogo.src = companies[i].logo;
         companyLogo.alt = companies[i].name;
         break;
@@ -158,7 +151,7 @@ function topp(){
   var ulEl =document.createElement('ul');
   restorantClass[0].textContent = bestOne.name;
   logoClass[0].src= bestOne.logo;
-  votesClass[0].textContent = `Number of votes until now ${bestOne.totalVoites}`;
+  votesClass[0].textContent = `votes  ${bestOne.totalVoites}`;
   discClass[0].textContent = `The menu for ${bestOne.name} is `;
   discClass[0].appendChild(ulEl);
   for(let i =0 ;i<bestOne.menu.length;i++){
@@ -171,7 +164,7 @@ function topp(){
     if(i !== restorantIndex){
       restorantClass[topDiv].textContent = companies[companyIndex].restorant[i].name;
       logoClass[topDiv].src= companies[companyIndex].restorant[i].logo;
-      votesClass[topDiv].textContent = `Number of votes until now ${companies[companyIndex].restorant[i].totalVoites}`;
+      votesClass[topDiv].textContent = `votes  ${companies[companyIndex].restorant[i].totalVoites}`;
       discClass[topDiv].textContent = `The menu for ${companies[companyIndex].restorant[i].name} is `;
       let ulEl =document.createElement('ul');
       discClass[topDiv].appendChild(ulEl);
@@ -187,11 +180,14 @@ function topp(){
 }
 
 // Event listeners function for hover effects
-function hoverEffects(e){
-  console.log(e.target.id);
+function hoverEffects(){
+  // var imgDesc = document.querySelector('.imgDesc imgDesc.1');
+  // var imgDesc = 'ss';
+  // console.log(e.target.id);
   imgDesc.appendChild(imgEl);
   // imgEl.src =companies[companyIndex].restorant[e.target.id.split('.')[0]].menu(e.target.id.split('.')[1]);
   imgDesc.style.opacity ='1';
+  imgDesc.style.zIndex ='9999';
 
 }
 
@@ -199,6 +195,7 @@ function hoverEffects(e){
 function hoverEffectsOut(){
   imgDesc.removeChild(imgEl);
   imgDesc.style.opacity ='0';
+  imgDesc.style.zIndex ='-9999';
 }
 
 
@@ -207,7 +204,6 @@ function ordered(){
   popalert();
   localStorage.setItem('companies',JSON.stringify(companies));
   // Companies.saveToLocalStorage();
-  // resturantDataFunction( bestOne.name,bestOne.totalVoites,bestOne.menu);
 }
 
 
@@ -222,8 +218,6 @@ function loadData() {
 
 // Display alert after ordering
 function popalert(){
-  // alert(`Thank you ${user} for your order from ${companies[companyIndex].restorant[restorantIndex].name}
-  // and the total votes for the resturant ${companies[companyIndex].restorant[restorantIndex].totalVoites}`);
   var msg = document.getElementById('msg');
   msg.style.zIndex='9999';
   msg.innerHTML=(`Thank you ${user} for your order from ${companies[companyIndex].restorant[restorantIndex].name}
@@ -244,3 +238,49 @@ function listenersfun(){
     }
   }
 }
+
+// Display resturants
+function printRest(){
+  var main = document.getElementById('main');
+  for(let i =0;i<companies[0].restorant.length;i++){
+    var divZero = document.createElement('div');
+    divZero.className = 'all inlineDiv';
+    main.appendChild(divZero);
+    // var imgDesc = document.createElement('img');
+    // imgDesc.className = `imgDesc imgDesc${i}`;
+    // divZero.appendChild(imgDesc);
+    var divOne = document.createElement('div');
+    divOne.className = 'container ';
+    divZero.appendChild(divOne);
+    var divTwo = document.createElement('div');
+    divTwo.className = 'boxContainer';
+    divOne.appendChild(divTwo);
+    var divThree = document.createElement('div');
+    divThree.className = 'box';
+    divTwo.appendChild(divThree);
+    var divFour = document.createElement('div');
+    divFour.className = 'front';
+    divThree.appendChild(divFour);
+    var divFive = document.createElement('div');
+    divFour.appendChild(divFive);
+    var par = document.createElement('p');
+    par.className = 'resturantName';
+    divFive.appendChild(par);
+    var image = document.createElement('img');
+    image.className = 'imgLogo';
+    divFive.appendChild(image);
+    par = document.createElement('p');
+    par.className = 'votes';
+    divFive.appendChild(par);
+    var divsix = document.createElement('div');
+    divsix.className = 'back';
+    divThree.appendChild(divsix);
+    par = document.createElement('p');
+    par.className = 'desc';
+    divsix.appendChild(par);
+
+
+  }
+
+}
+
