@@ -193,6 +193,10 @@ p.p1 {
 }
 
 
+
+
+
+/* This section for footer */
 footer {
     height: 35%;
     background-color: #9fa0a0;
@@ -202,11 +206,133 @@ footer {
     float: left;
     margin-top: 2%;
     font-weight: 700;
-    color: rgb(71, 36, 68);
+    color: rgb(51, 28, 49);
     font-size: 27px;
     text-align: center;
     font-family: 'Chilanka', cursive;
 
 }
 
+.img1{
+  padding-top: 9%;
+  width: 150%;
+}
 
+.img2{
+  margin-left: -11%;
+  width: 170%;
+  height: 70%;
+}
+
+
+.apps {
+   width: 100px;
+   height: 100px;
+    margin-left: 18%;
+    padding: 2px;
+  }
+
+  .p6 {
+    padding-left: 60px;
+    margin-top: 3%;
+    font-weight: 700;
+    color: rgb(51, 28, 49);
+    font-size: 27px;
+    text-align: center;
+    font-family: 'Chilanka', cursive;
+  }
+
+  .num1{
+    margin-top: 2%;
+    float: left;
+    display: inline-block;
+    bottom: 0;
+  }
+
+  
+  i.fa.fa-envelope {
+    float: left;
+    margin-top: 5%;
+    font-size: 20px;
+  }
+
+  .num4{
+    margin-top: 2%;
+    margin-left: 10%;
+    float: left;
+    display: inline-block;
+    bottom: 0;
+  }
+
+  i.fa.fa-map-o {
+  float: left;
+  font-size: 19px;
+  }
+
+ 
+  i.fa.fa-mobile-phone {
+  float: left;
+  font-size: 25px;
+  }
+  
+  .contact{
+    margin-left: 50px;
+    padding-left: 70px;
+  }
+
+  .p7 {
+    padding-left: 60;
+    margin-top: 3%;
+    font-weight: 700;
+    color: rgb(51, 28, 49);
+    font-size: 27px;
+    text-align: center;
+    font-family: 'Chilanka', cursive;
+  }
+
+  .fa {
+     
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%; 
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  
+  .fa-facebook {
+    float: right;
+    margin-top: 6%;
+    background: rgb(18, 71, 185);
+    color: white;
+  }
+  
+  .fa-twitter {
+    float: right;
+    margin-top: 6%;
+    margin-right: 4%;
+    background: #55ACEE;
+    color: white;
+  }
+
+  .fa-instagram {
+    float: right;
+    margin-top: 6%;
+    margin-right: 4%;
+    background: #ff1f8f;
+    color: white;
+  }
+  
+  /* .p8 {
+    padding-left: 60;
+    margin-top: 15%;
+    font-weight: 700;
+    color: rgb(51, 28, 49);
+    font-size: 10px;
+    text-align: center;
+    font-family: 'Chilanka', cursive;
+  } */
