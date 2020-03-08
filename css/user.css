@@ -183,7 +183,7 @@ main{
   height: 100px;
   position: absolute;
   background-color: aqua;
-  z-index: 9;
+  z-index: -99;
   right: 35%;
   top:-80px;
   opacity: 0;
