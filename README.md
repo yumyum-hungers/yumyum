@@ -11,4 +11,4 @@ i am working in x company and every day during my work me and my 
 also we get every day free delivery because yum yum offer that when we reach 10 order from same restaurant i am so happy to find yum yum it makes my day days always yum yum .
 
 # object model
-![object model](images\Presentation1.jpg)
+![object model](images/Presentation1.jpg)
