@@ -23,7 +23,6 @@ localStorage.setItem('companies',JSON.stringify([
         menu:['chicken','coca'],totalVoites:15},
     ]
   },
-
   {name:'amazon',
     logo:'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRfH1ax3tDvXMU9_C4S2BS865aiuFMyE7jdmsFLELqUMPy8R3ec',
     users:[{name:'swsan',password:'123',brake:'12',cardId:'7854879',payementMetod:'zainCash'},
@@ -39,9 +38,7 @@ localStorage.setItem('companies',JSON.stringify([
       {name:'BurgerMaker',logo:'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTqwRhlloYzv_UieJ0izfJ7wyqxxr1oLspdnxMJ4ugbU9JaV_w5',
         menu:['chicken','coca'],totalVoites:0},
     ]
-
   },
-
   {name:'hyere',
     logo:'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQQuKThZ70eGV3vUpe53a93qtlUyAwfNwNlBoEQNxdE4L7gOv9L',
     users:[{name:'lama',password:'123',brake:'12',cardId:'7854879',payementMetod:'zainCash'},
@@ -59,7 +56,6 @@ localStorage.setItem('companies',JSON.stringify([
     ]
   }
 ]));
-
 /****************************************** User Page Code start here ******************************************** */
 // Global variables
 var numberOfTopDiv = 3;
@@ -279,4 +275,3 @@ function printRest(){
   }
 
 }
-
