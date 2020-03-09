@@ -59,7 +59,7 @@ var Restorant = function(name,logo) {
   // to store data of every restorant
   this.name = name;
   this.logo = logo;
-  this.totalvoteses ;
+  this.totalvoteses=0 ;
   this.order =[];
   this.menu ;
   this.menuImage ;
@@ -78,7 +78,7 @@ Restorant.prototype.votes = function() {
 if(localStorage.getItem('companies') === null){
   console.log('give it data');
   var companyToAdd = ['LTUC','Arab Bank','Hikma','JU'];
-  var logoToAdd = ['images\LUCT-600x400.jpg','images\arabi.jpg','images\hikma.jpg','images\jordan-uni.png'];
+  var logoToAdd = ['images/LUCT-600x400.jpg','images/arabi.jpg','images/hikma.jpg','images/jordan-uni.png'];
 
   var mc = new Restorant('McDonald\'s','');
   mc.menu =['Big Mac Reagular Meal','Chicken McNuggets (6 pcs)','McChiken Regular Meal','Big Teasty Medium Meal'];
@@ -86,7 +86,7 @@ if(localStorage.getItem('companies') === null){
 
   var pizzaHut = new Restorant('Pizza Hut','');
   pizzaHut.menu =['HAWAIIAN','HOT STUFF BEEF','MEAT LOVERS','PEPPERONI'];
-  pizzaHut.menuImage = ['','','',''];
+  pizzaHut.menuImage = ['https://pbs.twimg.com/profile_images/1009039397243801600/ZY_JEMj4.jpg ','','',''];
 
   var mrPotato = new Restorant('Mr Potato','');
   mrPotato.menu =['Crispy Baked Potato Wedges','Potato With Chees','Potato without Potato ','Capmer\'s Potato'];
