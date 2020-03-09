@@ -4,13 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registeration</title>
+    <link rel="icon" href="images/serving-dish.png" type="image/icon type">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/forms.css">
    
+
 </head>
 <body>
-    <header>
-        <img id="logo-1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Whole_Foods_Market_201x_logo.svg/800px-Whole_Foods_Market_201x_logo.svg.png" alt="">
+    <header class="home-intro">
+        
+        <a href="">
+            <img class="logo wow bounceInRight" src="images/yumyum (3).jpg" alt="yumyum">
+            </a>
+            <div class="container deepOrange pullRightLeft">
+                <a>HOME</a>
+                <a>REGISTER</a>
+                <a>ABOUT US</a>
+                <a>CONTACT</a>
+              </div>
+        
+            
+
+
+        <!-- <img id="logo-1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Whole_Foods_Market_201x_logo.svg/800px-Whole_Foods_Market_201x_logo.svg.png" alt="">
         <img id="logo-2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Whole_Foods_Market_201x_logo.svg/800px-Whole_Foods_Market_201x_logo.svg.png" alt="">
         <div class="inner-header">
        <div class="main-header">
@@ -21,28 +37,35 @@
         <a href=""><li>About Us</li></a>
         <a href=""><li>Contact Us</li></a>
         </ul>
-    </div>
-    </header>
-    <main>
+    </div> -->
+    
+    
 
 
 
 
         <div class="form-style-3">
         <form id="myForm">
-            <fieldset> <legend>Please Fill In The Registeration Form</legend>
+            <fieldset> <legend>Please Fill In The Form</legend>
              <label for="name">Name: </label>
-            <input type="text" id="name" placeholder="Enter Full Name.." >
+            <input type="text" id="name" placeholder="Enter Full Name.." required >
              <label for="phonenumber">Phone Number: </label>
-             <input type="number" id="phonenumber" placeholder="Enter Phone Number.." >
-             <label for="company">Comapny: </label>
-            <input type="text" id="company" placeholder="Enter Company.. (optional)">
+             <input type="number" id="phonenumber" placeholder="Enter Phone Number.." required>
+             <label for="company">Company: </label>
+             <select for="company" id="breakHours" >
+                <optgroup label="Choose a Company:" id="companyList"> 
+                    <!-- <option value="Ltuc">LTUC</option>
+                    <option value="Arab Bank">Arab Bank</option>
+                    <option value="Hikma">Hikma</option>
+                    <option value="JU">JU</option> -->
+                   </optgroup> </select>
+            <!-- <input type="text" id="company" placeholder="Choose Company.. (optional)"> -->
 
              <label for="employees">Number of Employees: </label>
-            <input type="number" id="employees" placeholder="Enter Number of Employees..(opyional)">
+            <input type="number" id="employees" placeholder="Enter Number of Employees..(optional)" required>
 
-             <label for="breakHours">Break hours: </label>
-            <select id="breakHours" >
+             <label for="hours">Break hours: </label>
+            <select id="hours" >
                 <optgroup label="pick a time:"> 
                     <option value="10am">10am</option>
                     <option value="11am">11am</option>
@@ -57,9 +80,9 @@
                 <option value="8pm">8pm</option> </optgroup> </select>
 
                 <label for="email">Email: </label>
-             <input type="text" id="email" placeholder="Enter your Email.." >
+             <input type="text" id="email" placeholder="Enter your Email.." required>
              <label for="pwd">Password: </label>
-            <input type="password" id="pwd" placeholder="Enter your Password.." >
+            <input type="password" id="pwd" placeholder="Enter your Password.." required >
              <button type="submit" value="Submit" id="submit" onsubmit="check(); return false" > <a href="billing.html"></a> Submit </button>
             </fieldset>
         </form>
@@ -67,11 +90,11 @@
 
 
     </div>
-     <img id="form-logo" src="img/logo-head.png" alt="">
-     <img id="burger" src="img/burger.png" alt="">
+     <!-- <img id="form-logo" src="img/logo-head.png" alt=""> -->
+     <!-- <img id="burger" src="img/burger.png" alt=""> -->
 
         
-    </main>
+    </header>
 <footer>
     <div class="snapInButtonContainer" ng-click="openContactUs()">
         <a class="snapInButton">
@@ -83,9 +106,9 @@
         </a>
     </div>
   
-    <p class="foot-p"> Copyright © 2020 by Team Hungers </p>
+    <!-- <p class="foot-p"> Copyright © 2020 by Team Hungers </p> -->
 </footer>
+<script src="js/app.js"></script>
 <script src="forms.js"></script>
-    
 </body>
 </html>
