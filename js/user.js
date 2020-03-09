@@ -89,6 +89,8 @@ topp();
 // Declare event listeners for every restorant
 listenersfun();
 
+
+
 /*********************************************** Functions ******************************************************* */
 
 
@@ -113,6 +115,7 @@ function printCompany(){
   }
 }
 
+
 // calculate best one according to number of votes
 function votesCalc(){
   bestOne = companies.company[companyIndex].restorant[0].totalvoteses;
@@ -132,6 +135,7 @@ function topp(){
   var votesClass = document.getElementsByClassName('votes');
   var discClass = document.getElementsByClassName('desc');
   var logoClass = document.getElementsByClassName('imgLogo');
+  var tableEl = document.getElementsByClassName('table');
   var topDiv =1;
   var ulEl =document.createElement('ul');
   restorantClass[0].textContent = bestOne.name;
@@ -145,6 +149,33 @@ function topp(){
     ulEl.appendChild(liEl);
     liEl.id =`${0}.${restorantIndex}.${i}`;
     orderClass[0].id = `${restorantIndex}`;
+
+    var trEl = document.createElement('tr');
+    trEl.className = 'tr';
+    tableEl[0].appendChild(trEl);
+    var tdEl = document.createElement('td');
+    tdEl.className = 'td';
+    trEl.appendChild(tdEl);
+    tdEl.textContent = `${bestOne.menu[i]}`;
+
+    tdEl = document.createElement('td');
+    tdEl.className = 'tdorder';
+    tdEl.id = `tdorder.${restorantIndex}.${i}`;
+    trEl.appendChild(tdEl);
+    tdEl.textContent = '0';
+
+    tdEl = document.createElement('td');
+    tdEl.className = 'add';
+    tdEl.id = `tdADD.${restorantIndex}.${i}`;
+    trEl.appendChild(tdEl);
+    tdEl.textContent = '+';
+
+    tdEl = document.createElement('td');
+    tdEl.className = 'sub';
+    tdEl.id = `tdsub.${restorantIndex}.${i}`;
+    trEl.appendChild(tdEl);
+    tdEl.textContent = '-';
+
   }
   for (let i =0;i<=companies.company[companyIndex].restorant.length-1;i++){
     if(i !== restorantIndex){
@@ -160,6 +191,34 @@ function topp(){
         liEl.textContent = `${companies.company[companyIndex].restorant[i].menu[j]}`;
         ulEl.appendChild(liEl);
         liEl.id =`${topDiv}.${i}.${j}`;
+
+        trEl = document.createElement('tr');
+        trEl.className = 'tr';
+        tableEl[topDiv].appendChild(trEl);
+
+        tdEl = document.createElement('td');
+        tdEl.className = 'td';
+        trEl.appendChild(tdEl);
+        tdEl.textContent = `${companies.company[companyIndex].restorant[i].menu[j]}`;
+
+        tdEl = document.createElement('td');
+        tdEl.className = 'tdorder';
+        tdEl.id = `tdorder.${i}.${j}`;
+        trEl.appendChild(tdEl);
+        tdEl.textContent = '0';
+
+        tdEl = document.createElement('td');
+        tdEl.className = 'add';
+        tdEl.id = `tdADD.${i}.${j}`;
+        trEl.appendChild(tdEl);
+        tdEl.textContent = '+';
+
+        tdEl = document.createElement('td');
+        tdEl.className = 'sub';
+        tdEl.id = `tdsub.${i}.${j}`;
+        trEl.appendChild(tdEl);
+        tdEl.textContent = '-';
+
       }
       topDiv++;
     }
@@ -179,18 +238,52 @@ function hoverEffects(e){
 // Event listeners function for hover effects
 function hoverEffectsOut(e){
   var imgDesc = document.querySelectorAll('.imgDesc');
-  // imgDesc[e.target.id.split('.')[0]].removeChild(imgEl);
   imgDesc[e.target.id.split('.')[0]].style.opacity ='0';
   imgDesc[e.target.id.split('.')[0]].style.zIndex ='-9999';
 }
 
 
 function ordered(e){
+  // var rest = e.target.id.split('.')[1];
+  // var meal = e.target.id.split('.')[2];
+  // var tdOrderId = document.getElementById(`tdorder.${e.target.id}.${meal}`);
+  // var num = parseInt(tdOrderId.textContent);
+  // num++;
+  // tdOrderId.textContent = num;
+// console.log(e.target.id);
+// for()
+
   companies.company[companyIndex].restorant[e.target.id].totalvoteses +=1;
   popalert(e);
   localStorage.setItem('companies.company',JSON.stringify(companies.company));
-  topp();
+  // topp();
+  // var tables =document.getElementsByClassName('table');
+  // console.log(tables.length);
+  // var z = tables.length;
+  // for(let i = 0;i<z;i++){
+  //   console.log(i);
+  //   console.log('www',tables.length);
+  //   tables[i].remove();
+  // }
   // companies.company.saveToLocalStorage();
+
+  // var emptyMain =document.getElementById('main');
+  // emptyMain.innerHTML='';
+
+  // // Get data from local storage
+  // loadData();
+  // // Display boxes
+  // printRest();
+
+  // // var orderClass = document.querySelectorAll('.orderButton');
+
+  // // calculate best one according to number of votes
+  // votesCalc();
+
+// // Display other resturants
+// topp();
+// // Declare event listeners for every restorant
+// listenersfun();
 }
 
 
@@ -201,10 +294,8 @@ function loadData() {
 
   // get array of objects for the companies.company
   var companiesarr = JSON.parse(localStorage.getItem('companies')) || [];
-  // console.log('asdawd',companiesarr);
   // eslint-disable-next-line no-undef
   companies = new Companies(companiesarr);
-  // console.log(companies);
 }
 
 // Display alert after ordering
@@ -223,6 +314,8 @@ function popalert(e){
 function listenersfun(){
   var menuMeal = document.querySelectorAll('li');
   var orderButton = document.querySelectorAll('.orderButton');
+  var addButton = document.querySelectorAll('.add');
+  var subButton = document.querySelectorAll('.sub');
   for(let i = 0 ;i<orderButton.length;i++){
     orderButton[i].addEventListener('click',ordered);
   }
@@ -230,7 +323,32 @@ function listenersfun(){
     menuMeal[i].addEventListener('mouseover',hoverEffects);
     menuMeal[i].addEventListener('mouseout',hoverEffectsOut);
   }
+  for(let i =0 ; i <addButton.length;i++){
+    addButton[i].addEventListener('click',addOne);
+    subButton[i].addEventListener('click',subOne);
+
+  }
+
 }
+
+function addOne(e){
+  var rest = e.target.id.split('.')[1];
+  var meal = e.target.id.split('.')[2];
+  var tdOrderId = document.getElementById(`tdorder.${rest}.${meal}`);
+  var num = parseInt(tdOrderId.textContent);
+  num++;
+  tdOrderId.textContent = num;
+}
+
+function subOne(e){
+  var rest = e.target.id.split('.')[1];
+  var meal = e.target.id.split('.')[2];
+  var tdOrderId = document.getElementById(`tdorder.${rest}.${meal}`);
+  var num = parseInt(tdOrderId.textContent);
+  num--;
+  tdOrderId.textContent = num;
+}
+
 
 // Display resturants
 function printRest(){
@@ -268,6 +386,34 @@ function printRest(){
     par = document.createElement('p');
     par.className = 'desc';
     divsix.appendChild(par);
+
+    var tableEl = document.createElement('table');
+    tableEl.className = 'table';
+    divsix.appendChild(tableEl);
+
+    var trEl = document.createElement('tr');
+    trEl.className = 'tr';
+    tableEl.appendChild(trEl);
+
+    var thEl = document.createElement('th');
+    thEl.className = 'th';
+    trEl.appendChild(thEl);
+    thEl.textContent = 'Meal';
+
+    thEl = document.createElement('th');
+    thEl.className = 'th';
+    trEl.appendChild(thEl);
+    thEl.textContent = '# of orders';
+
+    thEl = document.createElement('th');
+    thEl.className = 'th';
+    trEl.appendChild(thEl);
+    thEl.textContent = 'ADD';
+
+    thEl = document.createElement('th');
+    thEl.className = 'th';
+    trEl.appendChild(thEl);
+    thEl.textContent = 'Sub';
 
     var divOrder = document.createElement('div');
     divOrder.className = 'orderButton';

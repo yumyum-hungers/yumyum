@@ -87,7 +87,7 @@ if(localStorage.getItem('companies') === null){
   var pizzaHut = new Restorant('Pizza Hut','');
   pizzaHut.menu =['HAWAIIAN','HOT STUFF BEEF','MEAT LOVERS','PEPPERONI'];
   pizzaHut.menuImage = ['https://pbs.twimg.com/profile_images/1009039397243801600/ZY_JEMj4.jpg ','','',''];
-
+  pizzaHut.totalvoteses=2;
   var mrPotato = new Restorant('Mr Potato','');
   mrPotato.menu =['Crispy Baked Potato Wedges','Potato With Chees','Potato without Potato ','Capmer\'s Potato'];
   mrPotato.menuImage = ['','','',''];
