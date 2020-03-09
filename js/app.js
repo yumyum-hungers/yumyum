@@ -82,17 +82,17 @@ if(localStorage.getItem('companies') === null){
   var companyToAdd = ['LTUC','Arab Bank','Hikma','JU'];
   var logoToAdd = ['images/LUCT-600x400.jpg','images/arabi.jpg','images/hikma.jpg','images/jordan-uni.png'];
 
-  var mc = new Restorant('McDonald\'s','');
+  var mc = new Restorant('McDonald\'s','images/mac.png');
   mc.menu =['Big Mac Reagular Meal','Chicken McNuggets (6 pcs)','McChiken Regular Meal','Big Teasty Medium Meal'];
-  mc.menuImage = ['https://www.firefly-burgers.com/wp-content/uploads/2018/07/logo.png','','',''];
+  mc.menuImage = ['images/bigmac.jpg','images/mcnugget.jpg','images/mcChikenregularmeal.jpg','images/bigteastymediummeal.jpg'];
 
-  var pizzaHut = new Restorant('Pizza Hut','');
+  var pizzaHut = new Restorant('Pizza Hut','images/pizza.png');
   pizzaHut.menu =['HAWAIIAN','HOT STUFF BEEF','MEAT LOVERS','PEPPERONI'];
-  pizzaHut.menuImage = ['https://pbs.twimg.com/profile_images/1009039397243801600/ZY_JEMj4.jpg ','','',''];
+  pizzaHut.menuImage = ['images/HAWAIIAN.jpg','images/HOTSTUFFBEEF.jpeg','images/meatlovers.jpg','images/PEPPERONI.jpg'];
 
-  var mrPotato = new Restorant('Mr Potato','');
-  mrPotato.menu =['Crispy Baked Potato Wedges','Potato With Chees','Potato without Potato ','Capmer\'s Potato'];
-  mrPotato.menuImage = ['','','',''];
+  var mrPotato = new Restorant('Mr Potato','images/potato.png');
+  mrPotato.menu =['Crispy Baked Potato Wedges','Potato With Cheese','Potato without Potato ','Capmer\'s Potato'];
+  mrPotato.menuImage = ['images/CrispyBakedPotatoWedges.jpg','images/Potatowithcheese.jpg','images/PotatowithoutPotato.jpg','images/Capmers Potato.jpeg'];
 
   var firefly = new Restorant('FireFly','');
   mrPotato.menu =['Angus Burger Sandwich','Wall Street Burger Sandwich','Rustic Burger Sandwich ','Red Kamikaze Burger Sandwich'];
