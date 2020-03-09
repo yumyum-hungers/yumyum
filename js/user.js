@@ -163,7 +163,7 @@ function topp(){
   }
   for (let i =0;i<=numberOfTopDiv;i++){
     if(i !== restorantIndex){
-        console.log(i);
+      console.log(i);
       restorantClass[topDiv].textContent = companies[companyIndex].restorant[i].name;
       logoClass[topDiv].src= companies[companyIndex].restorant[i].logo;
       votesClass[topDiv].textContent = `votes  ${companies[companyIndex].restorant[i].totalVoites}`;
