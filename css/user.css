@@ -18,16 +18,18 @@ body, html{
   /* position: relative; */
 }
 
-#main{
-  /* background-image: url('https://download.hipwallpaper.com/desktop/1536/864/25/82/ltP7UD.jpg');
-  background-size: cover;
-  border: solid 1px #efefef; */
+#main {
   /* border: solid 0.1px #efefef; */
-/* animation: comeOut 3s forwards; */
-padding: 20px 0 20px 142px;
-position: relative;
-width: 1500px;
-left:50px;
+  /* animation: comeOut 3s forwards; */
+  padding: 5px;
+  margin: 20px 0px 20px 218px;
+  position: relative;
+  width: 77%;
+  left: 50px;
+  border: solid 5px #d3d3d3bf;
+  border-radius: 22px;
+  min-height: 900px;
+  background: #deb887ba;
 }
 
 
@@ -388,15 +390,18 @@ div.pullRightLeft a:hover:before, div.pullRightLeft a:hover:after
   color: #f20519;
 }
 
-#sideData{
+#sideData {
   /* border: solid red; */
   height: 150px;
   width: 150px;
   position: fixed;
-  padding: 10px;
-  margin: 10px;
+  left: -5px;
+  padding: 6px 10px 10px 69px;
+   margin: 23px 0px 0px; 
   z-index: 9999;
-
+  border: solid #989898b5 6px;
+  height: 300px;
+  border-radius: 0px 15px 15px 0px;
 }
 
 #companyLogo{
