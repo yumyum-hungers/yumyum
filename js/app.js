@@ -94,12 +94,21 @@ if(localStorage.getItem('companies') === null){
   mrPotato.menu =['Crispy Baked Potato Wedges','Potato With Chees','Potato without Potato ','Capmer\'s Potato'];
   mrPotato.menuImage = ['','','',''];
 
+  var firefly = new Restorant('FireFly','');
+  mrPotato.menu =['Angus Burger Sandwich','Wall Street Burger Sandwich','Rustic Burger Sandwich ','Red Kamikaze Burger Sandwich'];
+  mrPotato.menuImage = ['images/Angus_Burger_Sandwich_636799688345719763.jpg','images/Wall_Street_Burger_S_636799690678903303.jpg','images/Rustic_Burger_Sandwi_636799690691765646.jpg','images/Red_Kamikaze_Burger__636799690706329626.jpg'];
+
   var companies = new Companies([]);
   for (var i in companyToAdd) {
     companies.addCompany(companyToAdd[i],logoToAdd[i]);
     companies.company[i].restorant = [mc,pizzaHut,mrPotato];
   }
+  companies.company[0].addUser('anas','anas','0785544665','hi@bye.com','12','015','55');
+  companies.company[1].addUser('rowaid','rowaid','0785544665','bye@hi.com','1','015','55');
+  companies.company[2].addUser('yamam','yamam','0785544665','yum@hi.com','3','015','55');
+  companies.company[3].addUser('samah','samah','0785544665','css@hi.com','10','015','55');
   localStorage.companies = JSON.stringify(companies.company);
+
 
 }else{
   console.log('do nothing');
