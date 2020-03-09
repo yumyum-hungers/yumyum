@@ -3,7 +3,7 @@
 // var User = new User(userItems);
 
 /*********************************************** Data for testing **************************************************** */
-/*localStorage.setItem('user','ruwaid');
+localStorage.setItem('user','samah');
 /*
 //companies.company objects
 localStorage.setItem('companies.company',JSON.stringify([
@@ -82,8 +82,6 @@ printUser();
 
 // Display boxes
 printRest();
-
-var orderClass = document.querySelectorAll('.orderButton');
 
 // calculate best one according to number of votes
 votesCalc();
@@ -175,26 +173,15 @@ function topp(){
   var votesClass = document.getElementsByClassName('votes');
   var discClass = document.getElementsByClassName('desc');
   var logoClass = document.getElementsByClassName('imgLogo');
-  // var tableEl = document.getElementsByClassName('table');
+  var orderClass = document.querySelectorAll('.orderButton');
   var tbodyEl = document.querySelectorAll('tbody');
   var topDiv =1;
-  // var ulEl =document.createElement('ul');
   restorantClass[0].textContent = bestOne.name;
   logoClass[0].src= bestOne.logo;
   votesClass[0].textContent = `ordered  ${bestOne.totalvoteses}`;
   discClass[0].textContent = `The menu for ${bestOne.name} is `;
-  // discClass[0].appendChild(ulEl);
   for(let i =0 ;i<bestOne.menu.length;i++){
-    // let liEl =document.createElement('li');
-    // liEl.textContent = `${bestOne.menu[i]}`;
-    // ulEl.appendChild(liEl);
-    // liEl.id =`${0}.${restorantIndex}.${i}`;
     orderClass[0].id = `${restorantIndex}`;
-    // console.log('before',i,tableEl);
-    // console.log('after',tableEl);
-    // var tbodyEl = document.createElement('tbody');
-    // tbodyEl.className = 'tbody';
-    // tableEl[0].appendChild(tbodyEl[0]);
     var trEl = document.createElement('tr');
     trEl.className = 'tr';
     tbodyEl[0].appendChild(trEl);
@@ -228,11 +215,9 @@ function topp(){
       restorantClass[topDiv].textContent = companies.company[companyIndex].restorant[i].name;
       logoClass[topDiv].src= companies.company[companyIndex].restorant[i].logo;
       votesClass[topDiv].textContent = `ordered  ${companies.company[companyIndex].restorant[i].totalvoteses}`;
-      discClass[topDiv].textContent = `The menu for ${companies.company[companyIndex].restorant[i].companyName} is `;
+      discClass[topDiv].textContent = `The menu for ${companies.company[companyIndex].restorant[i].name} is `;
       orderClass[topDiv].id = `${i}`;
-
       for(let j =0 ;j<companies.company[companyIndex].restorant[i].menu.length;j++){
-
 
         trEl = document.createElement('tr');
         trEl.className = 'tr';
@@ -295,6 +280,10 @@ function ordered(e){
   for(let meal = 0 ;meal < companies.company[companyIndex].restorant[res].menu.length ; meal++){
     var resturant = document.getElementById(`tdorder.${res}.${meal}`).textContent;
     value += parseInt(resturant);
+    for(let i = 0; i < parseInt(resturant);i++){
+      companies.company[companyIndex].users[0].ordered.push(companies.company[companyIndex].restorant[res].menu[meal]);
+      companies.company[companyIndex].users[0].resturant.push(companies.company[companyIndex].restorant[res].name);
+    }
   }
   companies.company[companyIndex].restorant[res].totalvoteses += value;
   companies.saveToLocalStorage();

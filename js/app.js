@@ -48,10 +48,12 @@ var Users = function(name,password,number,email,breakHour,employeesNumber,visaNu
   this.password = password;
   this.number =number;
   this.email = email;
-  this.breakHour =breakHour;
+  this.breakHour = breakHour;
   this.employeesNumber = employeesNumber;
   //   this.visaType = visaType;
   this.visaNumber =visaNumber;
+  this.ordered = [];
+  this.resturant = [];
 };
 
 
@@ -59,7 +61,7 @@ var Restorant = function(name,logo) {
   // to store data of every restorant
   this.name = name;
   this.logo = logo;
-  this.totalvoteses=0 ;
+  this.totalvoteses = 0 ;
   this.order =[];
   this.menu ;
   this.menuImage ;
@@ -80,24 +82,33 @@ if(localStorage.getItem('companies') === null){
   var companyToAdd = ['LTUC','Arab Bank','Hikma','JU'];
   var logoToAdd = ['images/LUCT-600x400.jpg','images/arabi.jpg','images/hikma.jpg','images/jordan-uni.png'];
 
-  var mc = new Restorant('McDonald\'s','');
+  var mc = new Restorant('McDonald\'s','images/mac.png');
   mc.menu =['Big Mac Reagular Meal','Chicken McNuggets (6 pcs)','McChiken Regular Meal','Big Teasty Medium Meal'];
-  mc.menuImage = ['https://www.firefly-burgers.com/wp-content/uploads/2018/07/logo.png','','',''];
+  mc.menuImage = ['images/bigmac.jpg','images/mcnugget.jpg','images/mcChikenregularmeal.jpg','images/bigteastymediummeal.jpg'];
 
-  var pizzaHut = new Restorant('Pizza Hut','');
+  var pizzaHut = new Restorant('Pizza Hut','images/pizza.png');
   pizzaHut.menu =['HAWAIIAN','HOT STUFF BEEF','MEAT LOVERS','PEPPERONI'];
-  pizzaHut.menuImage = ['https://pbs.twimg.com/profile_images/1009039397243801600/ZY_JEMj4.jpg ','','',''];
-  pizzaHut.totalvoteses=2;
-  var mrPotato = new Restorant('Mr Potato','');
-  mrPotato.menu =['Crispy Baked Potato Wedges','Potato With Chees','Potato without Potato ','Capmer\'s Potato'];
-  mrPotato.menuImage = ['','','',''];
+  pizzaHut.menuImage = ['images/HAWAIIAN.jpg','images/HOTSTUFFBEEF.jpeg','images/meatlovers.jpg','images/PEPPERONI.jpg'];
+
+  var mrPotato = new Restorant('Mr Potato','images/potato.png');
+  mrPotato.menu =['Crispy Baked Potato Wedges','Potato With Cheese','Potato without Potato ','Capmer\'s Potato'];
+  mrPotato.menuImage = ['images/CrispyBakedPotatoWedges.jpg','images/Potatowithcheese.jpg','images/PotatowithoutPotato.jpg','images/Capmers Potato.jpeg'];
+
+  var firefly = new Restorant('FireFly','images/firfly.jpg');
+  firefly.menu = ['Angus Burger Sandwich','Wall Street Burger Sandwich','Rustic Burger Sandwich ','Red Kamikaze Burger Sandwich'];
+  firefly.menuImage = ['images/Angus_Burger_Sandwich_636799688345719763.jpg','images/Wall_Street_Burger_S_636799690678903303.jpg','images/Rustic_Burger_Sandwi_636799690691765646.jpg','images/Red_Kamikaze_Burger__636799690706329626.jpg'];
 
   var companies = new Companies([]);
   for (var i in companyToAdd) {
     companies.addCompany(companyToAdd[i],logoToAdd[i]);
-    companies.company[i].restorant = [mc,pizzaHut,mrPotato];
+    companies.company[i].restorant = [mc,pizzaHut,mrPotato,firefly];
   }
+  companies.company[0].addUser('anas','anas','0785544665','hi@bye.com','12','015','55');
+  companies.company[1].addUser('rowaid','rowaid','0785544665','bye@hi.com','1','015','55');
+  companies.company[2].addUser('yamam','yamam','0785544665','yum@hi.com','3','015','55');
+  companies.company[3].addUser('samah','samah','0785544665','css@hi.com','10','015','55');
   localStorage.companies = JSON.stringify(companies.company);
+
 
 }else{
   console.log('do nothing');
