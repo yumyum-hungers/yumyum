@@ -59,7 +59,7 @@ var Restorant = function(name,logo) {
   // to store data of every restorant
   this.name = name;
   this.logo = logo;
-  this.totalvoteses ;
+  this.totalvoteses = 0 ;
   this.order =[];
   this.menu ;
   this.menuImage ;
