@@ -7,7 +7,7 @@ AOS.init({
 });
 
 new WOW().init();
-<<<<<<< HEAD
+
 
 var testBox = document.getElementById('testBox');
 var signBox = document.getElementById('signBox');
@@ -16,9 +16,9 @@ var form2 = document.getElementById('form2');
 var companies ;
 window.addEventListener('scroll',scrollingSign);
 function loadData() {
-  // get array of objects for the companies
-  companies = JSON.parse(localStorage.getItem('companies')) || [];
-
+  var companiesarr = JSON.parse(localStorage.getItem('companies')) || [];
+  // eslint-disable-next-line no-undef
+  companies = new Companies(companiesarr);
 }
 
 loadData();
@@ -60,16 +60,3 @@ function sign(e){
   form.reset();
   form2.reset();
 }
-<<<<<<< HEAD
-=======
->>>>>>> e854fb111de675e4c585fc98ac4aac36b0289436
-=======
-
-// function openForm() {
-//   document.getElementById("myForm").style.display = "block";
-// }
-
-// function closeForm() {
-//   document.getElementById("myForm").style.display = "none";
-// }
->>>>>>> 6e0bdcb3aab118e2734cae7e4b8bb9a9c24cde0b
