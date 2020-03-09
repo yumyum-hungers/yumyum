@@ -1,0 +1,314 @@
+@import 'https://fonts.googleapis.com/css?family=Viga&display=swap';
+@import 'https://fonts.googleapis.com/css?family=Chilanka&display=swap';
+@import 'https://fonts.googleapis.com/css?family=Chilanka&display=swap';
+
+
+.home-intro {
+  background-image: url('https://download.hipwallpaper.com/desktop/1536/864/25/82/ltP7UD.jpg');
+  background-size: cover;
+  height: 157px;
+  color: white;
+  text-align: center;
+  margin:0px 0px -10px;
+
+}
+
+body, html{
+  height: 100%;
+}
+
+#main{
+  background-image: url('https://download.hipwallpaper.com/desktop/1536/864/25/82/ltP7UD.jpg');
+  background-size: cover;
+  
+}
+
+ 
+div.cont {
+  margin: 0 auto;
+  padding: 5% 0%;
+  text-align: center;
+  margin-left: 46%; 
+}
+
+
+div.cont a
+{
+  color: rgb(58, 58, 88);
+  text-decoration: none;
+  font: 20px 'Viga', sans-serif;
+  margin: 0% 2%;
+  padding: 1% 2%;
+  position: relative;
+  cursor: pointer;
+}
+
+img.logo {
+  float: left;
+  border-radius: 50%;
+  height: 15%;
+  width: 7%;
+  margin: 40px 10px 0 10px;
+}
+
+
+/* Pull right and left  */
+div.pullRightLeft a:before, div.pullRightLeft a:after
+{
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0px;
+    content: '';
+    background: rgb(96, 88, 146);
+    opacity: 0.3;
+    transition: all 0.3s;
+}
+
+div.pullRightLeft a:before
+{
+    left: 0px;
+} 
+
+div.pullRightLeft a:after
+{
+    right: 0px;
+}
+
+div.pullRightLeft a:hover:before, div.pullRightLeft a:hover:after
+{
+    width: 100%;
+}
+
+/*******************************************************************************/
+
+#headerUser{
+  background-image: url('https://download.hipwallpaper.com/desktop/1536/864/25/82/ltP7UD.jpg');
+  background-size: cover;
+  height: 176px;
+  margin: 0 0 0px 0;
+}
+.borderBox{
+  background-image: linear-gradient(180deg, rgba(242,242,242,1) 0%, rgba(242,242,242,1) 10%, rgba(165,166,174,1) 20%, rgba(165,166,174,1) 30%, rgba(242,242,242,1) 40%, rgba(242,242,242,1) 50%, rgba(165,166,174,1) 60%, rgba(165,166,174,1) 70%, rgba(242,242,242,1) 80%, rgba(242,242,242,1) 90%, rgba(165,166,174,1) 100%);
+  height: 200px;
+  width: 20px;
+  position: absolute;
+  left: 47.2%;
+  z-index: 99999;
+}
+
+#ourCompanyName{
+  font-size: 60px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  position: absolute;
+  top: 25%;
+  right: 65%;
+  background-color: #a5a6ae;
+  color: #F2F2F2 ;
+  padding: 20px;
+}
+main{
+  position: relative;
+}
+
+.container {
+  margin: 20px;
+  width: 300px;
+  height: 300px;
+  padding: 5px;
+  position: relative;
+  left: 200px;  
+}
+
+.inlineDiv{
+  display: inline-block;
+  text-align: center;
+}  
+
+.boxContainer{
+    width: 98%;
+    height: 98%;
+}
+
+.box {
+    width: 98%;
+    height: 98%;
+    transition: 1.5s ease-in-out;
+    cursor: pointer;
+    transform-style: preserve-3d;
+  }
+
+
+.boxContainer:hover  .box{
+    transform: rotateY(180deg);
+}
+
+.front {
+    border: 2px solid #7F5D3F;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    background-color: #E0BE96;
+    
+}
+.front h2,p{
+    padding: 1em;
+    font-size: large;
+    transform: translateZ(10px);
+}
+
+.back {
+   border: 2px solid #A5A6AE;
+   transform: rotateY(180deg);
+   background-color: #2DA5DC;
+   backface-visibility: hidden;
+   transform-style: preserve-3d;
+}
+
+.back h2{
+    padding: 1em;
+    font-size: large;
+    transform: translateZ(10px);
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    border: solid 2px;
+    box-shadow: #e4e4e4 13px 0px 20px;
+}
+.imgDesc{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background-color: aqua;
+  z-index: -99;
+  right: 35%;
+  top:-80px;
+  opacity: 0;
+}
+
+img{
+  height: 100%;
+  width: 100%;
+  border: solid 2px black;
+  background-color: #a5a6ae;
+}
+.button {
+  padding: 6px 18px;
+  /* font-size: 24px; */
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #1C1009;
+  background-color: #A5A6AE;
+  border: none;
+  border-radius: 15px;
+  /* box-shadow: 0 9px #A8AFB0; */
+  position: absolute;
+  right:5px;
+  top:-150px;
+}
+
+.button:hover {
+  background-color: #A8AFB0;
+}
+
+.button:active {
+  background-color: #A8AFB0;
+  box-shadow: 0 5px #A5A6AE;
+  transform: translateY(4px);
+}
+
+#companyData{
+  width: 90px;
+  height: 90px;
+  margin: 40px 20px;
+  float: left;
+}
+#companyName{
+  font-size: XX-large;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #f20519;
+}
+
+#companyLogo{
+  transition: 2s ease-in-out;
+  margin: 5px 0;
+  z-index: 999999;
+}
+
+#companyLogo:hover{
+transform: rotate(-10deg);
+}
+
+#userName{
+  position: absolute;
+    top: 31px;
+    left: 150px;
+    font-size: large;
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: #f2eef2 dotted;
+    border-radius: 20px;
+    padding: 10px;
+    color: #FAF9F9;
+    background-color: #f20519;
+    position: fixed;
+    top: 0px;
+    z-index: 9999;
+}
+#userName:hover{
+  background-color: #FAF9F9;
+  color: #f20519;
+  border-color: #f20519;
+}
+
+ #msg{
+  z-index: -99999;
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  text-align: center;
+  background-color: #2DA5DC;
+  opacity: 0; 
+  left: 490px;
+  padding: 50px;
+  text-align: center;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius:50px ;
+  transition: 1s ease-in-out;
+  top:0;
+}
+
+#userInfo{
+  position: relative;
+  width: 100%;
+}
+#orderButton{
+  color: #1C1009;
+  font-size: x-large;
+  font-family: fantasy;
+   border:solid #A5A6AE;
+  position: absolute;
+  left:5%;
+  padding: 1%; 
+  background-color: #FAF9F9 ;
+  cursor: pointer;
+  top: 300px;
+}
+
+.imgLogo{
+  width: 100px;
+  height: 100px;
+  align-content: center;
+  transform: translateZ(15px);
+  border-radius: 5px;
+}
+
+
+
+.votes{
+  font-size: medium;
+}
