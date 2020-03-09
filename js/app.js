@@ -48,10 +48,11 @@ var Users = function(name,password,number,email,breakHour,employeesNumber,visaNu
   this.password = password;
   this.number =number;
   this.email = email;
-  this.breakHour =breakHour;
+  this.breakHour = breakHour;
   this.employeesNumber = employeesNumber;
   //   this.visaType = visaType;
   this.visaNumber =visaNumber;
+  this.ordered = [];
 };
 
 
