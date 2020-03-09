@@ -101,7 +101,7 @@ if(localStorage.getItem('companies') === null){
   var companies = new Companies([]);
   for (var i in companyToAdd) {
     companies.addCompany(companyToAdd[i],logoToAdd[i]);
-    companies.company[i].restorant = [mc,pizzaHut,mrPotato];
+    companies.company[i].restorant = [mc,pizzaHut,mrPotato,firefly];
   }
   companies.company[0].addUser('anas','anas','0785544665','hi@bye.com','12','015','55');
   companies.company[1].addUser('rowaid','rowaid','0785544665','bye@hi.com','1','015','55');
