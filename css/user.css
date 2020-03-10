@@ -248,8 +248,8 @@ div.pullRightLeft a:hover:before, div.pullRightLeft a:hover:after
   position: absolute;
   background-color: aqua;
   z-index: -99;
-  right: 35%;
-  top:-80px;
+  right: 20px;
+  top:10px;
   opacity: 0;
 }
 .orderButton{

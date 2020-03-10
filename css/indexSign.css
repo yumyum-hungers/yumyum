@@ -1,65 +1,181 @@
+.sign-in {
+    background-color: #404265;
+    height: 100%;
+    position: relative;
+}
 
-#testBox{
-    top:350px;
-    width: 200px;
-    height: 200px;
-    position: fixed;
-    right: 50px;
-    transition: 1s ease-in-out;
-    background-color: red;
-  }
-  
-  #signBox{
-    height: 200px;
-    width: 15px;
-    background: red;
-    position: fixed;
-    right: 0px;
-    top:350px;  
-    border-radius: 20px;
-    text-align: center;
-    transition: all 1s ease-in-out;
-    animation: shake 3s 4s infinite ;
-    opacity: 0;
-    overflow: hidden;
-  }
-  #signBox form{
-    display: none;
-  }
-  
-  #signBox:hover form{
-    display: block;
-  }
-  #signBox a{
-    display: none;
-  }
-  
-  #signBox:hover a{
-    display: block;
-  }
-  
-  #signBox:hover{
-    height: 200px;
-    width: 500px;
-    background: red;
-    position: fixed;
-    right: 0px;
-    top:350px;  
-    border-radius: 20px;
-    border-top-left-radius: 100px;
-    border-bottom-left-radius: 100px;
-    animation: none;
-  }
-  
-  @keyframes shake {
-    0% { transform:translate(0,0) }
-    1% { transform:translate(5px,0) }
-    3% { transform:translate(0,0) }
-    5% { transform:translate(5px,0) }
-    7% { transform:translate(0,0) }
-    8% { transform:translate(5px,0) }
-    10% { transform:translate(0,0) }
-    12% { transform:translate(5px,0)}
-    14% { transform:translate(0,0) }
-    100% { transform:translate(0,0) }
-   }
+.testBox{
+  top: 80px;
+  width: 200px;
+  height: 200px;
+  border: 3px solid rgb(104, 17, 92);
+  position: absolute;
+  left: 45px;
+  transition: 0.3s ease-in-out;
+  background-color: rgb(228, 226, 226);
+}
+
+
+.testBox .sign {
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-family: 30px 'Viga', sans-serif;
+
+}
+
+.signBox .sign{
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-family: 30px 'Viga', sans-serif;
+
+}
+
+
+.testBox .name{
+  font-size: 15px;
+  padding-top: 10px;
+  font-family: sans-serif
+
+}
+
+
+.signBox .name{
+  margin-right: 30px;
+}
+
+.signBox #password{
+  margin-top: 10px;
+margin-right: 6px;
+}
+
+.testBox input#signIn {
+  margin-top: 21px;
+  background-color: #493d63;
+  color: aliceblue;
+  padding: 7px 15px 7px 15px;
+  cursor: pointer;
+  font-family: cursive;
+
+}
+
+.signBox  input#signIn {
+  margin-top: 21px;
+  background-color: #493d63;
+  color: aliceblue;
+  padding: 7px 15px 7px 15px;
+  cursor: pointer;
+  font-family: cursive;
+
+}
+
+.signBox input.name{
+  margin-top: 25px;
+}
+
+.testBox .sign-out {
+  margin-top: -36px;
+  float: right;
+  margin-right: 18px;
+  background-color: #493d63;
+  padding: 5px 15px 5px 15px;
+  font-family: cursive;
+  padding: 5px 15px 7px 15px;
+
+}
+
+.signBox .sign-out {
+  margin-top: -36px;
+  float: right;
+  margin-right: 18px;
+  background-color: #493d63;
+  padding: 5px 15px 5px 15px;
+  font-family: cursive;
+  padding: 5px 15px 7px 15px;
+
+}
+
+.signBox{
+  height: 200px;
+  width: 35px;
+  background: rgb(248, 68, 248);
+  position: fixed;
+  left: 0px;
+  top:150px;  
+  text-align: center;
+  transition: all 1s ease-in-out;
+  animation: shake 3s 4s infinite ;
+  overflow: hidden;
+}
+
+fieldset {
+  margin-left: 10px;
+}
+.signBox form{
+  display: none;
+}
+
+.signBox:hover form{
+  display: block;
+}
+.signBox a{
+  display: none;
+}
+
+.signBox:hover a{
+  display: block;
+}
+
+.signBox:hover{
+  height: 200px;
+  width: 350px;
+  background: rgb(175, 174, 174);
+  position: fixed;
+  right: 0px;
+  top:350px;  
+  border-radius: 20px;
+  animation: none;
+}
+
+@keyframes shake {
+  0% { transform:translate(0,0) }
+  1% { transform:translate(5px,0) }
+  3% { transform:translate(0,0) }
+  5% { transform:translate(5px,0) }
+  7% { transform:translate(0,0) }
+  8% { transform:translate(5px,0) }
+  10% { transform:translate(0,0) }
+  12% { transform:translate(5px,0)}
+  14% { transform:translate(0,0) }
+  100% { transform:translate(0,0) }
+ }
+ 
+a {
+  text-decoration: none;
+  color: black;
+  font-family: cursive;
+}
+
+.form{
+  color: white;
+}
+.mynum {
+  font-size: 19px;
+}
+
+label.name2 {
+  float: left;
+  margin-left: 65px;
+}
+
+label.name3 {
+  margin-top: 45px;
+  margin-left: 65px;
+}
+
+.submit {
+  padding-left: 60px;
+}
