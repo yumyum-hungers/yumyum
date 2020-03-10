@@ -3,7 +3,7 @@
 // var User = new User(userItems);
 
 /*********************************************** Data for testing **************************************************** */
-/*localStorage.setItem('user','ruwaid');
+localStorage.setItem('user','samah');
 /*
 //companies.company objects
 localStorage.setItem('companies.company',JSON.stringify([
@@ -64,6 +64,9 @@ var companies ;
 var companyIndex = 0;
 var restorantIndex;
 var bestOne = 0;
+
+
+
 /********************************************** Calling Functions ************************************************* */
 
 // Get data from local storage
@@ -75,10 +78,10 @@ printCompany();
 // Display User Name
 printUser();
 
+// ascending();
+
 // Display boxes
 printRest();
-
-var orderClass = document.querySelectorAll('.orderButton');
 
 // calculate best one according to number of votes
 votesCalc();
@@ -107,14 +110,49 @@ function printCompany(){
     for(let j =0 ; j<companies.company[i].users.length;j++){
       if(companies.company[i].users[j].name.includes(user)){
         companyIndex = i;
-        companyLogo.src = companies.company[i].logo;
-        companyLogo.alt = companies.company[i].name;
+        companyLogo.src = companies.company[i].logoDirectory;
+        companyLogo.alt = companies.company[i].companyName;
         break;
       }
     }
   }
 }
 
+
+// function ascending(){
+//   var arr= companies;
+//   var x= [];
+//   var y=[];
+// console.log('jj');
+// console.log(arr.company[0].restorant[0].totalvoteses);
+// for(let i = 0; i<arr.company[companyIndex].restorant.length;i++){
+//   x.push(arr.company[companyIndex].restorant[i].totalvoteses);
+//   // console.log(x);
+// }
+// x.sort();
+// for(let j = 0; j<arr.company[companyIndex].restorant.length;j++){
+//   for(let i = 0; i<arr.company[companyIndex].restorant.length;i++){
+//     if(x[j]===arr.company[companyIndex].restorant[i].totalvoteses){
+//       console.log('all',arr.company);
+//       y.push(arr.company[companyIndex].restorant[i]);
+//       console.log('inde',arr.company[companyIndex].restorant[i]);
+//       arr.company.splice(arr.company[companyIndex].restorant[i],1);
+//       console.log('arr',arr.company);
+//       break;
+//     }
+//   }
+// }
+// console.log('ff',y);
+//  console.log(arr.company[companyIndex].restorant.indexOf(y));
+// for(let j = 0; j<arr.company[companyIndex].restorant.length;j++){
+//   for(let i = 0; i<arr.company[companyIndex].restorant.length-1;i++){
+//     if(arr.company[companyIndex].restorant[i].totalvoteses > arr.company[companyIndex].restorant[i+1].totalvoteses){
+//       y.push(arr.company[companyIndex].restorant[i]);
+//     }
+//   }
+
+
+// }
 
 // calculate best one according to number of votes
 function votesCalc(){
@@ -135,26 +173,21 @@ function topp(){
   var votesClass = document.getElementsByClassName('votes');
   var discClass = document.getElementsByClassName('desc');
   var logoClass = document.getElementsByClassName('imgLogo');
-  var tableEl = document.getElementsByClassName('table');
+  var orderClass = document.querySelectorAll('.orderButton');
+  var tbodyEl = document.querySelectorAll('tbody');
   var topDiv =1;
-  var ulEl =document.createElement('ul');
   restorantClass[0].textContent = bestOne.name;
   logoClass[0].src= bestOne.logo;
-  votesClass[0].textContent = `votes  ${bestOne.totalvoteses}`;
+  votesClass[0].textContent = `ordered  ${bestOne.totalvoteses}`;
   discClass[0].textContent = `The menu for ${bestOne.name} is `;
-  discClass[0].appendChild(ulEl);
   for(let i =0 ;i<bestOne.menu.length;i++){
-    let liEl =document.createElement('li');
-    liEl.textContent = `${bestOne.menu[i]}`;
-    ulEl.appendChild(liEl);
-    liEl.id =`${0}.${restorantIndex}.${i}`;
     orderClass[0].id = `${restorantIndex}`;
-
     var trEl = document.createElement('tr');
     trEl.className = 'tr';
-    tableEl[0].appendChild(trEl);
+    tbodyEl[0].appendChild(trEl);
     var tdEl = document.createElement('td');
-    tdEl.className = 'td';
+    tdEl.className = 'meal';
+    tdEl.id =`${0}.${restorantIndex}.${i}`;
     trEl.appendChild(tdEl);
     tdEl.textContent = `${bestOne.menu[i]}`;
 
@@ -181,23 +214,18 @@ function topp(){
     if(i !== restorantIndex){
       restorantClass[topDiv].textContent = companies.company[companyIndex].restorant[i].name;
       logoClass[topDiv].src= companies.company[companyIndex].restorant[i].logo;
-      votesClass[topDiv].textContent = `votes  ${companies.company[companyIndex].restorant[i].totalvoteses}`;
-      discClass[topDiv].textContent = `The menu for ${companies.company[companyIndex].restorant[i].companyName} is `;
-      let ulEl =document.createElement('ul');
+      votesClass[topDiv].textContent = `ordered  ${companies.company[companyIndex].restorant[i].totalvoteses}`;
+      discClass[topDiv].textContent = `The menu for ${companies.company[companyIndex].restorant[i].name} is `;
       orderClass[topDiv].id = `${i}`;
-      discClass[topDiv].appendChild(ulEl);
       for(let j =0 ;j<companies.company[companyIndex].restorant[i].menu.length;j++){
-        let liEl =document.createElement('li');
-        liEl.textContent = `${companies.company[companyIndex].restorant[i].menu[j]}`;
-        ulEl.appendChild(liEl);
-        liEl.id =`${topDiv}.${i}.${j}`;
 
         trEl = document.createElement('tr');
         trEl.className = 'tr';
-        tableEl[topDiv].appendChild(trEl);
+        tbodyEl[topDiv].appendChild(trEl);
 
         tdEl = document.createElement('td');
-        tdEl.className = 'td';
+        tdEl.className = 'meal';
+        tdEl.id =`${topDiv}.${i}.${j}`;
         trEl.appendChild(tdEl);
         tdEl.textContent = `${companies.company[companyIndex].restorant[i].menu[j]}`;
 
@@ -244,46 +272,33 @@ function hoverEffectsOut(e){
 
 
 function ordered(e){
-  // var rest = e.target.id.split('.')[1];
-  // var meal = e.target.id.split('.')[2];
-  // var tdOrderId = document.getElementById(`tdorder.${e.target.id}.${meal}`);
-  // var num = parseInt(tdOrderId.textContent);
-  // num++;
-  // tdOrderId.textContent = num;
-// console.log(e.target.id);
-// for()
+  var x = document.getElementById('main');
+  x.className = 'door';
 
-  companies.company[companyIndex].restorant[e.target.id].totalvoteses +=1;
+  var res = e.target.id;
+  var value = 0;
+  for(let meal = 0 ;meal < companies.company[companyIndex].restorant[res].menu.length ; meal++){
+    var resturant = document.getElementById(`tdorder.${res}.${meal}`).textContent;
+    value += parseInt(resturant);
+    for(let i = 0; i < parseInt(resturant);i++){
+      companies.company[companyIndex].users[0].ordered.push(companies.company[companyIndex].restorant[res].menu[meal]);
+      companies.company[companyIndex].users[0].resturant.push(companies.company[companyIndex].restorant[res].name);
+    }
+  }
+  companies.company[companyIndex].restorant[res].totalvoteses += value;
+  companies.saveToLocalStorage();
   popalert(e);
-  localStorage.setItem('companies.company',JSON.stringify(companies.company));
-  // topp();
-  // var tables =document.getElementsByClassName('table');
-  // console.log(tables.length);
-  // var z = tables.length;
-  // for(let i = 0;i<z;i++){
-  //   console.log(i);
-  //   console.log('www',tables.length);
-  //   tables[i].remove();
-  // }
-  // companies.company.saveToLocalStorage();
 
-  // var emptyMain =document.getElementById('main');
-  // emptyMain.innerHTML='';
+  removeTableBody();
 
-  // // Get data from local storage
-  // loadData();
-  // // Display boxes
-  // printRest();
+  // calculate best one according to number of votes
+  votesCalc();
 
-  // // var orderClass = document.querySelectorAll('.orderButton');
+  // Display other resturants
+  topp();
 
-  // // calculate best one according to number of votes
-  // votesCalc();
-
-// // Display other resturants
-// topp();
-// // Declare event listeners for every restorant
-// listenersfun();
+  // Declare event listeners for every restorant
+  listenersfun();
 }
 
 
@@ -303,16 +318,18 @@ function popalert(e){
   var msg = document.getElementById('msg');
   msg.style.zIndex='9999';
   msg.innerHTML=(`Thank you ${user} for your order from ${companies.company[companyIndex].restorant[e.target.id].name}
-  and the total votes for the resturant ${companies.company[companyIndex].restorant[e.target.id].totalvoteses}`);
+  and the ordered numbers for the resturant ${companies.company[companyIndex].restorant[e.target.id].totalvoteses}`);
   msg.style.opacity=1;
   setTimeout(() => {
     msg.style.opacity=0;
     msg.style.zIndex='-9999';
-  }, 4000);
+    var x = document.getElementById('main');
+    x.className = '';
+  }, 8000);
 }
 
 function listenersfun(){
-  var menuMeal = document.querySelectorAll('li');
+  var menuMeal = document.querySelectorAll('.meal');
   var orderButton = document.querySelectorAll('.orderButton');
   var addButton = document.querySelectorAll('.add');
   var subButton = document.querySelectorAll('.sub');
@@ -326,9 +343,7 @@ function listenersfun(){
   for(let i =0 ; i <addButton.length;i++){
     addButton[i].addEventListener('click',addOne);
     subButton[i].addEventListener('click',subOne);
-
   }
-
 }
 
 function addOne(e){
@@ -354,6 +369,7 @@ function subOne(e){
 function printRest(){
   var main = document.getElementById('main');
   for(let i =0;i<companies.company[0].restorant.length;i++){
+
     var divOne = document.createElement('div');
     divOne.className = 'container inlineDiv ';
     main.appendChild(divOne);
@@ -415,10 +431,22 @@ function printRest(){
     trEl.appendChild(thEl);
     thEl.textContent = 'Sub';
 
+    var tbodyEl = document.createElement('tbody');
+    tableEl.appendChild(tbodyEl);
+
+
     var divOrder = document.createElement('div');
     divOrder.className = 'orderButton';
     divOne.appendChild(divOrder);
     divOrder.textContent = 'Order';
   }
 
+}
+
+
+function removeTableBody(){
+  var tbodyEl = document.querySelectorAll('tbody');
+  for(let table = 0; table < tbodyEl.length; table++){
+    tbodyEl[table].innerHTML =' ';
+  }
 }

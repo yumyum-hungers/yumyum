@@ -95,8 +95,8 @@ if(localStorage.getItem('companies') === null){
   mrPotato.menuImage = ['images/CrispyBakedPotatoWedges.jpg','images/Potatowithcheese.jpg','images/PotatowithoutPotato.jpg','images/Capmers Potato.jpeg'];
 
   var firefly = new Restorant('FireFly','images/firfly.jpg');
-  mrPotato.menu =['Angus Burger Sandwich','Wall Street Burger Sandwich','Rustic Burger Sandwich ','Red Kamikaze Burger Sandwich'];
-  mrPotato.menuImage = ['images/Angus_Burger_Sandwich_636799688345719763.jpg','images/Wall_Street_Burger_S_636799690678903303.jpg','images/Rustic_Burger_Sandwi_636799690691765646.jpg','images/Red_Kamikaze_Burger__636799690706329626.jpg'];
+  firefly.menu = ['Angus Burger Sandwich','Wall Street Burger Sandwich','Rustic Burger Sandwich ','Red Kamikaze Burger Sandwich'];
+  firefly.menuImage = ['images/Angus_Burger_Sandwich_636799688345719763.jpg','images/Wall_Street_Burger_S_636799690678903303.jpg','images/Rustic_Burger_Sandwi_636799690691765646.jpg','images/Red_Kamikaze_Burger__636799690706329626.jpg'];
 
   var companies = new Companies([]);
   for (var i in companyToAdd) {
