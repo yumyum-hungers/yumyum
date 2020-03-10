@@ -24,7 +24,7 @@ function order(){
   trEl.appendChild(thEl);
   var tbodyEl = document.createElement('tbody');
   tableEl.appendChild(tbodyEl);
-  for (var i in cart.items) {
+  for (var i in companies.company[companyIndex].users[userIndex].ordered) {
     // TODO: Iterate over the items in the cart
     // TODO: Create a TR
     // TODO: Create a TD for the delete link, quantity,  and the item
@@ -38,14 +38,14 @@ function order(){
     trEl.appendChild(tdEl0);
     trEl.appendChild(tdEl);
     trEl.appendChild(tdEl2);
-    tdEl2.textContent = companies.company[].usres[].breakHour;
-    tdEl.textContent =  companies.company[].usres[].ordered[] ;
-    tdEl0.textContent = companies.company[].usres[].restorant[];
-    }
+    tdEl2.textContent = companies.company[companyIndex].users[userIndex].breakHour;
+    tdEl.textContent = companies.company[companyIndex].users[userIndex].ordered[i] ;
+    tdEl0.textContent = companies.company[companyIndex].users[userIndex].resturant[i];
   }
+}
   
 
 
 
-}
+
 order();

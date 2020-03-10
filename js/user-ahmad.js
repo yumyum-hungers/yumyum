@@ -73,7 +73,7 @@ function diplayMenu(restorantNum){
     // menuImagEl.src = companies.company[companyNum].restorant[restorantNum].menuImage[m];
     var menuPEl =document.createElement('p');
     menuDivEl.appendChild(menuPEl);
-    menuPEl.className = 'menuP'
+    menuPEl.className = 'menuP';
     menuPEl.innerText = companies.company[companyNum].restorant[restorantNum].menu[m];
   }
 }
