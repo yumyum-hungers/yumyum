@@ -6,6 +6,17 @@ var companies;
 
 registerForm.addEventListener('submit', function (event){
   event.preventDefault();
+
+  function btnn(){
+    if (event.target.name.value)
+      window.location.href='billing.html';
+    document.getElementById('myForm').reset();
+  }
+  btnn();
+
+
+
+
   for (var i in companies.company) {
     if(companies.company[i].companyName===document.getElementById('breakHours').value){
       companynum = Number(i) ;
