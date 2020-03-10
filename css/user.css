@@ -28,6 +28,7 @@ padding: 20px 0 20px 170px;
 position: relative;
 width: 1025px;
 left:50px;
+top:64px;
 }
 
 
@@ -394,10 +395,11 @@ div.pullRightLeft a:hover:before, div.pullRightLeft a:hover:after
   /* border: solid red; */
   height: 150px;
   width: 150px;
-  position: fixed;
+  position: absolute;
   padding: 10px;
   margin: 10px;
   z-index: 9999;
+  top: 100px
 
 }
 
