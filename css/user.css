@@ -20,6 +20,7 @@ body, html{
 
 #main {
   /* border: solid 0.1px #efefef; */
+<<<<<<< HEAD
   /* animation: comeOut 3s forwards; */
   padding: 5px;
   margin: 20px 0px 20px 218px;
@@ -30,6 +31,13 @@ body, html{
   border-radius: 22px;
   min-height: 900px;
   background: #deb887ba;
+=======
+/* animation: comeOut 3s forwards; */
+padding: 20px 0 20px 170px;
+position: relative;
+width: 1025px;
+left:50px;
+>>>>>>> 4c3d1413248d06deec4f759d48b0f35f1fb1166d
 }
 
 
@@ -250,8 +258,8 @@ div.pullRightLeft a:hover:before, div.pullRightLeft a:hover:after
   position: absolute;
   background-color: aqua;
   z-index: -99;
-  right: 35%;
-  top:-80px;
+  right: 20px;
+  top:10px;
   opacity: 0;
 }
 .orderButton{
@@ -645,5 +653,43 @@ table th,tr,td{
 }
 table{
   margin: 5px auto;
+  cursor: default;
 }
+.add,.sub{
+  cursor: pointer;
+  font-size: X-large;
+  font-weight: bolder;
+}
+
+.add{
+  color: green;
+}
+.sub{
+  color: red;
+}
+.front{
+  transform: skewX(10deg);
+  position: absolute;
+
+}
+
+.door{
+    width:100px;
+    height:1000px; 
+    /* margin:20px;  */
+    /* background:red; */
+    animation: door 4s ease-in-out 0s infinite alternate;
+}
+
+@keyframes door {
+    0% {
+       -webkit-transform: perspective(5000) rotateY(0deg);
+       -webkit-transform-origin: 0% 0%;
+    }
+    100%{
+       -webkit-transform: perspective(5000) rotateY(50deg);
+        -webkit-transform-origin: 0% 0%;
+    }
+}
+
 
