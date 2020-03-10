@@ -1,11 +1,23 @@
 'use strict';
 
+var headarr = document.getElementsByClassName('heeeed');
+
+for(let i = 0 ; i<headarr.length;i++){
+  headarr[i].addEventListener('click',hi);
+}
+
+function hi(e){
+  localStorage.setItem('header',e.target.id);
+}
+
+
 // eslint-disable-next-line no-undef
 AOS.init({
   offset: 200, // offset (in px) from the original trigger point
   delay: 200,
 });
 
+// eslint-disable-next-line no-undef
 new WOW().init();
 
 

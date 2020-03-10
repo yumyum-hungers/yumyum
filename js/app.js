@@ -1,4 +1,5 @@
 'use strict';
+
 //to locate current user
 var usernum;
 // to locate current company
