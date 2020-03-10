@@ -1,14 +1,15 @@
-# yumyum
-website about ordering food for communities or company.
-# YUMYUM
+# yumYum
+Website about ordering food for communities or companies.
+
+# What is yumYum?
 Ordering your food have never been that easy. Our website provides the best ways to order food using a unique *community registration* which allows the companies (or any kind of community like groups) to register their employees to our system.
-We provide discounts for the registered members when they vote for their favourite resturants starting from the very 10 votes from the same community ending with a free delivery option when they exceed 30 votes.
+We provide discounts for the registered members when they order for their favourite resturants starting from  10 orders from the same community ending with a free delivery option when they exceed 30 orders.
 Although our system keeps track of the companies break hours to delivere their daily meals as soon as the braek starts.
-What are you waiting for? Your food is a button away from you!
-Register to our website and order your first meal.
-# story 
-i am working in x company and every day during my work me and my college spend so much time deciding what we will eat and because we are more that ten people it will take so much time so we need something to make it easier i found yum yum which will give us opportunity to share what we decide to make it easier for my college to decide what they will order , 
-also we get every day free delivery because yum yum offer that when we reach 10 order from same restaurant i am so happy to find yum yum it makes my day days always yum yum .
+What are you waiting for??! Your food is a button away from you!one click the meal be in front of you!Dream achieved right!! ;)
+come on! Register to our website and order your first meal!
+
+# oUr story 
+Hmmm our story started from our suffering to get our meals in fast and in our break times and with free meals *-* life is becoming more colorful lol! as we are  working in a computing company and every day during our work; we spend so much time deciding what we will eat and because we are more than ten people it will take so much time so we need something to make it easier we make *yumYum* which will give us opportunity to share what we decide to make it easier for me and my colleagues to decide what we will order and for yummy free delivery meals that we get! we are  so happy to create *yumYum* it makes our day and whole our next days always yum yummy! :)) 
 
 # object model
 ![object model](images/Presentation1.jpg)
