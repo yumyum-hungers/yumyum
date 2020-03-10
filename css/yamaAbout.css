@@ -2,51 +2,77 @@
 @import 'https://fonts.googleapis.com/css?family=Chilanka&display=swap';
 @import 'https://fonts.googleapis.com/css?family=Chilanka&display=swap';
 
-.home-intro {
-  background-image: url('https://download.hipwallpaper.com/desktop/1536/864/25/82/ltP7UD.jpg');
-  background-size: cover;
+
+
+body, html{
   height: 100%;
-  color: white;
-  text-align: center;
 }
-h1 {
-    font-family: 'Chilanka', cursive;
-    color: #1f1835;
-    font-size: 60px;
-    font-weight: 600;
-    float: left;
-    margin: 8% 10%;
-  }
-  div.cont {
-    margin: 0 auto;
-    padding: 5% 0%;
+
+.home-intro {
+    background-image: url('https://download.hipwallpaper.com/desktop/1536/864/25/82/ltP7UD.jpg');
+    background-size: cover;
+    height: 100%;
+    color: white;
     text-align: center;
-    margin-left: 46%; 
   }
-  div.cont a
+
+div.myContainer {
+  margin: 0 auto;
+  padding: 5% 0%;
+  text-align: center;
+  margin-left: 46%; 
+}
+
+
+div.myContainer a
 {
-    color: rgb(58, 58, 88);
-    text-decoration: none;
-    font: 20px 'Viga', sans-serif;
-    margin: 0% 2%;
-    padding: 1% 2%;
-    position: relative;
-    /* z-index: 0; */
-    cursor: pointer;
+  color: rgb(58, 58, 88);
+  text-decoration: none;
+  font: 20px 'Viga', sans-serif;
+  margin: 0% 2%;
+  padding: 1% 2%;
+  position: relative;
+  /* z-index: 0; */
+  cursor: pointer;
 }
+
 img.logo {
-    float: left;
-    border-radius: 50%;
-    height: 15%;
-    width: 7%;
-    margin: 2% 5%;
+  float: left;
+  border-radius: 50%;
+  height: 15%;
+  width: 7%;
+  margin: 2% 5%;
 }
 
 
 
+/* Pull right and left  */
+div.pullRightLeft a:before, div.pullRightLeft a:after
+{
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  top: 0px;
+  content: '';
+  background: rgb(96, 88, 146);
+  opacity: 0.3;
+  transition: all 0.3s;
+}
 
+div.pullRightLeft a:before
+{
+  left: 0px;
+} 
 
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic);
+div.pullRightLeft a:after
+{
+  right: 0px;
+}
+
+div.pullRightLeft a:hover:before, div.pullRightLeft a:hover:after
+{
+  width: 100%;
+}
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
