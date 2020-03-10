@@ -7,6 +7,7 @@ AOS.init({
 });
 
 new WOW().init();
+
 var testBox = document.getElementById('testBox');
 var signBox = document.getElementById('signBox');
 var form = document.getElementById('form');
@@ -14,9 +15,9 @@ var form2 = document.getElementById('form2');
 var companies ;
 window.addEventListener('scroll',scrollingSign);
 function loadData() {
-  // get array of objects for the companies
-  companies = JSON.parse(localStorage.getItem('companies')) || [];
-
+  var companiesarr = JSON.parse(localStorage.getItem('companies')) || [];
+  // eslint-disable-next-line no-undef
+  companies = new Companies(companiesarr);
 }
 
 loadData();
@@ -58,6 +59,7 @@ function sign(e){
   form.reset();
   form2.reset();
 }
+
 
 
 // function openForm() {
