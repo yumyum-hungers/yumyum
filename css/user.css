@@ -20,24 +20,16 @@ body, html{
 
 #main {
   /* border: solid 0.1px #efefef; */
-<<<<<<< HEAD
-  /* animation: comeOut 3s forwards; */
-  padding: 5px;
-  margin: 20px 0px 20px 218px;
-  position: relative;
-  width: 77%;
-  left: 50px;
-  border: solid 5px #d3d3d3bf;
-  border-radius: 22px;
-  min-height: 900px;
-  background: #deb887ba;
-=======
 /* animation: comeOut 3s forwards; */
-padding: 20px 0 20px 170px;
-position: relative;
-width: 1025px;
-left:50px;
->>>>>>> 4c3d1413248d06deec4f759d48b0f35f1fb1166d
+    padding: 4px;
+    margin: 14px 0 20px 209px;
+    position: relative;
+    width: 1025px;
+    left: 50px;
+    /* background-image: url(../img/ltmodify1.png);
+    background-size: cover; */
+    border-left: solid 5px #493d636e;
+    /* border-radius: 17px; */
 }
 
 
@@ -45,6 +37,7 @@ main{
   position: relative;
   padding: 2px;
   /* margin: 2px; */
+  background-image: url(../img/ltp.png);
 }
 
 @keyframes comeOut {
@@ -153,11 +146,10 @@ div.pullRightLeft a:hover:before, div.pullRightLeft a:hover:after
   padding: 5px;
   position: relative;
   left: 200px;   */
-  margin: 30px;
-  width: 450px;
-  height: 300px;
-  padding: 1px auto;
-  position: relative;
+    margin: 49px 0px 49px 29px;
+    width: 30%;
+    height: 490px;
+    position: relative;
   /* left: 100px; */
   /* float: left; */
 }
@@ -175,6 +167,7 @@ div.pullRightLeft a:hover:before, div.pullRightLeft a:hover:after
 .inlineDiv{
   display: inline-block;
   text-align: center;
+  margin: 10px 0px 87px 34px;
 }  
 
 .boxContainer{
@@ -249,8 +242,11 @@ div.pullRightLeft a:hover:before, div.pullRightLeft a:hover:after
     height: 100%;
     position: absolute;
     border-radius: 10px;
-    border: solid 2px;
+    /* border: solid 2px; */
+    background: rgb(138,135,135);
+    background: linear-gradient(45deg, rgba(138,135,135,1) 27%, rgba(241,241,241,1) 50%, rgba(189,189,189,1) 66%, rgba(163,163,163,1) 79%);
     box-shadow: #e4e4e4 13px 0px 20px;
+    box-shadow: #8e8e8e 3px 20px 19px 5px;
 }
 .imgDesc{
   width: 100px;
@@ -487,19 +483,31 @@ transform: rotate(-10deg);
 } */
 
 .imgLogo{
-  width: 150px;
-  height: 150px;
+  width: 300px;
+  height: 300px;
   align-content: center;
   transform: translateZ(15px);
   border-radius: 5px;
+  opacity: 0.8;
 }
 
 .votes{
   font-size: 24px;
   font-weight: bold;
+  /* padding: 104px 0px 1px 152px; */
+  margin: 105px 0px 0px 149px;
+  padding: 12px 25px 15px 9px;
+  width: 108px;
+  height: 23px;
+  float: left;
+  border-top: solid 4px #ea00008f;
+  border-left: solid 4px #ea00008f;
+  border-radius: 5px 0px 8px 0px;
+  background: #ea0000b3;
 }
 .resturantName{
   font-size: 24px;
+  padding: 43px 0px;
   font-weight: bolder;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -668,8 +676,10 @@ table{
   color: red;
 }
 .front{
-  transform: skewX(10deg);
+  /* transform: skewX(10deg); */
   position: absolute;
+
+  
 
 }
 
