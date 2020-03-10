@@ -8,7 +8,6 @@ AOS.init({
 
 new WOW().init();
 
-
 var testBox = document.getElementById('testBox');
 var signBox = document.getElementById('signBox');
 var form = document.getElementById('form');
@@ -60,3 +59,13 @@ function sign(e){
   form.reset();
   form2.reset();
 }
+
+
+
+// function openForm() {
+//   document.getElementById("myForm").style.display = "block";
+// }
+
+// function closeForm() {
+//   document.getElementById("myForm").style.display = "none";
+// }

@@ -1,92 +1,169 @@
 @import 'https://fonts.googleapis.com/css?family=Viga&display=swap';
 @import 'https://fonts.googleapis.com/css?family=Chilanka&display=swap';
-@import 'https://fonts.googleapis.com/css?family=Chilanka&display=swap';
+@import 'https://fonts.googleapis.com/css?family=Dancing+Script&display=swap';
 
-.home-intro {
-  background-image: url('https://download.hipwallpaper.com/desktop/1536/864/25/82/ltP7UD.jpg');
-  background-size: cover;
+
+
+body, html{
   height: 100%;
-  color: white;
+}
+
+body{
+  background-color: rgb(221, 214, 255);
+}
+
+/* This section for header */
+div.myContainer {
+  margin: 0 auto;
+  padding: 5% 0%;
+  text-align: center;
+  margin-left: 46%; 
+}
+
+
+div.myContainer a
+{
+  color: rgb(58, 58, 88);
+  text-decoration: none;
+  font: 20px 'Viga', sans-serif;
+  margin: 0% 2%;
+  padding: 1% 2%;
+  position: relative;
+  /* z-index: 0; */
+  cursor: pointer;
+}
+
+img.logo {
+  float: left;
+  border-radius: 50%;
+  height: 15%;
+  width: 7%;
+  margin: 2% 5%;
+}
+
+
+
+/* Pull right and left  */
+div.pullRightLeft a:before, div.pullRightLeft a:after
+{
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  top: 0px;
+  content: '';
+  background: rgb(96, 88, 146);
+  opacity: 0.3;
+  transition: all 0.3s;
+}
+
+div.pullRightLeft a:before
+{
+  left: 0px;
+} 
+
+div.pullRightLeft a:after
+{
+  right: 0px;
+}
+
+div.pullRightLeft a:hover:before, div.pullRightLeft a:hover:after
+{
+  width: 100%;
+}
+
+/* This section for h1 and the next button */
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  color: #1f1835;
+  font-size: 95px;
+  float: left;
+  margin: 8% 10%;
   text-align: center;
 }
-h1 {
-    font-family: 'Chilanka', cursive;
-    color: #1f1835;
-    font-size: 60px;
-    font-weight: 600;
-    float: left;
-    margin: 8% 10%;
-  }
-  div.cont {
-    margin: 0 auto;
-    padding: 5% 0%;
-    text-align: center;
-    margin-left: 46%; 
-  }
-  div.cont a
-{
-    color: rgb(58, 58, 88);
-    text-decoration: none;
-    font: 20px 'Viga', sans-serif;
-    margin: 0% 2%;
-    padding: 1% 2%;
-    position: relative;
-    /* z-index: 0; */
-    cursor: pointer;
+
+a.next {
+  text-decoration: none;
+  display: inline-block;
+  padding: 12px 18px;
+  margin-left: 45%;
+  
 }
-img.logo {
-    float: left;
-    border-radius: 50%;
-    height: 15%;
-    width: 7%;
-    margin: 2% 5%;
+
+a.next:hover {
+  background-color: rgb(182, 150, 250);
+  color: black;
 }
 
 
-
-
-
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic);
-
-body {
-    font-family: 'Source Sans Pro', sans-serif;
-    line-height: 1.5;
-    color: #323232;
-    font-size: 15px;
-    font-weight: 400;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
+.next {
+  background-color: rgb(125, 65, 255);
+  color: white;
 }
-h5{
-    color: rgb(8, 8, 141);
+
+.round {
+  border-radius: 50%;
 }
-main{
-    padding: 75px;
-    background-color: rebeccapurple;
+
+.paragraph {
+  margin-left: 10%;
+}
+
+
+section{
+  display:flex;
+   margin:100px 0; 
+   width:1000px}
+
+
+   .picture{
+     width:60%
+     
+    }
+
+   .picture img{
+	 opacity:.7; margin:15px; border-radius:1%; width:100%
+}
+
+
+    section{
+      margin:75px 5px 5px -40px;
+      width: 1321px;
+    }
+    .picture{
+      width:50%;
+      margin-left: 10%;
+      margin-top: -6%;
+    }
+    .picture img{height:600px; width:500px; margin:2px}
     
+  
+
+  h4 {
+    margin-top: 40px;
+    font-family: 'Barlow Condensed', sans-serif; 
+  }
+
+  p {
+    font-family: 'Barlow Condensed', sans-serif; 
+  }
+
+
+.container {
+  margin-top: 10%;
+  margin-left: 10%;
+  text-align: center;
+  margin-bottom: 180px;
+
 }
-.heading-title {
-    margin-bottom: 100px;
+
+h5{
+  color: rgb(8, 8, 141);
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
 }
-.text-center {
-    text-align: center;
-}
-.heading-title h3 {
-    margin-bottom: 0;
-    letter-spacing: 2px;
-    font-weight: normal;
-}
-.p-top-30 {
-    padding-top: 30px;
-}
-.half-txt {
-    width: 60%;
-    margin: 0 auto;
-    display: inline-block;
-    line-height: 25px;
-    color: #7e7e7e;
-}
+
+
 .text-uppercase {
     text-transform: uppercase;
 }
@@ -142,6 +219,7 @@ main{
 .desk, .desk h4, .team-hover .s-link a {
     text-align: center;
     color: #222;
+    margin: 29px 0 0 0;
 }
 .team-member:hover .team-hover .s-link {
     bottom: 10%;
@@ -190,163 +268,162 @@ main{
     color: #a5a5a5;
     letter-spacing: 1px;
 }
-img{
+.theImg{
     height: 315px;
-    width: 170px;
-    border-radius: 15px;
+    width: 178px;
+    border-radius: 58px;
 }
 .col-md-4.col-sm-4 {
     display: inline-block;
     width: 226px;
 }
 
+
+
+
+
+
+
+/* This section for footer */
 footer {
-    height: 35%;
-    background-color: gray;
+  height: 35%;
+  background-color: #9fa0a0;
 }
 
 .p5 {
-    float: left;
-    margin-top: 2%;
-    font-weight: 700;
-    color: rgb(51, 28, 49);
-    font-size: 27px;
-    text-align: center;
-    font-family: 'Chilanka', cursive;
+  float: left;
+  margin-top: 2%;
+  font-weight: 700;
+  color: rgb(51, 28, 49);
+  font-size: 27px;
+  text-align: center;
+  font-family: 'Chilanka', cursive;
 
 }
 
 .img1{
-  margin-top: 52px;
-    margin-left: -275px;
-    width: 150%;
-    height: 50%;
+margin-top: 52px;
+  margin-left: -275px;
+width: 150%;
 }
 
 .img2{
-  width: 170%;
-  height: 70%;
+width: 170%;
+height: 70%;
 }
 
 
 .apps {
-  display: inline-block;
-   width: 100px;
-   height: 100px;
-    margin-left: 1%;
-  }
-
-  .p6 {
-    margin-top: 13px;
-    font-weight: 700;
-    color: rgb(51, 28, 49);
-    font-size: 27px;
-    font-family: 'Chilanka', cursive;
-  }
-
-  .num1{
-    margin-top: 3%;
-    float: left;
-  }
-
-  
-  i.fa.fa-envelope {
-    float: left;
-    font-size: 20px;
-  }
-
-  .num4{
-    margin-top: 45px;
-    margin-left: 8%;
-    float: left;
-  }
-
-  i.fa.fa-map-o {
-    padding-top: 0px;
-    margin-left: 5px;
-    float: left;
-    font-size: 19px;
-  }
-
- 
-  i.fa.fa-mobile-phone {
-    padding-top: 0px;
-    margin-left: 11px;
-    float: left;
-    font-size: 25px;
-  
-  }
-  
-  .contact {
-    
-    margin-left: -17px;
+display: inline-block;
+ width: 100px;
+ height: 100px;
+  margin-left: 1%;
 }
-  .fa-envelope:before {
-    
-    margin-left: 6px;
-  }
 
-  .p7 {
-    margin-right: 107px;
-    padding-left: 60;
-    margin-top: 3%;
-    font-weight: 700;
-    color: rgb(51, 28, 49);
-    font-size: 27px;
-    text-align: center;
-    font-family: 'Chilanka', cursive;
-  }
-
-  .fa {
-     
-    padding: 15px;
-    font-size: 20px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50%; 
-  }
-  
-  .fa:hover {
-      opacity: 0.7;
-  }
-  
-  
-  .fa-facebook {
-    float: left;
-    margin-right: 16px;
-    margin-top: 6%;
-    padding-left: 18px;
-    padding-right: 18px;
-    padding-bottom: 14px;
-    background: rgb(18, 71, 185);
-    color: white;
-  }
-  
-  .fa-twitter {
-    float: left;
-    margin-top: 6%;
-    margin-right: 5%;
-    background: #55ACEE;
-    color: white;
-  }
-
-  .fa-instagram {
-    float: left;
-    margin-top: 6%;
-    margin-right: 5%;
-    background: #ff1f8f;
-    color: white;
-  }
-
-  p.p8 {
-    font-family: 'Barlow Condensed', sans-serif;
-    margin-top: 35%;
-    font-size: 17px;
+.p6 {
+  margin-top: 13px;
+  font-weight: 700;
+  color: rgb(51, 28, 49);
+  font-size: 27px;
+  font-family: 'Chilanka', cursive;
 }
+
+.num1{
+  margin-top: 3%;
+  float: left;
+}
+
+
+i.fa.fa-envelope {
+  float: left;
+  font-size: 20px;
+}
+
+.num4{
+  margin-top: 45px;
+  margin-left: 8%;
+  float: left;
+}
+
+i.fa.fa-map-o {
+  padding-top: 0px;
+  margin-left: 5px;
+  float: left;
+  font-size: 19px;
+}
+
+
+i.fa.fa-mobile-phone {
+  padding-top: 0px;
+  margin-left: 11px;
+  float: left;
+  font-size: 25px;
+
+}
+
+.contact {
   
+  margin-left: -17px;
+}
+.fa-envelope:before {
+  
+  margin-left: 6px;
+}
+
+.p7 {
+  margin-right: 107px;
+  padding-left: 60;
+  margin-top: 3%;
+  font-weight: 700;
+  color: rgb(51, 28, 49);
+  font-size: 27px;
+  text-align: center;
+  font-family: 'Chilanka', cursive;
+}
+
+.fa {
+   
+  padding: 15px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%; 
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
 
 
+.fa-facebook {
+  float: left;
+  margin-right: 16px;
+  margin-top: 6%;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-bottom: 14px;
+  background: rgb(18, 71, 185);
+  color: white;
+}
 
+.fa-twitter {
+  float: left;
+  margin-top: 6%;
+  margin-right: 5%;
+  background: #55ACEE;
+  color: white;
+}
 
+.fa-instagram {
+  float: left;
+  margin-top: 6%;
+  margin-right: 5%;
+  background: #ff1f8f;
+  color: white;
+}
 
-
+p.p8 {
+  font-family: 'Barlow Condensed', sans-serif;
+  margin-top: 35%;
+  font-size: 17px;
+}
