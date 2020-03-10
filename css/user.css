@@ -20,9 +20,6 @@ body, html{
 
 #main {
   /* border: solid 0.1px #efefef; */
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   /* animation: comeOut 3s forwards; */
   padding: 5px;
   margin: 20px 0px 20px 218px;
@@ -33,18 +30,13 @@ body, html{
   border-radius: 22px;
   min-height: 900px;
   background: #deb887ba;
-=======
->>>>>>> 872058f638a0df7d3f632fc40120d2a34b24a1db
 /* animation: comeOut 3s forwards; */
 padding: 20px 0 20px 170px;
 position: relative;
 width: 1025px;
 left:50px;
-<<<<<<< HEAD
 top:64px;
-=======
->>>>>>> 4c3d1413248d06deec4f759d48b0f35f1fb1166d
->>>>>>> 872058f638a0df7d3f632fc40120d2a34b24a1db
+
 }
 
 
