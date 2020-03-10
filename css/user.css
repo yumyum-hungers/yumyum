@@ -4,7 +4,7 @@
 
 
 .home-intro {
-  background-image: url('https://download.hipwallpaper.com/desktop/1536/864/25/82/ltP7UD.jpg');
+  background-image: url('../images/lt.jpg');
   background-size: cover;
   height: 157px;
   color: white;
@@ -20,16 +20,23 @@ body, html{
 
 #main {
   /* border: solid 0.1px #efefef; */
+  /* animation: comeOut 3s forwards; */
+  padding: 5px;
+  /* margin: 20px 0px 20px 218px; */
+  position: relative;
+  /* width: 77%; */
+  /* left: 50px; */
+  border: solid 5px #d3d3d3bf;
+  border-radius: 22px;
+  min-height: 900px;
+  background: #deb887ba;
 /* animation: comeOut 3s forwards; */
-    padding: 4px;
-    margin: 14px 0 20px 209px;
-    position: relative;
-    width: 1025px;
-    left: 50px;
-    /* background-image: url(../img/ltmodify1.png);
-    background-size: cover; */
-    border-left: solid 5px #493d636e;
-    /* border-radius: 17px; */
+padding: 20px 0 20px 170px;
+position: relative;
+width: 1025px;
+left:140px;
+top:64px;
+
 }
 
 
@@ -400,14 +407,12 @@ div.pullRightLeft a:hover:before, div.pullRightLeft a:hover:after
   /* border: solid red; */
   height: 150px;
   width: 150px;
-  position: fixed;
-  left: -5px;
-  padding: 6px 10px 10px 69px;
-   margin: 23px 0px 0px; 
+  position: absolute;
+  padding: 10px;
+  margin: 10px;
   z-index: 9999;
-  border: solid #989898b5 6px;
-  height: 300px;
-  border-radius: 0px 15px 15px 0px;
+  top: 100px
+
 }
 
 #companyLogo{
@@ -702,4 +707,48 @@ table{
     }
 }
 
+#orderedButton{
+  /* width: 50px;
+  height: 50px; */
+  /* border: solid red; */
+  position: absolute;
+  z-index: 999999999;
+  bottom: -61px;
+  cursor: pointer;
+}
+.orderedImg{
+  width: 100px;
+  height:100px;
+  border-radius: 22px
+}
+h2{
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: absolute;
+  left:15px;
+}
+ul{
+  display: inline-block;
+  /* margin: 0px 10px 0 70px; */
+  position: relative;
+  top: -44px;
+}
+li{
+  margin: 5px;
+}
+.orderedOne{
+  display: inline-block;
+  margin: 20px 5px;
+  /* width: 50px; */
+  border: solid gray;
+  padding: 10px;
+  border-radius: 20px;
 
+}
+.divdiv{
+  margin: 10px;
+  position: absolute;
+  left: 5px;
+  top: 40px;
+}
