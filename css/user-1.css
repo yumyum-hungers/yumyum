@@ -1,0 +1,110 @@
+body{
+    background: #1d1d1d;
+}
+#resturant-logos {
+    display: inline-block;
+}
+#resturant-logos img{
+    height: 150px;
+    width: 150px;
+}
+main {
+    display: block;
+    position: relative;
+    top: 214px;
+
+}
+.logos {
+    height: 200px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    border: solid 5px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+.logos h5,p{
+    
+    position: absolute;
+    bottom: 0px;
+    margin: 0px 0px 0px 0px;
+    color: #ffffff;
+    padding: 15px 0px 15px 10px;
+}
+.logos h5{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 190px;
+    
+}
+.logos p {
+    position: absolute;
+    right: 25px;
+    
+}
+
+.wrapper {
+    height: 200px;
+    width: 632px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  
+  .button-wrapper {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 10;
+
+  }
+  
+  .carousel {
+    /* margin: 0px 10px 0px 22px; */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 85%;
+    display: flex;
+    position: absolute;
+    left: 58px;
+    transition: all 1s ease;
+    overflow: hidden;
+  }
+  
+  .card {
+    margin: 0px 10px 0px 70px; 
+    /* background: black; */
+    min-width: 200px;
+    height: 200px;
+    margin-right: 1rem;
+    display: inline-block;
+  }
+  .bb{
+      height: 200px;
+      width: 50px;
+  }
+  main{
+      width: 700px;
+      margin: auto;
+  }
+  .menuDev {
+      height: 300px;
+      background-size: cover;
+      background-repeat: round;
+      margin: 100px 0px;
+      position: relative;
+      border-radius: 25px 25px 0px 0px ;
+
+
+  }
+  .menuP{
+      position: absolute;
+      bottom: 0px;
+      padding: 20px 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      width: 660px;
+      
+  }
