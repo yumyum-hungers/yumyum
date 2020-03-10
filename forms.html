@@ -4,13 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registeration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="images/serving-dish.png" type="image/icon type">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/forms.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+    <link rel="stylesheet" href="css/animate.min.css">
    
+
 </head>
 <body>
-    <header>
-        <img id="logo-1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Whole_Foods_Market_201x_logo.svg/800px-Whole_Foods_Market_201x_logo.svg.png" alt="">
+    <header class="home-intro">
+        
+        <a href="">
+            <img class="logo wow bounceInRight" src="images/yumyum (3).jpg" alt="yumyum">
+            </a>
+            <div class="container deepOrange pullRightLeft">
+                <a>HOME</a>
+                <a>REGISTER</a>
+                <a>ABOUT US</a>
+                <a>CONTACT</a>
+              </div>
+              <h1 class="wow swing">YUM YUM</h1>
+        
+            
+
+
+        <!-- <img id="logo-1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Whole_Foods_Market_201x_logo.svg/800px-Whole_Foods_Market_201x_logo.svg.png" alt="">
         <img id="logo-2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Whole_Foods_Market_201x_logo.svg/800px-Whole_Foods_Market_201x_logo.svg.png" alt="">
         <div class="inner-header">
        <div class="main-header">
@@ -21,28 +41,35 @@
         <a href=""><li>About Us</li></a>
         <a href=""><li>Contact Us</li></a>
         </ul>
-    </div>
-    </header>
-    <main>
+    </div> -->
+    
+    
 
 
 
 
         <div class="form-style-3">
         <form id="myForm">
-            <fieldset> <legend>Please Fill In The Registeration Form</legend>
+            <fieldset> <legend>Please Fill In The Registration Form</legend>
              <label for="name">Name: </label>
-            <input type="text" id="name" placeholder="Enter Full Name.." >
+            <input type="text" id="name" placeholder="Enter Full Name.." required >
              <label for="phonenumber">Phone Number: </label>
-             <input type="number" id="phonenumber" placeholder="Enter Phone Number.." >
-             <label for="company">Comapny: </label>
-            <input type="text" id="company" placeholder="Enter Company.. (optional)">
+             <input type="number" id="phonenumber" placeholder="Enter Phone Number.." required>
+             <label for="company">Company: </label>
+             <select for="company" id="breakHours" >
+                <optgroup label="Choose a Company:" id="companyList"> 
+                    <!-- <option value="Ltuc">LTUC</option>
+                    <option value="Arab Bank">Arab Bank</option>
+                    <option value="Hikma">Hikma</option>
+                    <option value="JU">JU</option> -->
+                   </optgroup> </select>
+            <!-- <input type="text" id="company" placeholder="Choose Company.. (optional)"> -->
 
              <label for="employees">Number of Employees: </label>
-            <input type="number" id="employees" placeholder="Enter Number of Employees..(opyional)">
+            <input type="number" id="employees" placeholder="Enter Number of Employees..(optional)" required>
 
-             <label for="breakHours">Break hours: </label>
-            <select id="breakHours" >
+             <label for="hours">Break hours: </label>
+            <select id="hours" >
                 <optgroup label="pick a time:"> 
                     <option value="10am">10am</option>
                     <option value="11am">11am</option>
@@ -57,22 +84,139 @@
                 <option value="8pm">8pm</option> </optgroup> </select>
 
                 <label for="email">Email: </label>
-             <input type="text" id="email" placeholder="Enter your Email.." >
+             <input type="text" id="email" placeholder="Enter your Email.." required>
              <label for="pwd">Password: </label>
-            <input type="password" id="pwd" placeholder="Enter your Password.." >
-             <button type="submit" value="Submit" id="submit" onsubmit="check(); return false" > <a href="billing.html"></a> Submit </button>
+            <input type="password" id="pwd" placeholder="Enter your Password.." required >
+             <button type="submit" value="Submit" id="submit" onclick="btnn()">REGISTER </button>
             </fieldset>
         </form>
-        
+        <script>
+          
+        </script>
 
 
     </div>
-     <img id="form-logo" src="img/logo-head.png" alt="">
-     <img id="burger" src="img/burger.png" alt="">
+     <!-- <img id="form-logo" src="img/logo-head.png" alt=""> -->
+     <!-- <img id="burger" src="img/burger.png" alt=""> -->
 
         
-    </main>
+    </header>
+    <div class="companies">
+        <p class="p3 wow fadeInRight">Participating Companies</p>
+
+        <div class="row">
+            <div class="column" data-aos="zoom-in">
+              <img src="images/bank.png" alt="Arab-Bank" width="100" height="100">
+            </div>
+            <div class="column" data-aos="zoom-in">
+              <img src="images/bayt.png" alt="bayt" width="100" height="100">
+            </div>
+            <div class="column" data-aos="zoom-in">
+              <img src="images/hikma.png" alt="hikma" width="100" height="100">
+            </div>
+            <div class="column" data-aos="zoom-in">
+              <img src="images/sooq.png" alt="sooq" width="100" height="100">
+            </div>
+            <div class="column" data-aos="zoom-in">
+              <img src="images/LTUC.png" alt="LTUC" width="100" height="100">
+            </div> 
+            <div class="column" data-aos="zoom-in">
+              <img src="images/estarta.png" alt="estarta" width="100" height="100">
+            </div>
+            <div class="column" data-aos="zoom-in">
+                <img src="images/jordan-uni.png" alt="jordan-uni" width="100" height="100">
+              </div>
+            <div class="column" data-aos="zoom-in">
+                <img src="images/sedco.png" alt="sedco" width="100" height="100">
+              </div>  
+           
+               
+              
+          </div>
+
+          <p class="p4 wow fadeInRight">Restaurants</p>
+          <div class="row">
+            <div class="column" data-aos="zoom-in">
+              <img src="images/pizza.png" alt="pizza" width="100" height="100">
+            </div>
+            <div class="column" data-aos="zoom-in">
+              <img src="images/saj.png" alt="saj" width="100" height="100">
+            </div>
+            <div class="column" data-aos="zoom-in">
+              <img src="images/subway.png" alt="subway" width="100" height="100">
+            </div>
+            <div class="column" data-aos="zoom-in">
+                <img src="images/waffle.jpg" alt="waffle" width="100" height="100">
+              </div>
+            <div class="column" data-aos="zoom-in">
+                <img src="images/mac.png" alt="mac" width="100" height="100">
+              </div>
+            <div class="column" data-aos="zoom-in">
+                <img src="images/hardees.png" alt="hardees" width="100" height="100">
+              </div>  
+            <div class="column" data-aos="zoom-in">
+                <img src="images/burger.jpg" alt="burger" width="100" height="100">
+              </div>
+              <div class="column" data-aos="zoom-in">
+                <img src="images/hcmp.png" alt="hamada" width="100" height="100">
+              </div>  
+              
+          </div>
+    </div>
 <footer>
+    <div>
+        <img class="logo" src="images/yumyum (3).jpg" alt="yumyum">
+        
+     </div> 
+     
+     <div class="num2">
+     <div class="num1">
+     <p class="p5">Take YUMYUM with you</p>
+     <div class="apps" > 
+         <a href=""><img class="img1" src="images/app store.png" alt="app store" >
+         </a>
+       </div>
+       
+       <div class="apps" >
+       <a href=""><img class="img2" src="images/google play.png" alt="google play" >
+       </a>
+       </div>  
+     </div>
+
+     <div class="num1">
+       <p class="p6">Contact Us</p>
+     
+       <div class="contact">
+       <i class="fa fa-envelope" >
+         yumyum@gmail.com
+         </i>
+       </div>
+
+         <div class="contact">
+         <i class="fa fa-map-o">
+         Jordan-Amman   
+         </i></div>
+
+          <div class="contact">
+            <i class="fa fa-mobile-phone">
+             0795269835
+         </i></div>
+     </div>
+
+     <div class="num4">
+       <p class="p7">Follow Us On</p>
+       <a href="#" class="fa fa-facebook"></a>
+       <a href="#" class="fa fa-twitter"></a>
+       <a href="#" class="fa fa-instagram"></a>
+       <p class="p8"> Copyright © 2020 by Team Hungers</p>
+     </div>
+    
+    
+   </div>
+
+
+
+
     <div class="snapInButtonContainer" ng-click="openContactUs()">
         <a class="snapInButton">
             <div class="favicon">
@@ -83,9 +227,12 @@
         </a>
     </div>
   
-    <p class="foot-p"> Copyright © 2020 by Team Hungers </p>
+    <!-- <p class="foot-p"> Copyright © 2020 by Team Hungers </p> -->
 </footer>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/app.js"></script>
 <script src="forms.js"></script>
-    
+
 </body>
 </html>

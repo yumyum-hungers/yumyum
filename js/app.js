@@ -84,7 +84,7 @@ if(localStorage.getItem('companies') === null){
 
   var mc = new Restorant('McDonald\'s','images/mac.png');
   mc.menu =['Big Mac Reagular Meal','Chicken McNuggets (6 pcs)','McChiken Regular Meal','Big Teasty Medium Meal'];
-  mc.menuImage = ['images/bigmac.jpg','images/mcnugget.jpg','images/mcChikenregularmeal.jpg','images/bigteastymediummeal.jpg'];
+  mc.menuImage = ['images/bigmacc.jpg','images/mcnugget.jpg','images/mcChikenmegularmeal.jpg','images/bigteastymediummeal.jpg'];
 
   var pizzaHut = new Restorant('Pizza Hut','images/pizza.png');
   pizzaHut.menu =['HAWAIIAN','HOT STUFF BEEF','MEAT LOVERS','PEPPERONI'];
@@ -105,7 +105,7 @@ if(localStorage.getItem('companies') === null){
   }
   companies.company[0].addUser('anas','anas','0785544665','hi@bye.com','12','015','55');
   companies.company[1].addUser('rowaid','rowaid','0785544665','bye@hi.com','1','015','55');
-  companies.company[2].addUser('yamam','yamam','0785544665','yum@hi.com','3','015','55');
+  companies.company[2].addUser('yamama','yamama','0785544665','yum@hi.com','3','015','55');
   companies.company[3].addUser('samah','samah','0785544665','css@hi.com','10','015','55');
   localStorage.companies = JSON.stringify(companies.company);
 

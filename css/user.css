@@ -18,10 +18,7 @@ body, html{
   /* position: relative; */
 }
 
-#main{
-  /* background-image: url('https://download.hipwallpaper.com/desktop/1536/864/25/82/ltP7UD.jpg');
-  background-size: cover;
-  border: solid 1px #efefef; */
+#main {
   /* border: solid 0.1px #efefef; */
 /* animation: comeOut 3s forwards; */
 padding: 20px 0 20px 170px;
@@ -391,7 +388,7 @@ div.pullRightLeft a:hover:before, div.pullRightLeft a:hover:after
   color: #f20519;
 }
 
-#sideData{
+#sideData {
   /* border: solid red; */
   height: 150px;
   width: 150px;

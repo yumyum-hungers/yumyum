@@ -1,55 +1,66 @@
 'use strict';
-// function Resturant(name, phoneNumber, company, employees, breakHours, email){
-//   this.name = name;
-//   this.phoneNumber = phoneNumber;
-//   this.company = company;
-//   this.employees = employees;
-//   this.breakHours = breakHours;
-//   this.email = email;
-// }
-
-
-//   var nameInput = event.target.name.value;
-//   var phoneInput = event.target.phoneNumber.value;
-//   var companyInput = event.target.company.value;
-//   var employeeInput = event.target.employees.value;
-//   var breakInput = event.target.breakHours.value;
-//   var emailInput = event.target.email.value;
-//   var newStore = new Resturant(nameInput, phoneInput, companyInput, employeeInput, breakInput, emailInput);
-
-//   newStore();
-
-// }
-// );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function myForm(){
-//   var no1=document.getElementById('name').value;
-//   var no2=document.getElementById('phonenumber').value;
-//   var no3=document.getElementById('company').value;
-//   var no4=document.getElementById('employees').value;
-//   var no5=document.getElementById('breakHours').value;
-//   var no6=document.getElementById('email').value;
-//   var no7=document.getElementById('pwd').value;
-
-
-//   alert('Name: ' + no1 +'\n Phone Number: ' + no2 +'\n company: ' + no3+ '\n Number of Employees: ' +no4
-//   + '\n Break Hour: ' + no5 + '\n Email: ' + no6 + '\n password: ********');
-// }
-
-
 var registerForm = document.getElementById('myForm');
+var companynum ;
+var userNum ;
+var companies;
+
 registerForm.addEventListener('submit', function (event){
-  event.preventDefault();});
+  event.preventDefault();
+
+  function btnn(){
+    if (event.target.name.value)
+      window.location.href='billing.html';
+    document.getElementById('myForm').reset();
+  }
+  btnn();
+
+
+
+
+  for (var i in companies.company) {
+    if(companies.company[i].companyName===document.getElementById('breakHours').value){
+      companynum = Number(i) ;
+      console.log(companynum);
+      break;
+    }
+  }
+  console.log(companies.company[companynum]);
+  // companies.company[companynum].addUser
+  var user1 = new Users(event.target.name.value,event.target.pwd.value,event.target.phonenumber.value
+    ,event.target.email.value,event.target.hours.value,event.target.employees.value,0);
+
+  companies.company[companynum].users.push(user1);
+  userNum = companies.company[companynum].users.length-1;
+  companies.saveToLocalStorage();
+  localStorage.companynum=companynum;
+  localStorage.userNum=userNum;
+}
+);
+
+
+function loadCompanies() {
+  var companiesFromLocalStorage = JSON.parse(localStorage.getItem('companies')) || [];
+  companies = new Companies(companiesFromLocalStorage);
+}
+loadCompanies();
+var listElement = document.getElementById('companyList');
+for (var c = 0; c < companies.company.length; c++){
+  companies.company[c].companyName;
+  var optgroupElement = document.createElement('option');
+  optgroupElement.innerHTML=companies.company[c].companyName;
+
+  optgroupElement.id=c;
+
+
+  listElement.appendChild(optgroupElement);
+}
+
+
+// companies.company[i].addUser(name,password,number,email,breakHour,employeesNumber,visaNumber);
+
+
+
+// console.log (companies.company[0].companyName);
+
+
+// companies.saved.localStorage();

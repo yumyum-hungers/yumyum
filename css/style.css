@@ -1,7 +1,7 @@
 
   @import 'https://fonts.googleapis.com/css?family=Viga&display=swap';
   @import 'https://fonts.googleapis.com/css?family=Chilanka&display=swap';
-  @import 'https://fonts.googleapis.com/css?family=Chilanka&display=swap';
+  @import 'https://fonts.googleapis.com/css?family=Kalam&display=swap';
 
 .home-intro {
     background-image: url('https://download.hipwallpaper.com/desktop/1536/864/25/82/ltP7UD.jpg');
@@ -85,6 +85,9 @@ div.pullRightLeft a:hover:before, div.pullRightLeft a:hover:after
     width: 100%;
 }
 
+p.p1.wow.fadeInRight {
+  border-bottom: solid;
+}
  
 h2 {
     position: relative;
@@ -123,7 +126,7 @@ p.p1 {
     clear: left;
     color: beige;
     font-size: 40px;
-    margin: 3% 27%;
+    margin: 2% 42%;
     font-family: 'Chilanka', cursive;
 }
 
@@ -135,16 +138,21 @@ p.p1 {
     padding: -82%;
     margin: 29% 75%;
     padding: 32px;
-    border: 5px groove rgb(243, 202, 236);
+    border-left: 2px solid rgb(248, 247, 250);
+    border-right: 2px solid rgb(248, 247, 250);
+    /* border: 5px groove rgb(243, 202, 236); */
     margin: -2% 10%;
-    font-family: 'Snippet', sans-serif;
+    font-family: 'Kalam', cursive;
     color: beige;
     text-align: left;
     font-size: 25px;
     line-height: 33px;
 }
 
-
+.p2.aos-init.aos-animate {
+  margin-right: 345px;
+  margin-top: -9px;
+}
 .companies {
     height: 100%;
     background-color: beige;
@@ -214,73 +222,76 @@ footer {
 }
 
 .img1{
-  padding-top: 9%;
+  margin-top: 52px;
+    margin-left: -275px;
   width: 150%;
 }
 
 .img2{
-  margin-left: -11%;
   width: 170%;
   height: 70%;
 }
 
 
 .apps {
+  display: inline-block;
    width: 100px;
    height: 100px;
-    margin-left: 18%;
-    padding: 2px;
+    margin-left: 1%;
   }
 
   .p6 {
-    padding-left: 60px;
-    margin-top: 3%;
+    margin-top: 13px;
     font-weight: 700;
     color: rgb(51, 28, 49);
     font-size: 27px;
-    text-align: center;
     font-family: 'Chilanka', cursive;
   }
 
   .num1{
-    margin-top: 2%;
+    margin-top: 3%;
     float: left;
-    display: inline-block;
-    bottom: 0;
   }
 
   
   i.fa.fa-envelope {
     float: left;
-    margin-top: 5%;
     font-size: 20px;
   }
 
   .num4{
-    margin-top: 2%;
-    margin-left: 10%;
+    margin-top: 45px;
+    margin-left: 8%;
     float: left;
-    display: inline-block;
-    bottom: 0;
   }
 
   i.fa.fa-map-o {
-  float: left;
-  font-size: 19px;
+    padding-top: 0px;
+    margin-left: 5px;
+    float: left;
+    font-size: 19px;
   }
 
  
   i.fa.fa-mobile-phone {
-  float: left;
-  font-size: 25px;
+    padding-top: 0px;
+    margin-left: 11px;
+    float: left;
+    font-size: 25px;
+  
   }
   
-  .contact{
-    margin-left: 50px;
-    padding-left: 70px;
+  .contact {
+    
+    margin-left: -17px;
+}
+  .fa-envelope:before {
+    
+    margin-left: 6px;
   }
 
   .p7 {
+    margin-right: 107px;
     padding-left: 60;
     margin-top: 3%;
     font-weight: 700;
@@ -305,34 +316,273 @@ footer {
   
   
   .fa-facebook {
-    float: right;
+    float: left;
+    margin-right: 16px;
     margin-top: 6%;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-bottom: 14px;
     background: rgb(18, 71, 185);
     color: white;
   }
   
   .fa-twitter {
-    float: right;
+    float: left;
     margin-top: 6%;
-    margin-right: 4%;
+    margin-right: 5%;
     background: #55ACEE;
     color: white;
   }
 
   .fa-instagram {
-    float: right;
+    float: left;
     margin-top: 6%;
-    margin-right: 4%;
+    margin-right: 5%;
     background: #ff1f8f;
     color: white;
   }
+
+  p.p8 {
+    font-family: 'Barlow Condensed', sans-serif;
+    margin-top: 35%;
+    font-size: 17px;
+}
   
-  /* .p8 {
-    padding-left: 60;
-    margin-top: 15%;
-    font-weight: 700;
-    color: rgb(51, 28, 49);
-    font-size: 10px;
-    text-align: center;
-    font-family: 'Chilanka', cursive;
-  } */
+
+/* this section for the form */
+/* .open-button {
+  background-color: rgb(126, 43, 119);
+  color: white;
+  font-size: 25px;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  left: 28px;
+  width: 280px;
+}
+
+
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 23px;
+  left: 28px;
+ 
+}
+
+
+.form-container {
+  max-width: 300px;
+  padding: 53px;
+  background-color: rgb(168, 168, 168);
+  
+}
+
+
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+
+}
+
+
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+.form-container .btn {
+  background-color: rgb(155, 4, 185);
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  margin-bottom:10px;
+  opacity: 0.8;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.form-container .cancel {
+  background-color: rgb(255, 241, 118);
+  color:black;
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1.1;
+}
+
+.log{
+text-align: center;
+padding-bottom: 11px;
+font-weight: 600;
+font: 30px 'Viga', sans-serif;
+} */
+
+
+#testBox{
+  top: 800px;
+  width: 200px;
+  height: 200px;
+  border: 3px solid rgb(104, 17, 92);
+  position: absolute;
+  left: 45px;
+  transition: 0.3s ease-in-out;
+  background-color: rgb(228, 226, 226);
+}
+
+
+.sign {
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-family: 30px 'Viga', sans-serif;
+
+}
+
+.sign2{
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-family: 30px 'Viga', sans-serif;
+
+}
+
+
+.name{
+  font-size: 15px;
+  padding-top: 10px;
+  font-family: sans-serif
+
+}
+
+
+.name3{
+  margin-right: 30px;
+}
+
+input.pass{
+  margin-top: 10px;
+margin-right: 6px;
+}
+
+input#signIn {
+  margin-top: 21px;
+  background-color: #493d63;
+  color: aliceblue;
+  padding: 7px 15px 7px 15px;
+  cursor: pointer;
+  font-family: cursive;
+
+}
+
+input.name2{
+  margin-top: 25px;
+}
+
+.sign-out {
+  margin-top: -36px;
+  float: right;
+  margin-right: 18px;
+  background-color: #493d63;
+  padding: 5px 15px 5px 15px;
+  font-family: cursive;
+  padding: 5px 15px 7px 15px;
+
+}
+
+#signBox{
+  height: 200px;
+  width: 35px;
+  background: rgb(248, 68, 248);
+  position: fixed;
+  left: 0px;
+  top:350px;  
+  /* border-radius: 20px; */
+  text-align: center;
+  transition: all 1s ease-in-out;
+  animation: shake 3s 4s infinite ;
+  opacity: 0;
+  overflow: hidden;
+}
+
+fieldset {
+  margin-left: 10px;
+}
+#signBox form{
+  display: none;
+}
+
+#signBox:hover form{
+  display: block;
+}
+#signBox a{
+  display: none;
+}
+
+#signBox:hover a{
+  display: block;
+}
+
+#signBox:hover{
+  height: 200px;
+  width: 350px;
+  background: rgb(175, 174, 174);
+  position: fixed;
+  right: 0px;
+  top:350px;  
+  border-radius: 20px;
+  /* border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px; */
+  animation: none;
+}
+
+@keyframes shake {
+  0% { transform:translate(0,0) }
+  1% { transform:translate(5px,0) }
+  3% { transform:translate(0,0) }
+  5% { transform:translate(5px,0) }
+  7% { transform:translate(0,0) }
+  8% { transform:translate(5px,0) }
+  10% { transform:translate(0,0) }
+  12% { transform:translate(5px,0)}
+  14% { transform:translate(0,0) }
+  100% { transform:translate(0,0) }
+ }
+ 
+a {
+  text-decoration: none;
+  color: black;
+  font-family: cursive;
+}
+
+.form{
+  color: white;
+}
+.mynum {
+  font-size: 19px;
+}
+
+label.name2 {
+  float: left;
+  margin-left: 65px;
+}
+
+label.name3 {
+  margin-top: 45px;
+  margin-left: 65px;
+}
+
+.submit {
+  padding-left: 60px;
+}
