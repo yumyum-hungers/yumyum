@@ -95,7 +95,7 @@ main {
     border: solid 5px rgba(0, 0, 0, 0.5);
     border-radius: 5px;
 }
-.logos h5,p{
+.logos h5, .logos p{
     
     position: absolute;
     bottom: 0px;
@@ -131,7 +131,7 @@ main {
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    z-index: 10;
+    z-index: 0;
     left: 0;
     top: 208px;
     padding: 40px 0px;
@@ -150,6 +150,7 @@ main {
     left: 58px;
     transition: all 1s ease;
     overflow: hidden;
+    z-index: 8;
   }
   
   .card {
@@ -192,6 +193,7 @@ main {
   #leftDiv, #rightDiv {
     background: #1d1d1d;
     height: 205px;
+    z-index: 10;
     
     /* padding: 25px 0px; */
 }
