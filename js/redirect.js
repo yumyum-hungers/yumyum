@@ -8,7 +8,7 @@ setTimeout(() => {
     window.location.replace('forms.html');
     break;
   case 'thirdPage':
-    window.location.replace('yamaAbout.html');
+    window.location.replace('AboutUS.html');
     break;
   case 'fourthPage':
     window.location.replace('user.html');

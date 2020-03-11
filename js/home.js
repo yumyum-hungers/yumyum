@@ -21,7 +21,7 @@ AOS.init({
 new WOW().init();
 
 var signBox = document.getElementById('signBox');
-var form = document.getElementById('form');
+// var form = document.getElementById('form');
 var form2 = document.getElementById('form2');
 var companies ;
 window.addEventListener('scroll',scrollingSign);
@@ -43,7 +43,7 @@ function scrollingSign(){
 }
 
 
-form.addEventListener('submit',sign);
+// form.addEventListener('submit',sign);
 form2.addEventListener('submit',sign);
 function sign(e){
   e.preventDefault();
@@ -59,7 +59,7 @@ function sign(e){
       }
     }
   }
-  form.reset();
+  // form.reset();
   form2.reset();
 }
 
