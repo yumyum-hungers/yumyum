@@ -81,11 +81,11 @@ Restorant.prototype.votes = function() {
 if(localStorage.getItem('companies') === null){
   console.log('give it data');
   var companyToAdd = ['LTUC','Arab Bank','Hikma','JU'];
-  var logoToAdd = ['images/LUCT-600x400.jpg','images/arabi.jpg','images/hikma.jpg','images/jordan-uni.png'];
+  var logoToAdd = ['/images/LTUC.png','/images/bank.png','/images/hikma.png','/images/jordan-uni.png'];
 
   var mc = new Restorant('McDonald\'s','images/mac.png');
   mc.menu =['Big Mac Reagular Meal','Chicken McNuggets (6 pcs)','McChiken Regular Meal','Big Teasty Medium Meal'];
-  mc.menuImage = ['images/bigmacc.jpg','images/mcnugget.jpg','images/mcChikenmegularmeal.jpg','images/bigteastymediummeal.jpg'];
+  mc.menuImage = ['images/bigmacc.png','images/mcnugget.png','images/McChiken Regular Meal.png','images/Big Teasty Medium Meal.png'];
 
   var pizzaHut = new Restorant('Pizza Hut','images/pizza.png');
   pizzaHut.menu =['HAWAIIAN','HOT STUFF BEEF','MEAT LOVERS','PEPPERONI'];
@@ -96,7 +96,7 @@ if(localStorage.getItem('companies') === null){
   mrPotato.menuImage = ['images/CrispyBakedPotatoWedges.jpg','images/Potatowithcheese.jpg','images/PotatowithoutPotato.jpg','images/Capmers Potato.jpeg'];
 
   var firefly = new Restorant('FireFly','images/firfly.jpg');
-  firefly.menu = ['Angus Burger Sandwich','Wall Street Burger Sandwich','Rustic Burger Sandwich ','Red Kamikaze Burger Sandwich'];
+  firefly.menu = ['Angus Burger Sandwich','Wall Street ','Rustic Burger Sandwich ','Red Kamikaze Burger Sandwich'];
   firefly.menuImage = ['images/Angus_Burger_Sandwich_636799688345719763.jpg','images/Wall_Street_Burger_S_636799690678903303.jpg','images/Rustic_Burger_Sandwi_636799690691765646.jpg','images/Red_Kamikaze_Burger__636799690706329626.jpg'];
 
   var companies = new Companies([]);

@@ -356,7 +356,7 @@ footer {
 }
   
 
-/* #testBox{
+#testBox{
   top: 800px;
   width: 200px;
   height: 200px;
@@ -418,6 +418,12 @@ input#name {
   padding-left: 18px;
 }
 
+input#name {
+  padding-left: 10p;
+  margin-right: 39px;
+  padding-left: 18px;
+}
+
 input.name2{
   margin-top: 25px;
 }
@@ -436,7 +442,7 @@ input.name2{
 #signBox{
   height: 200px;
   width: 50px;
-  background: rgb(255, 41, 237);
+  background: rgb(255, 215, 86);
   position: fixed;
   left: 0px;
   top:350px;  
@@ -446,6 +452,7 @@ input.name2{
   animation: shake 3s 4s infinite ;
   opacity: 0;
   overflow: hidden;
+  z-index: 9;
 }
 
 fieldset {
@@ -469,7 +476,7 @@ fieldset {
 #signBox:hover{
   height: 200px;
   width: 350px;
-  background: rgb(255, 41, 237);
+  background: rgb(245, 243, 124);
   position: fixed;
   right: 0px;
   top:350px;  
