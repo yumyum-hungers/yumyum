@@ -6,17 +6,23 @@ var companies ;
 var restorantIndex;
 var logosDivEl = document.getElementById('resturant-logos');
 var bestOne = 0;
+var logoDivImage = document.createElement('div');
+logosDivEl.appendChild(logoDivImage);
+logoDivImage.className = 'divForLogo';
 var ulEl = document.createElement('ul');
-logosDivEl.appendChild(ulEl);
+logoDivImage.appendChild(ulEl);
 ulEl.className ='carousel';
 ulEl.setAttribute("data-target", "carousel");
+
 
 // Get data from local storage
 // Get data from local storage
 function loadData() {
   // string that have the user name from sign in or sign up
   userNum = localStorage.userNum;
+  userNum = 0;
   companyNum = localStorage.companyNum;
+  companyNum = 0;
 
   // get array of objects for the companies.company
   var companiesarr = JSON.parse(localStorage.getItem('companies')) || [];
@@ -82,8 +88,8 @@ function listdisplay(){
   // Select the carousel you'll need to manipulate and the buttons you'll add events to
   const carousel = document.querySelector('[data-target=\'carousel\']');
   const card = carousel.querySelector('[data-target=\'card\']');
-  const leftButton = document.querySelector('[data-action=\'slideLeft\']');
-  const rightButton = document.querySelector('[data-action=\'slideRight\']');
+  const leftButton = document.querySelector('.bb2');
+  const rightButton = document.querySelector('.bb1');
 
   // Prepare to limit the direction in which the carousel can slide,
   // and to control how much the carousel advances by each time.

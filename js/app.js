@@ -54,7 +54,7 @@ var Users = function(name,password,number,email,breakHour,employeesNumber,visaNu
   //   this.visaType = visaType;
   this.visaNumber =visaNumber;
   this.ordered = [];
-  this.resturant = [];
+  this.restorant = [];
 };
 
 
