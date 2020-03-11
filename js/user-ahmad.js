@@ -12,7 +12,8 @@ logoDivImage.className = 'divForLogo';
 var ulEl = document.createElement('ul');
 logoDivImage.appendChild(ulEl);
 ulEl.className ='carousel';
-ulEl.setAttribute("data-target", "carousel");
+ulEl.id = 'allLogos';
+ulEl.setAttribute('data-target', 'carousel');
 
 
 // Get data from local storage
@@ -47,10 +48,11 @@ function displayRstorant(){
 
     var liEl = document.createElement('li');
     liEl.className = 'card';
-    liEl.setAttribute("data-target", "card");
+    liEl.setAttribute('data-target', 'card');
     ulEl.appendChild(liEl);
     var divEl = document.createElement('div');
     divEl.className = 'logos';
+    divEl.id =r;
     liEl.appendChild(divEl);
     // var imgEl = document.createElement('img');
     // divEl.appendChild(imgEl);
@@ -126,3 +128,32 @@ function listdisplay(){
   });
 }
 listdisplay();
+function enableSwitchMenu(){
+  var a1 =document.getElementById('allLogos');
+  a1.addEventListener('click',function(){
+    if(companies.company[companyNum].restorant.length >Number( event.target.id)){
+      diplayMenu(Number(event.target.id));
+    }
+  });
+}
+enableSwitchMenu();
+function addYourInfo(){
+  var headerEl = document.getElementById('header') ;
+  var infoDivEl = document.createElement('div');
+  headerEl.appendChild(infoDivEl);
+  infoDivEl.id = 'infoDiv';
+  var compLogoEl =document.createElement('img');
+  compLogoEl.src = companies.company[companyNum].logoDirectory;
+  infoDivEl.appendChild(compLogoEl);
+  var usernameEl = document.createElement('p');
+  usernameEl.id = 'userName';
+  usernameEl.innerText = companies.company[companyNum].users[userNum].name;
+  infoDivEl.appendChild(usernameEl);
+  var pEl = document.createElement('p');
+  pEl.href = '';
+  infoDivEl.appendChild(pEl);
+  var aEl = document.createElement('a');
+  aEl.href = '';
+  infoDivEl.appendChild(aEl);
+}
+addYourInfo();
