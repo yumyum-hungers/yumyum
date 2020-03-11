@@ -1,17 +1,89 @@
 body{
     background: #1d1d1d;
 }
+/* header css */
+.home-intro {
+    /* background-image: url('https://download.hipwallpaper.com/desktop/1536/864/25/82/ltP7UD.jpg'); */
+    /* background-size: cover; */
+    background-color: ;
+    height: 150px;
+    color: white;
+    text-align: center;
+  }
+div.container {
+    margin: 0 auto;
+    padding: 5% 0%;
+    text-align: center;
+    margin-left: 46%; 
+  }
+
+
+div.container a
+{
+    color: beige;
+    text-decoration: none;
+    font: 20px 'Viga', sans-serif;
+    margin: 0% 2%;
+    padding: 1% 2%;
+    position: relative;
+    /* z-index: 0; */
+    cursor: pointer;
+}
+
+img.logo {
+    float: left;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    margin: 5px 5%;
+}
+
+
+
+/* Pull right and left  */
+div.pullRightLeft a:before, div.pullRightLeft a:after
+{
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0px;
+    content: '';
+    background: beige;
+    opacity: 0.5;
+    transition: all 0.3s;
+}
+
+div.pullRightLeft a:before
+{
+    left: 0px;
+} 
+
+div.pullRightLeft a:after
+{
+    right: 0px;
+}
+
+div.pullRightLeft a:hover:before, div.pullRightLeft a:hover:after
+{
+    width: 100%;
+}
+
+p.p1.wow.fadeInRight {
+  border-bottom: solid;
+}
+/* logo css */
 #resturant-logos {
     display: inline-block;
+    
 }
-#resturant-logos img{
+.divForLogo img{
     height: 150px;
     width: 150px;
 }
 main {
     display: block;
     position: relative;
-    top: 214px;
+    top: 331px;
 
 }
 .logos {
@@ -48,6 +120,8 @@ main {
     position: relative;
     overflow: hidden;
     margin: 0 auto;
+    left: 0;
+    
   }
   
   .button-wrapper {
@@ -58,12 +132,16 @@ main {
     align-items: center;
     position: absolute;
     z-index: 10;
-
+    left: 0;
+    top: 208px;
+    padding: 40px 0px;
+    border-top: dashed 2px #4b4a4a;
+    border-bottom: dashed 2px #4d4d4d;
   }
   
   .carousel {
     /* margin: 0px 10px 0px 22px; */
-    margin: 0;
+    margin: 90px 0px;
     padding: 0;
     list-style: none;
     width: 85%;
@@ -82,19 +160,22 @@ main {
     margin-right: 1rem;
     display: inline-block;
   }
-  .bb{
-      height: 200px;
+  .bb1,.bb2{
+      height: 100px;
       width: 50px;
+      padding: 50px 0px;
+      background-color: rgb(197, 197, 197,0.5);
+      
   }
   main{
       width: 700px;
       margin: auto;
   }
   .menuDev {
-      height: 300px;
+      height: 250px;
       background-size: cover;
       background-repeat: round;
-      margin: 100px 0px;
+      margin: 80px 0px;
       position: relative;
       border-radius: 25px 25px 0px 0px ;
 
@@ -108,3 +189,15 @@ main {
       width: 660px;
       
   }
+  #leftDiv, #rightDiv {
+    background: #1d1d1d;
+    height: 205px;
+    
+    /* padding: 25px 0px; */
+}
+#rightDiv{
+    padding: 0px 0px 0px 40px;
+}
+#leftDiv{
+    padding: 0px 40px 0px 0px;
+}
