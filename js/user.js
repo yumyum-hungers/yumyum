@@ -3,7 +3,7 @@
 // var User = new User(userItems);
 
 /*********************************************** Data for testing **************************************************** */
-localStorage.setItem('user','samah');
+// localStorage.setItem('user','samah');
 
 var headarr = document.getElementsByClassName('heeeed');
 
@@ -131,7 +131,6 @@ function orderButtonfun(e){
 }
 
 function order(){
-  // console.log('hiii order');
   var main = document.getElementById('main');
   main.innerHTML ='';
   var h2El =document.createElement('h2');
@@ -140,29 +139,8 @@ function order(){
   var divEl = document.createElement('div');
   divEl.className = 'divdiv';
   main.appendChild(divEl);
-  // var tableEl = document.createElement('table');
-  // divEl.appendChild(tableEl);
-  // var theadEl = document.createElement('thead');
-  // tableEl.appendChild(theadEl);
-  // var trEl = document.createElement('tr');
-  // theadEl.appendChild(trEl);
-  // var thEl = document.createElement('th');
-  // thEl.innerHTML = 'restorant';
-  // trEl.appendChild(thEl);
-  // thEl = document.createElement('th');
-  // thEl.innerHTML = 'item';
-  // trEl.appendChild(thEl);
-  // thEl = document.createElement('th');
-  // thEl.innerHTML = 'order delivery time';
-  // trEl.appendChild(thEl);
-  // var tbodyEl = document.createElement('tbody');
-  // tableEl.appendChild(tbodyEl);
+
   for (var i in companies.company[companyIndex].users[userIndex].ordered) {
-    // TODO: Iterate over the items in the cart
-    // TODO: Create a TR
-    // TODO: Create a TD for the delete link, quantity,  and the item
-    // TODO: Add the TR to the TBODY and each of the TD's to the TR
-    // trEl = document.createElement('tr');
     var divAllOrder = document.createElement('div');
     divAllOrder.className = 'orderedOne';
     var tdEl0 = document.createElement('ul');
@@ -170,9 +148,6 @@ function order(){
     var tdEl2 = document.createElement('li');
     var tdEl3 = document.createElement('li');
     var tdEl4 = document.createElement('li');
-
-    // tdEl0.id=i;
-    // tbodyEl.appendChild(trEl);
     divEl.appendChild(divAllOrder);
     divAllOrder.appendChild(tdEl0);
     tdEl0.appendChild(tdEl1);
@@ -185,19 +160,15 @@ function order(){
     var z = companies.company[companyIndex].users[userIndex].resturant[i];
     var t = companies.company[companyIndex].users[userIndex].ordered[i];
     var imgIndex =0;
-    // console.log(i,'t ',companies.company[companyIndex].
-    //   restorant[]);
     for(let j = 0 ; j < companies.company[companyIndex].restorant.length;j++){
       if(companies.company[companyIndex].restorant[j].name=== z){
         for(let k = 0 ; k < companies.company[companyIndex].restorant[j].menu.length;k++){
           if(companies.company[companyIndex].restorant[j].menu[k] === t){
             imgIndex = companies.company[companyIndex].restorant[j].menuImage[k];
-            // console.log(companies.company[companyIndex].restorant[j].menuImage[k]);
           }
         }
 
       }
-      // console.log(companies.company[companyIndex].restorant[j].name.indexOf('Pizza Hut'));
     }
     tdEl1.textContent =`Resturant: ${companies.company[companyIndex].users[userIndex].resturant[i]}`;
     tdEl2.textContent = companies.company[companyIndex].users[userIndex].ordered[i] ;
@@ -206,12 +177,9 @@ function order(){
     imgg.className = 'orderedImg';
     divAllOrder.appendChild(imgg);
     imgg.src = imgIndex;
-    // tdEl4.textContent = imgg;
   }
 }
-// .indexOf(companies.company[companyIndex].users[userIndex].resturant[i])
 
-// order();
 
 
 
@@ -241,42 +209,6 @@ function printCompany(){
     }
   }
 }
-
-
-// function ascending(){
-//   var arr= companies;
-//   var x= [];
-//   var y=[];
-// console.log('jj');
-// console.log(arr.company[0].restorant[0].totalvoteses);
-// for(let i = 0; i<arr.company[companyIndex].restorant.length;i++){
-//   x.push(arr.company[companyIndex].restorant[i].totalvoteses);
-//   // console.log(x);
-// }
-// x.sort();
-// for(let j = 0; j<arr.company[companyIndex].restorant.length;j++){
-//   for(let i = 0; i<arr.company[companyIndex].restorant.length;i++){
-//     if(x[j]===arr.company[companyIndex].restorant[i].totalvoteses){
-//       console.log('all',arr.company);
-//       y.push(arr.company[companyIndex].restorant[i]);
-//       console.log('inde',arr.company[companyIndex].restorant[i]);
-//       arr.company.splice(arr.company[companyIndex].restorant[i],1);
-//       console.log('arr',arr.company);
-//       break;
-//     }
-//   }
-// }
-// console.log('ff',y);
-//  console.log(arr.company[companyIndex].restorant.indexOf(y));
-// for(let j = 0; j<arr.company[companyIndex].restorant.length;j++){
-//   for(let i = 0; i<arr.company[companyIndex].restorant.length-1;i++){
-//     if(arr.company[companyIndex].restorant[i].totalvoteses > arr.company[companyIndex].restorant[i+1].totalvoteses){
-//       y.push(arr.company[companyIndex].restorant[i]);
-//     }
-//   }
-
-
-// }
 
 // calculate best one according to number of votes
 function votesCalc(){
@@ -396,8 +328,8 @@ function hoverEffectsOut(e){
 
 
 function ordered(e){
-  var x = document.getElementById('main');
-  x.className = 'door';
+  // var x = document.getElementById('main');
+  // x.className = 'door';
 
   var res = e.target.id;
   var value = 0;

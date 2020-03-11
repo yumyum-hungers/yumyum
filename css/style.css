@@ -2,6 +2,7 @@
   @import 'https://fonts.googleapis.com/css?family=Viga&display=swap';
   @import 'https://fonts.googleapis.com/css?family=Chilanka&display=swap';
   @import 'https://fonts.googleapis.com/css?family=Kalam&display=swap';
+  @import 'https://fonts.googleapis.com/css?family=Dancing+Script&display=swap';
 
 .home-intro {
     background-image: url('https://download.hipwallpaper.com/desktop/1536/864/25/82/ltP7UD.jpg');
@@ -125,34 +126,40 @@ p.p1 {
     float: right;
     clear: left;
     color: beige;
-    font-size: 40px;
-    margin: 2% 25%;
-    font-family: 'Chilanka', cursive;
+    font-size: 100px;
+    margin: 320px -250px 25px 0px;
+    font-family: 'Dancing Script', cursive;
 }
 
+svg path {
+  fill: #fff;
+  text-align: center;
+}
+
+svg{
+width: 100px;
+float: right;
+margin: -100px 350px 0px 0px;
+}
 
 .p2 {
     width: 565px;
     float: right;
-    margin: 33% 45%;
     padding: -82%;
-    margin: 29% 75%;
-    padding: 32px;
-    border-left: 2px solid rgb(248, 247, 250);
-    border-right: 2px solid rgb(248, 247, 250);
-    /* border: 5px groove rgb(243, 202, 236); */
-    margin: -2% 10%;
+    padding: 32px;  
     font-family: 'Kalam', cursive;
     color: beige;
     text-align: left;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 33px;
 }
 
 .p2.aos-init.aos-animate {
-  margin-right: 112px;
-  margin-top: -9px;
+  margin-right: 71px;
+  margin-top: 120px;
+  
 }
+
 .companies {
     height: 100%;
     background-color: beige;
@@ -161,7 +168,7 @@ p.p1 {
 .p3 {
      float: right;
      clear: left;
-     margin: 3% 33%;
+     margin: 5% 33% 0%;
      color: rgb(71, 36, 68);
      font-size: 40px;
      text-align:center;
@@ -192,7 +199,7 @@ p.p1 {
   .p4 {
     float: right;
     clear: left;
-    margin: 3% 41%;
+    margin: 5% 41% 0%;
     color: rgb(71, 36, 68);
     font-size: 40px;
     text-align:center;
@@ -349,85 +356,6 @@ footer {
 }
   
 
-/* this section for the form */
-/* .open-button {
-  background-color: rgb(126, 43, 119);
-  color: white;
-  font-size: 25px;
-  padding: 10px 10px;
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
-  position: fixed;
-  bottom: 23px;
-  left: 28px;
-  width: 280px;
-}
-
-
-.form-popup {
-  display: none;
-  position: fixed;
-  bottom: 23px;
-  left: 28px;
- 
-}
-
-
-.form-container {
-  max-width: 300px;
-  padding: 53px;
-  background-color: rgb(168, 168, 168);
-  
-}
-
-
-.form-container input[type=text], .form-container input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
-
-}
-
-
-.form-container input[type=text]:focus, .form-container input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-
-.form-container .btn {
-  background-color: rgb(155, 4, 185);
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-  margin-bottom:10px;
-  opacity: 0.8;
-  font-family: 'Barlow Condensed', sans-serif;
-}
-
-.form-container .cancel {
-  background-color: rgb(255, 241, 118);
-  color:black;
-}
-
-.form-container .btn:hover, .open-button:hover {
-  opacity: 1.1;
-}
-
-.log{
-text-align: center;
-padding-bottom: 11px;
-font-weight: 600;
-font: 30px 'Viga', sans-serif;
-} */
-
-
 #testBox{
   top: 800px;
   width: 200px;
@@ -450,10 +378,10 @@ font: 30px 'Viga', sans-serif;
 }
 
 .sign2{
-  font-size: 20px;
+  font-size: 27px;
   text-align: center;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding-bottom: 25px;
+  padding-top: 24px;
   font-family: 30px 'Viga', sans-serif;
 
 }
@@ -467,23 +395,27 @@ font: 30px 'Viga', sans-serif;
 }
 
 
-.name3{
-  margin-right: 30px;
-}
-
-input.pass{
+input.pass {
   margin-top: 10px;
-margin-right: 6px;
+  margin-right: 41px;
+  width: 187px;
+  text-align: center;
 }
 
 input#signIn {
-  margin-top: 21px;
+  margin-top: 17px;
   background-color: #493d63;
   color: aliceblue;
   padding: 7px 15px 7px 15px;
   cursor: pointer;
   font-family: cursive;
 
+}
+
+input#name {
+  padding-left: 10p;
+  margin-right: 39px;
+  padding-left: 18px;
 }
 
 input.name2{
@@ -503,8 +435,8 @@ input.name2{
 
 #signBox{
   height: 200px;
-  width: 35px;
-  background: rgb(248, 68, 248);
+  width: 50px;
+  background: rgb(255, 215, 86);
   position: fixed;
   left: 0px;
   top:350px;  
@@ -514,6 +446,7 @@ input.name2{
   animation: shake 3s 4s infinite ;
   opacity: 0;
   overflow: hidden;
+  z-index: 9;
 }
 
 fieldset {
@@ -537,13 +470,12 @@ fieldset {
 #signBox:hover{
   height: 200px;
   width: 350px;
-  background: rgb(175, 174, 174);
+  background: rgb(245, 243, 124);
   position: fixed;
   right: 0px;
   top:350px;  
   border-radius: 20px;
-  /* border-top-left-radius: 100px;
-  border-bottom-left-radius: 100px; */
+  font-family: 'Kalam', cursive;
   animation: none;
 }
 
@@ -575,12 +507,12 @@ a {
 
 label.name2 {
   float: left;
-  margin-left: 65px;
+  margin-left: 28px;
 }
 
 label.name3 {
-  margin-top: 45px;
-  margin-left: 65px;
+  margin:14px 16px 0px 29px ;
+  float: left;
 }
 
 .submit {
