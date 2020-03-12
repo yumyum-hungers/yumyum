@@ -138,10 +138,11 @@ function enableSwitchMenu(){
 }
 enableSwitchMenu();
 function addYourInfo(){
-  var headerEl = document.getElementById('header') ;
-  var infoDivEl = document.createElement('div');
+  var headerEl = document.getElementById('yourInfo') ;
+  var infoDivEl = document.createElement('span');
   headerEl.appendChild(infoDivEl);
   infoDivEl.id = 'infoDiv';
+  infoDivEl.className = 'infoDiv';
   var compLogoEl =document.createElement('img');
   compLogoEl.src = companies.company[companyNum].logoDirectory;
   infoDivEl.appendChild(compLogoEl);
@@ -150,10 +151,22 @@ function addYourInfo(){
   usernameEl.innerText = companies.company[companyNum].users[userNum].name;
   infoDivEl.appendChild(usernameEl);
   var pEl = document.createElement('p');
-  pEl.href = '';
+  pEl.href = 'your order';
+  pEl.innerText = 'your order';
+  pEl.id='yourOrder';
   infoDivEl.appendChild(pEl);
   var aEl = document.createElement('a');
   aEl.href = '';
+  aEl.innerText = 'LOG OUT';
   infoDivEl.appendChild(aEl);
 }
 addYourInfo();
+window.addEventListener('scroll', function(){
+  if( window.pageYOffset < 300) {
+    //console.log('down')
+
+  } else {
+    //console.log('up');
+   
+  }
+})
