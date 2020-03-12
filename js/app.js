@@ -66,6 +66,7 @@ var Restorant = function(name,logo) {
   this.order =[];
   this.menu ;
   this.menuImage ;
+  this.cost=[];
 };
 Restorant.prototype.votes = function() {
   //this methode we will use when click happen so we will add votes to restorant in company ,and add 1 to total votes
@@ -80,25 +81,25 @@ Restorant.prototype.votes = function() {
 //   }
 if(localStorage.getItem('companies') === null){
   console.log('give it data');
-  var companyToAdd = ['LTUC','Arab Bank','Hikma','JU'];
+  var companyToAdd = ['LTUC','ArabBank','Hikma','JU'];
   var logoToAdd = ['/images/LTUC.png','/images/bank.png','/images/hikma.png','/images/jordan-uni.png'];
 
   var mc = new Restorant('McDonald\'s','images/mac.png');
   mc.menu =['Big Mac Reagular Meal','Chicken McNuggets (6 pcs)','McChiken Regular Meal','Big Teasty Medium Meal'];
   mc.menuImage = ['images/bigmacc.png','images/mcnugget.png','images/McChiken Regular Meal.png','images/Big Teasty Medium Meal.png'];
-
+  mc.cost =['5','4.75','5.5','5.25'];
   var pizzaHut = new Restorant('Pizza Hut','images/pizza.png');
   pizzaHut.menu =['HAWAIIAN','HOT STUFF BEEF','MEAT LOVERS','PEPPERONI'];
   pizzaHut.menuImage = ['images/HAWAIIAN.jpg','images/HOTSTUFFBEEF.jpeg','images/meatlovers.jpg','images/PEPPERONI.jpg'];
-
+  pizzaHut.cost =['5.68','4.5','5.45','5.25'];
   var mrPotato = new Restorant('Mr Potato','images/potato.png');
   mrPotato.menu =['Crispy Baked Potato Wedges','Potato With Cheese','Potato without Potato ','Capmer\'s Potato'];
   mrPotato.menuImage = ['images/CrispyBakedPotatoWedges.jpg','images/Potatowithcheese.jpg','images/PotatowithoutPotato.jpg','images/Capmers Potato.jpeg'];
-
-  var firefly = new Restorant('FireFly','images/firfly.jpg');
+  mrPotato.cost =['6.35','4.75','4.5','5.15'];
+  var firefly = new Restorant('FireFly','images/firefly.png');
   firefly.menu = ['Angus Burger Sandwich','Wall Street ','Rustic Burger Sandwich ','Red Kamikaze Burger Sandwich'];
   firefly.menuImage = ['images/Angus_Burger_Sandwich_636799688345719763.jpg','images/Wall_Street_Burger_S_636799690678903303.jpg','images/Rustic_Burger_Sandwi_636799690691765646.jpg','images/Red_Kamikaze_Burger__636799690706329626.jpg'];
-
+  firefly.cost =['5.75','4.70','6.5','5.25'];
   var companies = new Companies([]);
   for (var i in companyToAdd) {
     companies.addCompany(companyToAdd[i],logoToAdd[i]);

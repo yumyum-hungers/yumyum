@@ -43,7 +43,6 @@ function scrollingSign(){
 }
 
 
-// form.addEventListener('submit',sign);
 form2.addEventListener('submit',sign);
 function sign(e){
   e.preventDefault();
@@ -59,16 +58,5 @@ function sign(e){
       }
     }
   }
-  // form.reset();
   form2.reset();
 }
-
-
-
-// function openForm() {
-//   document.getElementById("myForm").style.display = "block";
-// }
-
-// function closeForm() {
-//   document.getElementById("myForm").style.display = "none";
-// }
