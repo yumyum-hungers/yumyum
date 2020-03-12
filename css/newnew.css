@@ -1,0 +1,487 @@
+@import 'https://fonts.googleapis.com/css?family=Viga&display=swap';
+  @import 'https://fonts.googleapis.com/css?family=Chilanka&display=swap';
+  @import 'https://fonts.googleapis.com/css?family=Kalam&display=swap';
+  @import 'https://fonts.googleapis.com/css?family=Dancing+Script&display=swap';
+
+.home-intro {
+    /* background-image: url('https://ecodaily.eu/wp-content/uploads/2018/08/01-8-ways-to-hate-junk-food-junk.jpg'); */
+    /*background-color: transparent; */
+    /* background-color: #e3e3e3; */
+    /* background-size: cover; */
+
+    /* height: 100%;
+
+    height: 100%; */
+    color: white;
+    text-align: center;
+    width: 98%;
+    position: relative;
+  }
+
+.companyName {
+    position: relative;
+    top: 171px;
+    left: -599px;
+}
+#companyName{
+    top: 149px;
+    left: 221px;
+    /* width: 100%; */
+    position: absolute;
+}
+#userName{
+    text-transform: uppercase;
+}
+
+.right{
+    height: 200px;
+    width: 500px;
+    float: right;
+}
+
+  body{
+    height: 100%;
+    background-image:  url('/img/ltp.png');
+  }
+
+ 
+  h1 {
+    font-family: 'Chilanka', cursive;
+    color: #1f1835;
+    font-size: 95px;
+    font-weight: 600;
+    float: left;
+    margin: 8% 10%;
+  }
+
+  h3 {
+    font-size: 50px;
+    color: #1f1835;
+    transform-origin: top center;
+    float: left;
+    left: 158px;
+    position: relative;
+}
+
+
+ 
+  div.container {
+    margin: 0 auto;
+    padding: 5% 0%;
+    text-align: center;
+    margin-left: 46%; 
+  }
+
+
+div.container a
+{
+    color: rgb(58, 58, 88);
+    text-decoration: none;
+    font: 20px 'Viga', sans-serif;
+    margin: 0% 2%;
+    padding: 1% 2%;
+    position: relative;
+    cursor: pointer;
+}
+ 
+  img.logo {
+    float: left;
+    border-radius: 50%;
+    height: 15%;
+    width: 7%;
+    margin: 2% 5%;
+}
+
+h2 {
+    position: relative;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #28223c, #cec2c2, #28223c);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 9s linear infinite;
+    /* -webkit-background-clip: text; */
+    -webkit-text-fill-color: rgba(185, 28, 28, 0);
+    float: left;
+    font-weight: 700;
+    text-align: center;
+    margin: -6% 0% 0% 6%;
+}
+
+@keyframes animate {
+    0% {
+      background-position: -500%;
+    }
+    100% {
+      background-position: 500%;
+    }
+  }
+
+/* Pull right and left  */
+div.pullRightLeft a:before, div.pullRightLeft a:after
+{
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0px;
+    content: '';
+    background: rgb(96, 88, 146);
+    opacity: 0.3;
+    transition: all 0.3s;
+}
+
+div.pullRightLeft a:before
+{
+    left: 0px;
+} 
+
+div.pullRightLeft a:after
+{
+    right: 0px;
+}
+
+div.pullRightLeft a:hover:before, div.pullRightLeft a:hover:after
+{
+    width: 100%;
+}
+
+
+
+/********************************************** footer **********************************************/
+footer{
+    width: 98%;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: cursive;
+  }
+
+.num1{
+    margin-top: 3%;
+    float: left;
+  }
+
+  .p5 {
+    float: left;
+    margin-top: 2%;
+    font-weight: 700;
+    color: rgb(51, 28, 49);
+    font-size: 27px;
+    text-align: center;
+    font-family: 'Chilanka', cursive;
+
+}
+
+.apps {
+    display: inline-block;
+     width: 100px;
+     height: 100px;
+      margin-left: 1%;
+    }
+
+    .img1{
+        margin-top: 52px;
+          margin-left: -275px;
+        width: 150%;
+      }
+      
+      .img2{
+        width: 170%;
+        height: 70%;
+      }
+      .p6 {
+        margin-top: 13px;
+        font-weight: 700;
+        color: rgb(51, 28, 49);
+        font-size: 27px;
+        font-family: 'Chilanka', cursive;
+      }
+      .contact {
+    
+        margin-left: -17px;
+    }
+    i.fa.fa-envelope {
+        float: left;
+        font-size: 20px;
+      }
+      
+      
+  .num4{
+    margin-top: 45px;
+    margin-left: 8%;
+    float: left;
+  }
+
+  i.fa.fa-map-o {
+    padding-top: 0px;
+    margin-left: 5px;
+    float: left;
+    font-size: 19px;
+  }
+
+ 
+  i.fa.fa-mobile-phone {
+    padding-top: 0px;
+    margin-left: 11px;
+    float: left;
+    font-size: 25px;
+  
+  }
+  
+  .fa-envelope:before {
+    
+    margin-left: 6px;
+  }
+
+  .p7 {
+    margin-right: 107px;
+    padding-left: 60;
+    margin-top: 3%;
+    font-weight: 700;
+    color: rgb(51, 28, 49);
+    font-size: 27px;
+    text-align: center;
+    font-family: 'Chilanka', cursive;
+  }
+
+  .fa {
+     
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%; 
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  
+  .fa-facebook {
+    float: left;
+    margin-right: 16px;
+    margin-top: 6%;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-bottom: 14px;
+    background: rgb(18, 71, 185);
+    color: white;
+  }
+  
+  .fa-twitter {
+    float: left;
+    margin-top: 6%;
+    margin-right: 5%;
+    background: #55ACEE;
+    color: white;
+  }
+
+  .fa-instagram {
+    float: left;
+    margin-top: 6%;
+    margin-right: 5%;
+    background: #ff1f8f;
+    color: white;
+  }
+
+  p.p8 {
+    font-family: 'Barlow Condensed', sans-serif;
+    margin-top: 35%;
+    font-size: 17px;
+}
+  
+.mynum {
+    font-size: 19px;
+  }
+  /******************************************* main *****************************************************************/
+  
+main{
+    /* transform: scaleX(-1); */
+ 
+    position: relative;
+}
+
+.backgroundMain{
+    /* background-image:  url('https://download.hipwallpaper.com/desktop/1536/864/25/82/ltP7UD.jpg'); */
+    /* transform: scaleX(-1); */
+    background-size: cover;
+    position: relative;
+    /* border: blue solid; */
+    min-height: 500px;
+}
+
+#contentVariable{
+    /* transform: scaleX(-1);  */
+    height: 100%;
+}  
+.orderlistHeading {
+    position: relative;
+    right: 21px;
+    top: 94px;
+    font-size: 23px;
+    float: right;
+}
+div#orderButton {
+    position: absolute;
+    right: 43px;
+    top: 61px;
+    cursor: pointer;
+    background: #9fa0a0;
+    padding: 9px;
+    border-right: dashed #dc0909;
+}
+#previous{
+    position: relative;
+    right: 35px;
+    top: 10px;
+    float: right;
+    cursor: pointer;
+    background: #9fa0a0;
+    padding: 9px;
+    border-right: dashed #dc0909;
+}
+h5 {
+    font-size: 40px;
+    margin: 13px;
+}
+
+.orderList{
+    border: solid gray;
+    /* width: 90px; */
+    height: 100%;
+    position: relative;
+    right: -76px;
+    top: 134px;
+    float: right;
+    text-align: center;
+}
+#resturantImages{
+    border-radius: 50px;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    top: 34px;
+    left: 210px;
+}
+#contentVariable h4 {
+    font-size: 45px;
+    position: relative;
+    /* margin: 5px; */
+    left: 253px;
+    top: 20px;
+    width: 235px;
+}
+#resturantsName h4{
+    position: relative;
+    left: -44px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    position: absolute;
+    top: 131px;
+    right: 350px;
+    
+}
+table tr td{
+    padding: 7px;
+    font-size: 24px;
+}
+span{
+    cursor: pointer;
+}
+.mealButton{
+    cursor: pointer;
+    color: green;
+}
+
+.imgOrderList{
+    width: 48px;
+    height: 32px;
+    margin: 2px; 
+    text-align: center;
+    
+}
+
+.imgOrderList img{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+#resturantsName{
+/* height: 300px; */
+    /* transform: scaleX(-1); */
+    width: 99%;
+    /* border: dotted red; */
+    position: relative;
+    text-align: center;
+    bottom: 0px;
+    /* background-color: #f5f5dc; */
+    border: solid gray;
+    margin: 2px 0;
+}  
+#costId{
+    position: absolute;
+    left: 270px;
+    bottom: 55px;
+    font-size: 47px;
+    color: #1f1835;
+    font-family: fantasy;
+}
+#companyLogo{
+    z-index: 9;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: solid;
+}
+.resturant{
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    margin: 20px;
+}
+.resturant img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50px
+}
+
+.resturant img:hover{
+    width: 100%;
+    height: 100%;
+    transform: scale(1.2);
+    margin: 0px 20px 0 20px;
+}
+
+.orderedOne{
+    display: inline-block;
+    margin: 20px 5px;
+    /* width: 50px; */
+    border: solid gray;
+    padding: 10px;
+    border-radius: 20px;
+
+  
+  }
+  .orderedImg{
+    width: 100px;
+    height:100px;
+    border-radius: 22px
+  }
+  
+  .divdiv{
+      position: relative;
+      height: 100%;
+  }
