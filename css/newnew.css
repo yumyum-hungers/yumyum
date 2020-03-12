@@ -22,6 +22,7 @@
     position: relative;
     top: 171px;
     left: -599px;
+    /* left: -492px; */
 }
 #companyName{
     top: 149px;
@@ -41,7 +42,7 @@
 
   body{
     height: 100%;
-    background-image:  url('/img/ltp.png');
+    background-image:  url('../img/ltp.png');
   }
 
  
@@ -51,9 +52,27 @@
     font-size: 95px;
     font-weight: 600;
     float: left;
-    margin: 8% 10%;
+    margin: 9% 10%;
   }
-
+#welcome{
+    font-size: 50px;
+    color: #1f1835;
+    transform-origin: top center;
+    float: left;
+    position: relative;
+    margin-top: -38px;
+    top: 75px;
+  }
+#from{
+    font-size: 50px;
+    color: #1f1835;
+    transform-origin: top center;
+    float: left;
+    left: -635px;
+    position: relative;
+    margin-top: -38px;
+    top: 237px;
+}
   h3 {
     font-size: 50px;
     color: #1f1835;
@@ -61,6 +80,7 @@
     float: left;
     left: 158px;
     position: relative;
+    margin-top: -38px;
 }
 
 
@@ -336,6 +356,7 @@ div#orderButton {
     background: #9fa0a0;
     padding: 9px;
     border-right: dashed #dc0909;
+    z-index: 9;
 }
 #previous{
     position: relative;
@@ -346,10 +367,14 @@ div#orderButton {
     background: #9fa0a0;
     padding: 9px;
     border-right: dashed #dc0909;
+    z-index: 9;
+
 }
 h5 {
     font-size: 40px;
-    margin: 13px;
+    margin: 13px 0px;
+    left: 80px;
+    position: relative;
 }
 
 .orderList{
@@ -469,9 +494,13 @@ span{
     display: inline-block;
     margin: 20px 5px;
     /* width: 50px; */
-    border: solid gray;
+    border: solid lightgray;
     padding: 10px;
     border-radius: 20px;
+    border-radius: 20px;
+    left: 23px;
+    position: relative;
+    text-align: center;
 
   
   }
