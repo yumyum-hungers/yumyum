@@ -437,6 +437,7 @@ input.name2{
   animation: shake 3s 4s infinite ;
   opacity: 0;
   overflow: hidden;
+  z-index: 9;
 }
 
 fieldset {
@@ -460,7 +461,7 @@ fieldset {
 #signBox:hover{
   height: 200px;
   width: 350px;
-  background: rgb(255, 41, 237);
+  background: rgba(255, 41, 237,0.9);
   position: fixed;
   right: 0px;
   top:350px;  
