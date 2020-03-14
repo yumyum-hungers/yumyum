@@ -93,7 +93,7 @@ if(localStorage.getItem('companies') === null){
   pizzaHut.offer = 20;
   var mrPotato = new Restorant('Mr Potato','images/potato.png');
   mrPotato.menu =['Crispy Baked Potato Wedges','Potato With Cheese','Potato without Potato ','Capmer\'s Potato'];
-  mrPotato.menuImage = ['images/CrispyBakedPotatoWedges.jpg','images/Potatowithcheese.jpg','images/PotatowithoutPotato.jpg','images/Capmers Potato.jpeg'];
+  mrPotato.menuImage = ['images/CrispyBakedPotatoWedges.jpg','images/PotatoWithCheese.jpg','images/PotatowithoutPotato.jpg','images/Capmers Potato.jpeg'];
   mrPotato.cost =['6.35','4.75','4.5','5.15'];
   mrPotato.offer = 20;
   var firefly = new Restorant('FireFly','images/firefly.png');
