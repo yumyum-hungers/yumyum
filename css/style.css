@@ -356,17 +356,6 @@ footer {
 }
   
 
-#testBox{
-  top: 800px;
-  width: 200px;
-  height: 200px;
-  border: 3px solid rgb(104, 17, 92);
-  position: absolute;
-  left: 45px;
-  transition: 0.3s ease-in-out;
-  background-color: rgb(228, 226, 226);
-} */
-
 
 .sign {
   font-size: 20px;
@@ -396,6 +385,7 @@ footer {
 
 
 input.pass {
+  padding: 5px 0px 5px 0px;
   margin-top: 10px;
   margin-right: 41px;
   width: 187px;
@@ -403,6 +393,7 @@ input.pass {
 }
 
 input#signIn {
+  margin-left: 56px;
   margin-top: 17px;
   background-color: #493d63;
   color: aliceblue;
@@ -413,15 +404,9 @@ input#signIn {
 }
 
 input#name {
-  padding-left: 10p;
+  padding: 5px 0px 5px 18px;
   margin-right: 39px;
-  padding-left: 18px;
-}
-
-input#name {
-  padding-left: 10p;
-  margin-right: 39px;
-  padding-left: 18px;
+  
 }
 
 input.name2{
@@ -442,7 +427,7 @@ input.name2{
 #signBox{
   height: 200px;
   width: 50px;
-  background: rgb(255, 215, 86);
+  background: rgb(255, 41, 237);
   position: fixed;
   left: 0px;
   top:350px;  
@@ -452,7 +437,6 @@ input.name2{
   animation: shake 3s 4s infinite ;
   opacity: 0;
   overflow: hidden;
-  z-index: 9;
 }
 
 fieldset {
@@ -476,7 +460,7 @@ fieldset {
 #signBox:hover{
   height: 200px;
   width: 350px;
-  background: rgb(245, 243, 124);
+  background: rgb(255, 41, 237);
   position: fixed;
   right: 0px;
   top:350px;  
@@ -513,11 +497,11 @@ a {
 
 label.name2 {
   float: left;
-  margin-left: 28px;
+  margin: 8px 7px 0px 28px;
 }
 
 label.name3 {
-  margin:14px 16px 0px 29px ;
+  margin: 18px 17px 0px 29px;
   float: left;
 }
 
