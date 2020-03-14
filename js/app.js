@@ -67,6 +67,7 @@ var Restorant = function(name,logo) {
   this.menu ;
   this.menuImage ;
   this.cost=[];
+  this.offer=0;
 };
 Restorant.prototype.votes = function() {
   //this methode we will use when click happen so we will add votes to restorant in company ,and add 1 to total votes
@@ -74,11 +75,7 @@ Restorant.prototype.votes = function() {
   this.order.push(Companies.company[companynum].user[usernum].name);
 
 };
-// how to load
-// function loadCompanies() {
-//     var companiesFromLocalStorage = JSON.parse(localStorage.getItem('companies')) || [];
-//     var companies = new Companies(companiesFromLocalStorage);
-//   }
+
 if(localStorage.getItem('companies') === null){
   console.log('give it data');
   var companyToAdd = ['LTUC','ArabBank','Hikma','JU'];
@@ -88,18 +85,22 @@ if(localStorage.getItem('companies') === null){
   mc.menu =['Big Mac Reagular Meal','Chicken McNuggets (6 pcs)','McChiken Regular Meal','Big Teasty Medium Meal'];
   mc.menuImage = ['images/bigmacc.png','images/mcnugget.png','images/McChiken Regular Meal.png','images/Big Teasty Medium Meal.png'];
   mc.cost =['5','4.75','5.5','5.25'];
+  mc.offer = 45;
   var pizzaHut = new Restorant('Pizza Hut','images/pizza.png');
   pizzaHut.menu =['HAWAIIAN','HOT STUFF BEEF','MEAT LOVERS','PEPPERONI'];
   pizzaHut.menuImage = ['images/HAWAIIAN.jpg','images/HOTSTUFFBEEF.jpeg','images/meatlovers.jpg','images/PEPPERONI.jpg'];
   pizzaHut.cost =['5.68','4.5','5.45','5.25'];
+  pizzaHut.offer = 20;
   var mrPotato = new Restorant('Mr Potato','images/potato.png');
   mrPotato.menu =['Crispy Baked Potato Wedges','Potato With Cheese','Potato without Potato ','Capmer\'s Potato'];
   mrPotato.menuImage = ['images/CrispyBakedPotatoWedges.jpg','images/Potatowithcheese.jpg','images/PotatowithoutPotato.jpg','images/Capmers Potato.jpeg'];
   mrPotato.cost =['6.35','4.75','4.5','5.15'];
+  mrPotato.offer = 20;
   var firefly = new Restorant('FireFly','images/firefly.png');
   firefly.menu = ['Angus Burger Sandwich','Wall Street ','Rustic Burger Sandwich ','Red Kamikaze Burger Sandwich'];
   firefly.menuImage = ['images/Angus_Burger_Sandwich_636799688345719763.jpg','images/Wall_Street_Burger_S_636799690678903303.jpg','images/Rustic_Burger_Sandwi_636799690691765646.jpg','images/Red_Kamikaze_Burger__636799690706329626.jpg'];
   firefly.cost =['5.75','4.70','6.5','5.25'];
+  firefly.offer = 50;
   var companies = new Companies([]);
   for (var i in companyToAdd) {
     companies.addCompany(companyToAdd[i],logoToAdd[i]);

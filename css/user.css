@@ -7,7 +7,7 @@
     /* background-image: url('https://ecodaily.eu/wp-content/uploads/2018/08/01-8-ways-to-hate-junk-food-junk.jpg'); */
     /*background-color: transparent; */
     /* background-color: #e3e3e3; */
-    /* background-size: cover; */
+    /* background-size: ; */
 
     /* height: 100%;
 
@@ -21,7 +21,7 @@
 .companyName {
     position: relative;
     top: 171px;
-    left: -599px;
+    /* left: -599px; */
     /* left: -492px; */
 }
 #companyName{
@@ -68,8 +68,8 @@
     color: #1f1835;
     transform-origin: top center;
     float: left;
-    left: -635px;
-    position: relative;
+    left: 177px;
+    position: absolute;
     margin-top: -38px;
     top: 237px;
 }
@@ -370,10 +370,14 @@ div#orderButton {
     z-index: 9;
 
 }
+
+.previousOrders{
+    left: 80px;
+}
 h5 {
     font-size: 40px;
     margin: 13px 0px;
-    left: 80px;
+    /* left: 80px; */
     position: relative;
 }
 
@@ -514,3 +518,38 @@ span{
       position: relative;
       height: 100%;
   }
+
+ #companyOrders{
+     position: absolute;
+     right: 10px;
+     font-size: large;
+     float: right;
+     /* cursor: pointer; */
+     background: #9fa0a0;
+     padding: 9px;
+     /* border-right: dashed #dc0909; */
+     z-index: 9;
+     top: 0px;
+ } 
+
+ .offerButton{
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  float: right;
+  cursor: pointer;
+  background: #9fa0a0;
+  padding: 9px;
+  /* padding-right: 40px; */
+  border-left: dashed #dc0909;
+  z-index: 9;
+ }
+
+ .resturantLogo{
+     /* display: inline-block; */
+     width: 200px;
+     height: 200px;
+     display: inline-block;
+     margin: 20px;
+ }
+ 
