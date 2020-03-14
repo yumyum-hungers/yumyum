@@ -79,7 +79,7 @@ Restorant.prototype.votes = function() {
 if(localStorage.getItem('companies') === null){
   console.log('give it data');
   var companyToAdd = ['LTUC','ArabBank','Hikma','JU'];
-  var logoToAdd = ['/images/LTUC.png','/images/bank.png','/images/hikma.png','/images/jordan-uni.png'];
+  var logoToAdd = ['images/LTUC.png','images/bank.png','images/hikma.png','images/jordan-uni.png'];
 
   var mc = new Restorant('McDonald\'s','images/mac.png');
   mc.menu =['Big Mac Reagular Meal','Chicken McNuggets (6 pcs)','McChiken Regular Meal','Big Teasty Medium Meal'];
