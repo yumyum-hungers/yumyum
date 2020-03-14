@@ -83,6 +83,15 @@ function diplayMenu(restorantNum){
     menuDivEl.appendChild(menuPEl);
     menuPEl.className = 'menuP';
     menuPEl.innerText = companies.company[companyNum].restorant[restorantNum].menu[m];
+    var addButtom = document.createElement('p');
+    addButtom.id = m;
+    addButtom.className = 'addBottom';
+    addButtom.addEventListener('click',function(){
+      console.log('hi');
+      console.log(event.target.id);
+    });
+    addButtom.innerText = 'Add To Plate';
+    menuDivEl.appendChild(addButtom);
   }
 }
 diplayMenu(2);
@@ -155,8 +164,9 @@ function addYourInfo(){
   pEl.innerText = 'your order';
   pEl.id='yourOrder';
   infoDivEl.appendChild(pEl);
-  var aEl = document.createElement('a');
+  var aEl = document.createElement('p');
   aEl.href = '';
+  aEl.id='logOut';
   aEl.innerText = 'LOG OUT';
   infoDivEl.appendChild(aEl);
 }
@@ -167,6 +177,5 @@ window.addEventListener('scroll', function(){
 
   } else {
     //console.log('up');
-   
   }
-})
+});

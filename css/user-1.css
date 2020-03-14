@@ -22,7 +22,7 @@ body{
 
 div.container a 
 {
-    color: rgb(20, 20, 20);
+    color:rgb(73, 61, 99);
     text-decoration: none;
     font: 20px 'Viga', sans-serif;
     margin: 0% 0.5%;
@@ -33,7 +33,7 @@ div.container a
 }
 div.container div
 {
-    color: black;
+    color: rgb(73, 61, 99);
     text-decoration: none;
     font: 20px 'Viga', sans-serif;
     margin: 0% 0.5%;
@@ -55,7 +55,7 @@ img.logo {
 
 
 /* Pull right and left  */
-div.pullRightLeft a:before, div.pullRightLeft a:after 
+div.pullRightLeft a:before, div.pullRightLeft a:after ,.addBottom:before ,.addBottom:after
 
 {
     position: absolute;
@@ -63,22 +63,22 @@ div.pullRightLeft a:before, div.pullRightLeft a:after
     height: 100%;
     top: 0px;
     content: '';
-    background: beige;
+    background: rgb(73, 61, 99);
     opacity: 0.5;
     transition: all 0.3s;
 }
 
-div.pullRightLeft a:before
+div.pullRightLeft a:before,.addBottom:before
 {
     left: 0px;
 } 
 
-div.pullRightLeft a:after
+div.pullRightLeft a:after,.addBottom:after
 {
     right: 0px;
 }
 
-div.pullRightLeft a:hover:before, div.pullRightLeft a:hover:after
+div.pullRightLeft a:hover:before, div.pullRightLeft a:hover:after,.addBottom:hover:before
 {
     width: 100%;
 }
@@ -107,7 +107,7 @@ main {
     background-size: contain;
     background-repeat: no-repeat;
     position: relative;
-    border: solid 5px rgba(0, 0, 0, 0.5);
+    border: solid 5px rgba(73, 61, 99, 0.47);
     border-radius: 5px;
 }
 .logos h5, .logos p{
@@ -120,7 +120,7 @@ main {
     text-align: left;
 }
 .logos h5{
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(73, 61, 99, 0.47);
     width: 190px;
     
 }
@@ -200,13 +200,13 @@ main {
     position: relative;
     border-radius: 25px 25px 0px 0px;
     animation: op 2s ease forwards;
-    box-shadow: #f5f5dc66 0px 0px 11px;
+    box-shadow: #493d63bf -9px -9px 11px;
 }
   .menuP{
       position: absolute;
       bottom: 0px;
       padding: 20px 20px;
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color:rgba(73, 61, 99, 0.47);
       width: 92.5%;
       color: beige;
       
@@ -231,7 +231,7 @@ main {
    width: 266px;
    right: 0;
    top: -80px;
-   background: #1d1d1de7;
+   background: rgba(73, 61, 99, 0.856);;
    z-index: 1;
    border-radius: 5px 0px 20px 20px;
    opacity: 0;
@@ -259,11 +259,11 @@ p#yourOrder {
     border: gray 2px solid;
     border-radius: 16px;
 }
-#infoDiv a{
+#infoDiv #logOut{
     text-decoration: none;
     position: absolute;
     bottom: 0;
-    margin: 13px 0px 13px 15px;
+    margin: 13px 0px 14px 145px;
     background: lightgray;
     padding: 6px 10px;
     color: black;
@@ -272,7 +272,7 @@ p#yourOrder {
 }
 .border{
     width: 100%;
-    border-top: solid 1px gray;
+    border-top: solid 3px rgba(73, 61, 99, 0.34);
     margin: 20px 0px 40px 0px;
 }
 /* This section for footer */
@@ -452,7 +452,7 @@ footer {
   width: 266px;
   right: 0px;
   top: 32px;
-  background: #1d1d1de7;
+  background: rgba(73, 61, 99, 0.815);
   z-index: 20;
   border-radius: 5px 0px 20px 20px;
   z-index: 100;
@@ -506,4 +506,80 @@ img#dish {
 }
 #main{
   margin: 120px 0px 20px 0px;
+}
+div#footerlofo {
+  width: 20px;
+  margin: 43px;
+  float: left;
+}
+.num2 {
+  margin-left: 242px;
+}
+footer div{
+  display: flow-root;
+}
+#yourInfo:hover {
+  transition: all ease 1s ;
+  background-color: rgba(73, 61, 99, 0.2);
+}
+.menuDev:active{
+  filter: drop-shadow(0 0 0 steelblue);
+  transition: filter 0s;
+  /* animation: menu ease 1s 2s ;
+  animation-fill-mode: both; */
+}
+@keyframes menu {
+  0% {opacity: 1;
+  }
+  50% { opacity: 0;}
+  
+  100% {
+    opacity: 1;
+    
+  }
+}
+.logos:hover{
+  animation: biger 0.5s ease forwards;
+
+}
+.logos:active{
+  box-shadow: rgba(73, 61, 99, 0.8) 2px 2px 40px;
+}
+@keyframes biger {
+  0% {height: 200px;
+    width: 200px;
+  }
+  
+  
+  100% {
+    
+    height: 210px;
+    width: 210px;
+  }
+}
+.logos:hover  h5{
+  animation: bigerp 0.5s ease forwards;
+
+}
+@keyframes bigerp {
+  0% {
+  }
+  
+  
+  100% {
+    
+    width: 200px;
+  }
+}
+.addBottom {
+  position: absolute;
+  bottom: 0px;
+  padding: 10px 20px;
+  margin: 10px;
+  color: white;
+  right: 0px;
+  z-index: 2;
+}
+.addBottom:hover{
+  cursor: pointer;
 }
